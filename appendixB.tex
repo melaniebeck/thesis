@@ -1,0 +1,48 @@
+
+%% ----------------------------------------------------------------------------------------------------------------------------------------------
+%% 		MEASURING MORPH PARAMS ON SDSS STAMPS
+%% ----------------------------------------------------------------------------------------------------------------------------------------------
+
+\chapter{Measuring Nonparametric Morphological Diagnostics on SDSS Stamps} 
+\label{sec: measuring morphology}
+
+
+In order to train our Random Forest machine learning algorithm, we measure  non-parametric
+morphology diagnostics for the GZ2 galaxy sample. 
+
+We obtain $i$-band imaging from SDSS Data Release 12. Postage stamps are made from 
+the SDSS fields for each galaxy with dimensions of 3 Petrosian radii. Galaxies located 
+within 3 Petrosian radii of the edge of a field were excluded.  Postage stamps undergo a
+ cleaning process whereby nearby sources are identified with SExtractor \citep[ver. 2.8.6;][]{sextractor} and their pixels replaced with values that mimic the background in that region. 
+We compute the following widely adopted nonparametric measurements  of the galaxy light distribution on the cleaned postage stamps:
+
+Concentration is computed as $C = 5\log(r_{80}/ r_{20})$ where \rr{80} and \rr{20} are the
+radii containing 80\% and 20\% of the galaxy light respectively.  Small values of this ratio 
+tend to indicate disky galaxies, while larger values correlate with early-type ellipticals. 
+
+Asymmetry quantifies the degree of rotational symmetry in the galaxy light distribution
+ (not necessarily the physical shape of the galaxy as this parameter is not highly sensitive 
+to low surface brightness features). A correction for background noise is applied (as in e.g.~\cite{Conselice2000}), i.e., 
+\begin{equation}
+A = \frac{\sum_{x,y} |I - I_{180}|}{ 2\sum|I|} - B_{180}
+\end{equation}
+where $I$ is the galaxy flux in each pixel $(x, y)$, $I_{180}$ is the image rotated by 180 degrees about the galaxy's central pixel, and $B_{180}$ is the average asymmetry of the background. 
+
+The Gini coefficient, $G$,~\citep{Glasser1962, Abraham2003} describes how uniformly distributed a galaxy's flux is.  If $G$ is 0, the flux is distributed homogeneously among all galaxy pixels; if $G$ is 1,  the light is contained within a single pixel. This term correlates with $C$, however, $G$ does not require that the flux be in the central region of the galaxy.  We follow~\cite{Lotz2004} by first ordering the pixels by increasing flux value, and then computing
+\begin{equation}
+G = \frac{1}{|\bar X|n(n-1)}\sum_i^n(2i-n-1)|X_i|
+\end{equation}
+where $n$ is the number of pixels assigned to the galaxy, and $\bar X$ is the mean pixel value. 
+
+\M{20}~\citep{Lotz2004} is the second order moment of the brightest 20\% of the galaxy flux. We compute it as
+\begin{eqnarray}
+ M_{tot} & = & \sum_i^nf_i[(x_i-x_c)^2 + (y_i-y_c)^2]  \\
+ M_{20} & = & \log_{10} (\frac{\sum_iM_i}{M_{tot}}), ~~\textrm{while} \sum_ifi < 0.2f_{tot}
+\end{eqnarray}
+where M$_{tot}$, the total moment, is computed first and $f_{tot}$ is the total flux. For centrally concentrated objects, \M{20} correlates with $C$ but is also sensitive to bright off-centre knots of light. 
+
+Finally, we use the ellipticity, $\epsilon = 1 - b/a$, of the light distribution as measured by SExtractor which computes the semi-major axis $a$ and semi-minor axis $b$ from the second-order moments of the galaxy light.  
+
+In total, we measure morphological indicators for 282,350 SDSS galaxies. The relations between these diagnostics for the full sample is shown in the right panel of Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
+
+

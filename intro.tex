@@ -1,0 +1,175 @@
+%!TEX root = thesis.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% intro.tex: Introduction to the thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+\label{chap:intro}
+
+Here we define the big overarching problem. \\
+Why classify galaxies? \\
+What classifictions are needed?\\
+How do we get these classifications?\\
+What problems do traditional methods face?\\
+
+Chapter on a literature study of machine learning in astronomy? Or just in galaxy classification? And some machine learning basics. \\
+Chapter that is essentially my paper but with an added section on the exploration of dimensionality reduction algorithms we explored. \\
+Chapter on the science case of rare clumpy galaxies in the local universe found thanks to GZH.\\
+Appendix: Stupid spectro-polarimetry paper\\
+
+
+We're going to add in all the shit that I've done in the past three years -- much of that didn't make it into my paper. 
+We can break up the work into two major parts: \\
+1. SWAP + GZ 
+
+
+BEEF THIS UP.\\
+Astronomers have made use of visual galaxy morphologies to understand the dynamical structure of these systems for nearly ninety years 
+\citep[e.g.,][]{Hubble1936, 
+			deVauc1959, 
+			Sandage1961, 
+			vandenBergh1976, 
+			NairAbraham2010, 
+			Baillard2011}. 
+The division between early-type and late-type systems corresponds, for example, to a wide range of parameters from mass and luminosity, to environment, colour, and star formation history 
+\citep[e.g.,][]{Kormendy1977,  
+			Dressler1980, 
+			Strateva2001, 
+			Blanton2003, 
+			Kauffman2003, 
+			Nakamura2003, 
+			Shen2003, 
+			Peng2010}; 
+while detailed observations of morphological features such as bars and bulges 
+provide information about the history of their host systems 
+\citep[e.g., review by][]{KK04, 
+			Elmegreen2008, 
+			Sheth2008, 
+			Masters2010, 
+			Simmons2014}. 
+Modern studies of morphology  divide systems into broad classes 
+\citep[e.g.,][]{Conselice2006, 
+			Lintott2008, 
+			Kartaltepe2015, 
+			Peth2016}, 
+but a wealth of information can be gained from identifying new and often rare classes, 
+such as low redshift clumpy galaxies \citep[e.g.,][]{Elmegreen2013}, polar-ring galaxies \citep[e.g.,][]{Whitmore1990}, and the green peas \citep{Cardamone2009}. 
+
+
+While the Galaxy Zoo project has provided a solution that scales visual classification 
+for current surveys  by harnessing the combined power of thousands of volunteers \citep{Lintott2008, Lintott2011, Willett2013, Willett2017, Simmons2017},
+ producing a prolific amount of scientific output \citep[e.g.,][]{Land2008, Bamford2009,
+ Darg2010, Schawinski2014, Galloway2015, Smethurst2016}; upcoming surveys such as
+ \textit{LSST} and \textit{Euclid} will require a different approach, imaging more than
+ a billion new galaxies  \citep{LSST, Euclid}.  If detailed morphologies can be extracted 
+for just  0.1\% of this imaging, we will have millions of images to contend with. 
+A project of this magnitude would take more than sixty years to classify at 
+Galaxy Zoo's current rate and configuration. Standard visual morphology    
+methods will thus be unable to cope with the scale of data. 
+
+Another approach has been the automated extraction of morphologies with the
+ development of parametric \citep{Sersic1968, Odewahn2002, Peng2002}, 
+and non-parametric \citep{Abraham1994, Conselice2003, Abraham2003, Lotz2004,
+ Freeman2013} structural indicators. While these scale well to large samples 
+\citep[e.g.,][]{Simard2011, 
+			Griffith2012, 
+			Casteels2014, 
+			Holwerda2014, 
+			Meert2016}, 
+they often fail to capture detailed structure and can provide only statistical morphologies with large uncertainties \cite[e.g.,][]{Abraham1996, Bershady2000}. 
+
+
+
+Machine learning techniques are becoming increasingly popular for classification 
+and image processing tasks. Another automated approach, these generally work
+by defining a set of features that describe the morphology in an $N$-dimensional space. 
+The location in this morphology space defines a morphological type for each galaxy.
+Learning the morphology space can be achieved through algorithms such as 
+Support Vector Machines \citep{HuertasCompany2008} 
+or Principal Component Analysis \citep{Watanabe1985, Scarlata2007}.  
+Another approach is through deep learning, a machine learning technique that attempts 
+to model high level abstractions. Algorithms like convolutional and artificial 
+neural networks (CNNs, ANNs) have been used for galaxy morphology classification 
+with impressive accuracy 
+\citep{Ball2004, 
+	Banerji2010, 
+	Dieleman2015, 
+	HuertasCompany2015}. 
+A drawback to all machine learning classification techniques is the need for 
+standardized training data, with more complex algorithms requiring more data. 
+Furthermore, these data must be consistent for each survey: differences in resolution 
+and depth can be implicitly learned by the algorithm making their application to 
+disparate surveys challenging.  
+
+ In this work we present a system that preserves the best features of both visual 
+and automatic classifications, developing for the first time a framework that 
+brings both human and machine intelligence to the task of galaxy morphology to 
+handle the scale and scope of next generation data. We demonstrate the 
+effectiveness of such a system through a re-analysis of visual galaxy morphology
+ classifications collected during the Galaxy Zoo 2 project, and combine these with a 
+Random Forest machine learning algorithm that trains on a suite of non-parametric
+ morphology indicators widely used for automated morphologies. 
+In this paper we focus on the first question of the Galaxy Zoo 
+decision tree. We demonstrate that our method 
+provides a factor of 11.4 increase in the rate of galaxy morphology classification
+ while maintaining at least 93.5\% classification accuracy as compared to Galaxy Zoo 2 published data. 
+We first present an overview of our framework, which also serves as a blueprint for this paper. 
+
+
+%%%-------------------------------------------------------
+%%% FIGURE:     GZ EXPRESS Schematic
+%%%-------------------------------------------------------
+\begin{figure*}[ht!]
+%\figurenum{1}
+\plotone{Figures/human_machine/f1.pdf}
+\caption[Schematic of the human+machine hybrid system.]{Schematic of our hybrid system. Humans provide classifications of galaxy images via a web interface. We simulate this with the Galaxy Zoo 2 classification data described in Section~\ref{sec: data}. Human classifications are processed with an algorithm described in Section~\ref{sec: SWAP}. Subjects that pass a set of thresholds are considered human-retired (fully classified) and provide the training sample for the machine classifier as described in Section~\ref{sec: machine}. The trained machine is applied to all subjects not yet retired. Those that pass an analogous set of machine-specific thresholds are considered machine-retired. The rest remain in the system to be classified by either human or machine. This procedure is repeated  nightly. Our results are reported in Section~\ref{sec: results}.  \label{fig: schematic}}
+\end{figure*}
+
+
+%%----------------------------------------------------------------------------------------------------------------------------------------------------
+%%   GALAXY ZOO EXPRESS OVERVIEW
+%%---------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Galaxy Zoo Express Overview}
+
+The Galaxy Zoo Express (GZX) framework combines human and machine to
+ increase morphological classification efficiency, both in terms of the classification rate 
+and required human effort. Figure~\ref{fig: schematic} presents a schematic of 
+GZX including section numbers as a shortcut for the reader. We note that transparent 
+portions  of the schematic represent areas of future work which we explore in 
+Section~\ref{sec: visions}. Any system combining human and machine classifications 
+will have a set of generic features: a group of human classifiers, at least one 
+machine classifier, and a decision engine which determines how these 
+classifications should be combined.
+
+In this work we demonstrate our system through a re-analysis of  Galaxy Zoo 2 (GZ2)
+ classifications. This allows us to  create simulations of human classifiers (described in
+ Section~\ref{sec: data}). These classifications are used most effectively when processed 
+with SWAP, a Bayesian code described in Section~\ref{sec: SWAP}, first developed 
+for the Space Warps gravitational lens discovery project~\citep{Marshall2016}. 
+These subjects provide the machine's training sample. 
+
+In Section~\ref{sec: machine}, we incorporate a machine classifier. We have 
+developed a Random Forest algorithm that trains on measured morphology 
+indicators such as Concentration, Asymmetry, Gini coefficient and 
+\M{20} well-suited for the top-level question of the GZ2 decision tree, 
+discussed below. After a sufficient number of subjects have been classified 
+by humans,  the machine is trained and its performance assessed through 
+cross-validation. This procedure is repeated nightly and the machine's performance 
+increases with size of the training sample, albeit with a performance limit. 
+Once the machine reaches an acceptable level of performance it is applied to the 
+remaining galaxy sample. 
+
+Even with this simple description, one can see that the classification process 
+will progress in three phases.  First, the machine will not yet have reached an 
+acceptable level of performance; only humans contribute to subject classification. 
+Second, the machine's performance will improve; both humans and machine will 
+be responsible for classification. Finally, machine performance will slow; 
+remaining images will likely need to be classified by humans. These results are 
+explored in  Section~\ref{sec: results}. This blueprint allows even modest 
+machine learning routines to make significant contributions alongside human 
+classifiers and removes the need for ever-increasing performance in machine classification.
+
+
+
+
+
