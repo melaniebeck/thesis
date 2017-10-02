@@ -15,13 +15,21 @@ We obtain $i$-band imaging from SDSS Data Release 12 for all XXX galaxies in the
 Along with imaging, we also obtain basic SDSS measurements for each galaxy including the Petrosian radius. This value is used to create postage stamps from the SDSS fields for each galaxy with dimensions of 3 Petrosian radii where the galaxy of interest is centered on the stamp. Galaxies located within 3 Petrosian radii of the edge of a field were excluded as we did not perform mosaicing. This removed only XXX galaxies from our sample.
 
 \section{Image Cleaning}
-Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo a cleaning process. Sources in each stamp are identified with SExtractor \citep[ver. 2.8.6;][]{sextractor}. and their pixels replaced with values that mimic the background in that region. 
+Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo a cleaning process. Sources in each stamp are identified with SExtractor \citep[ver. 2.8.6;][]{sextractor} and segmentation maps are created. From these, the galaxy light in pixels of nearby sources are replaced with values that correspond to the distribution of the background for that postage stamp. 
 
  GIVE EXAMPLES??  YES. 
 
-\section{Morphology Diagnostics}
+ How many bad? How bad are the bad? What did I do to try to catch the bad? 
 
-We compute the following widely adopted nonparametric measurements  of the galaxy light distribution on the cleaned postage stamps:
+\section{Morphology Diagnostics}
+Once the postage stamps have been cleaned of nearby galaxies, measurements of the light profile can commence. The first stage in this process is the measurement of the Petrosian radius. 
+>>> PETROSIAN 1979
+
+Compare my petro-rad to SDSS? --It doesn't look good. 
+
+We use the Petrosian radius to define the aperture size for some of the following morphology measurements. [why did I measure my own instead of using SDSS??]
+
+We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps:
 
 Concentration is computed as $C = 5\log(r_{80}/ r_{20})$ where \rr{80} and \rr{20} are the
 radii containing 80\% and 20\% of the galaxy light respectively.  Small values of this ratio 
