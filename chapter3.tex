@@ -15,11 +15,30 @@ We obtain $i$-band imaging from SDSS Data Release 12 for all XXX galaxies in the
 Along with imaging, we also obtain basic SDSS measurements for each galaxy including the Petrosian radius. This value is used to create postage stamps from the SDSS fields for each galaxy with dimensions of 3 Petrosian radii where the galaxy of interest is centered on the stamp. Galaxies located within 3 Petrosian radii of the edge of a field were excluded as we did not perform mosaicing. This removed only XXX galaxies from our sample.
 
 \section{Image Cleaning}
-Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo a cleaning process. Sources in each stamp are identified with SExtractor \citep[ver. 2.8.6;][]{sextractor} and segmentation maps are created. From these, the galaxy light in pixels of nearby sources are replaced with values that correspond to the distribution of the background for that postage stamp. 
+Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo an extensive cleaning process. Sources in each stamp are identified via a two-stage SExtractor \citep[ver. 2.8.6;][]{sextractor} process. The first pass is designed to identify bright sources while the second pass is better optimized to pick up fainter objects. Segmentation maps are created for each pass and the main object is identified as that closest to the center of the stamp.  From these segmentation maps, the galaxy light in pixels of nearby sources are replaced with values that correspond to the distribution of the background for that postage stamp. 
 
  GIVE EXAMPLES??  YES. 
 
  How many bad? How bad are the bad? What did I do to try to catch the bad? 
+
+% From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
+GZ2 contained 295305 galaxies but only ~285K were published with actual classifications (Kyle told me why once but I forgot). Because all 295K are in the GZ2 database, I attempt to measure morphologies for all of them, whether or not they have a published GZ2 classification. (This is because the volunteer votes associated with these subjects remain in the database and are not excluded from our SWAP simulation.)
+
+\begin{table}
+	\begin{tabular}{|l|c|}
+		\hline
+		Full Galaxy Zoo 2 sample 	& 295305 \\
+		\hline
+		\hline
+		Successful cutouts 			& 282350 \\
+		Concentration				& 281945 \\
+		M$_{20}$					& 282154 \\
+		Asymmetry 					& 282256 \\
+		Gini coefficient			& 282252 \\
+		Elipticity ($1 - b/a$)		& 282337 \\
+		\hline
+	\end{tabular}
+\end{table}
 
 \section{Morphology Diagnostics}
 Once the postage stamps have been cleaned of nearby galaxies, measurements of the light profile can commence. The first stage in this process is the measurement of the Petrosian radius. 
