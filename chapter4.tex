@@ -284,6 +284,15 @@ phase is again dominated by human classifications.
 \end{figure*}
 
 
+%%%-------------------------------------------------------
+%%%  FIGURE:   CAS DISTRIBUTIONS 
+%%%-------------------------------------------------------
+\begin{figure*}[t!]
+\centering
+\includegraphics[width=7in]{Figures/human_machine/f10.pdf}
+\caption[Distributions of measured galaxy morphology features.]{The RF is trained on a 5-dimensional morphology parameter space. We show the distribution of each morphology indicator for machine-retired~\feat~(blue) and~\notfeat~(orange) subjects compared to the full GZ2 subject sample (black). The difference between~\feat~and~\notfeat~subjects is in stark contrast for all distributions except, perhaps, \M{20}.  \label{fig: morph params}}
+\end{figure*}
+
 In the bottom panels of Figure~\ref{fig: gzx components}, we consider the class
 composition of subjects retired by SWAP and the RF. 
 The left (right) panel shows the retired fraction of GZ2 subjects identified 
@@ -316,15 +325,6 @@ We visually examine several hundred
 and assess that, to the expert eye, a majority are, in fact, \feat.  
 A random sample is shown in Figure~\ref{fig: machine false pos}. 
 
-
-%%%-------------------------------------------------------
-%%%  FIGURE:   CAS DISTRIBUTIONS 
-%%%-------------------------------------------------------
-\begin{figure*}[t!]
-\centering
-\includegraphics[width=7in]{Figures/human_machine/f10.pdf}
-\caption[Distributions of measured galaxy morphology features]{The RF is trained on a 5-dimensional morphology parameter space. We show the distribution of each morphology indicator for machine-retired~\feat~(blue) and~\notfeat~(orange) subjects compared to the full GZ2 subject sample (black). The difference between~\feat~and~\notfeat~subjects is in stark contrast for all distributions except, perhaps, \M{20}.  \label{fig: morph params}}
-\end{figure*}
 
 That the machine strongly identifies these galaxies as \feat~
 (\pmachine~$\ge 0.9$) where humans instead classify them as \notfeat~(\ffeat~$< 0.5$) 
@@ -495,14 +495,3 @@ through New College and Oxford University's Balzan Fellowship as well as the Uni
 of Minnesota Doctoral Dissertation Fellowship. Travel funding was supplied 
 to MB, in part, by the University of Minnesota Thesis Research Travel Grant. CJL recognizes support from a grant from the Science \& Technology Facilities Council (ST/N003179/1). 
 BDS acknowledges support from Balliol College, Oxford, and the National Aeronautics and Space Administration (NASA) through Einstein Postdoctoral Fellowship Award Number PF5-160143 issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of NASA under contract NAS8-03060. The work of PJM is supported by the U.S. Department of Energy under contract number DE-AC02-76SF00515.
-
-
-
-
-\section{Stuff to fold into the existing text}
-
-\begin{figure*}[t!]
-\includegraphics[width=3.7in]{Figures/human_machine/A2b.pdf}
-\caption{\textit{Left.} Identifying~\feat~subjects is independent of identifying~\notfeat~subjects.  Both ROC curves use all subjects processed by SWAP where the score used to create the ROC curve is simply each subject's achieved posterior probability. The Featured curve demonstrates how well we identify~\feat~subjects with a threshold of 0.99, while the Not Featured curve demonstrates how well we identify~\notfeat~subjects with a threshold of 0.004. Typically, best performance is achieved by the score associated with the upper-left-most part of the curve. Our~\feat~threshold is nearly optimal, while our~\notfeat~threshold could be improved since the blue square is not as close to the upper left hand corner as other possible values of the subject posterior. \textit{Right.} Relation between measured morphology diagnostics for more than 280K SDSS galaxies. Most of these galaxies are processed through SWAP, receiving a posterior probability that estimates how likely each is to be~\feat~or~\notfeat.}
-\label{fig: morph thresh}
-\end{figure*}

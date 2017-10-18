@@ -149,6 +149,10 @@ Breiman, L. 2001, Machine Learning, 45, 5
   {Weinberg}, \& {Dav{\'e}}}]{Fardal2001}
 {Fardal}, M.~A., {Katz}, N., {Gardner}, J.~P., {et~al.} 2001, \apj, 562, 605
 
+\bibitem[{{Fasano} {et~al.}(2000){Fasano}, {Poggianti}, {Couch}, {Bettoni},
+  {Kj{\ae}rgaard}, \& {Moles}}]{Fasano2000}
+{Fasano}, G., {Poggianti}, B.~M., {Couch}, W.~J., {et~al.} 2000, \apj, 542, 673
+
 \bibitem[{{Faucher-Gigu{\`e}re} {et~al.}(2010){Faucher-Gigu{\`e}re}, {Kere{\v
   s}}, {Dijkstra}, {Hernquist}, \& {Zaldarriaga}}]{Faucher-Giguere2010}
 {Faucher-Gigu{\`e}re}, C.-A., {Kere{\v s}}, D., {Dijkstra}, M., {Hernquist},
@@ -557,6 +561,11 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   {Mart{\'{\i}}nez-Sansigre}}]{Smith2009}
 {Smith}, D.~J.~B., {Jarvis}, M.~J., {Simpson}, C., \&
   {Mart{\'{\i}}nez-Sansigre}, A. 2009, \mnras, 393, 309
+
+\bibitem[{{Smith} {et~al.}(2005){Smith}, {Treu}, {Ellis}, {Moran}, \&
+  {Dressler}}]{Smith2005}
+{Smith}, G.~P., {Treu}, T., {Ellis}, R.~S., {Moran}, S.~M., \& {Dressler}, A.
+  2005, \apj, 620, 78
 
 \bibitem[{{Snyder} {et~al.}(2015){Snyder}, {Torrey}, {Lotz}, {Genel},
   {McBride}, {Vogelsberger}, {Pillepich}, {Nelson}, {Sales}, {Sijacki},
