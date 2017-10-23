@@ -1,6 +1,6 @@
 %!TEX root = thesis.tex
 
-\chapter{Galaxy Zoo and morphology too}
+\chapter{Data: visual and automated morpholgies}
 \label{chap:2}
 
 
@@ -75,6 +75,7 @@ Finally, when considering morphologies, be they visual or automatic, for a sampl
 
 The general approach is such that, for a galaxy of a given size and brightness, a sample of other galaxies with similar characteristics will statistically share the same mix of morphologies. Thus the GZ2 main galaxy sample is binned by Petrosian absolute magnitude (M$_r$) and the Petrosian half-light radius, R$_{50}$,  as well as by redshift. A baseline morphology ratio is computed in the lowest redshift bin for those galaxies in the same with confirmed spectroscopic redshifts and with sufficient numbers of votes to yield statistically reliable classifications. This basiline is then used to correct more distant redshift bins. A more detailed account can be found in \cite{Willett2013}.
 
+This thesis draws on the \textit{raw} vote fractions for reasons explained in Chapter \ref{chap:3}. Focus now turns to the methodology of measuring automatic morphological indictors which are used in Chapter \ref{chap:4} to train a machine classifier. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%		SECTION: 	AUTOMATIC MORPHOLOGY INDICATORS
@@ -85,20 +86,22 @@ Any machine classifier must have a set of features from which to learn to differ
 In this work we draw on the Zurich Estimator of Structural Types (ZEST~\citep{Scarlata2007}). ZEST utilized five features measured from the light profile of galaxy imaging combined with a PCA analaysis to determine morphology for 120K COSMOS galaxies. These features are well known to correlate strongly with the distinction between early- and late-type galaxies. In this chapter we discuss how we measure these same features for the SDSS galaxy sample of GZ2. 
 
 \subsection{Imaging data}
-The Galaxy Zoo 2 galaxy sample was originally composed of 295305 subjects. However, the catalog paper published by \cite{Willett2013} provided classifications for only 285XXX. In a private conversation with the author, the remaining $\sim$10K galaxies in the GZ2 sample were unfit for classification for one reason or another and were thus excluded. However, as we explain in the next chapter, we use volunteer classifications from the original GZ2 database which includes classifications of these $\sim$10K galaxies. Because it is possible that these galaxies could have their morphology more accurately characterized by machine (as opposed to human classifications during the GZ2 project), we thus attempted to obtain SDSS imaging for the full GZ2 sample. 
+The Galaxy Zoo 2 galaxy sample was originally composed of 295305 subjects. However, the catalog paper published by \cite{Willett2013} provided classifications for only 285XXX. In a private conversation with the author, the remaining $\sim$10K galaxies in the GZ2 sample were unfit for classification for one reason or another and were thus excluded [is this because they were the galaxies with m$_r$ > 17.0??. However, as we explain in the next chapter, we use volunteer classifications from the original GZ2 database which includes classifications of these $\sim$10K galaxies. Because it is possible that these galaxies could have their morphology more accurately characterized by machine (as opposed to human classifications during the GZ2 project), thus obtaining SDSS imaging for the full GZ2 sample is attempted.  
 
-We obtain $i$-band imaging from SDSS Data Release 12 for 290059 galaxies in the GZ2 project. We draw from the meta data associated with each subject in the catalog of GZ2 galaxies. This includes the RUN, CAMCOL, FIELD, etc. Because the original GZ2 project obtained imaging from DR7, we find that the route to some galaxies in DR12 no longer exists thus explaining the loss of 5246 galaxy images. Because this represents such a small percentage of the total population we did not dig further to find said imaging at this time. 
+$i$-band imaging (with central wavelength 7480\AA) from SDSS Data Release 12 is obtained for 290,059 galaxies in the GZ2 project. These are drawn from the meta data associated with each subject in the catalog of GZ2 galaxies which includes the RUN, CAMCOL, FIELD, etc, location indicators specificaly for SDSS imaging data. Because the original GZ2 project obtained imaging from DR7, it is surmised that the route to some galaxies in DR12 no longer exist thus explaining the loss of 5246 galaxy images. Because this represents such a small percentage [XXX] of the total population these galaxies were not tracked down at this time.
 
-We successfully download SDSS fields for the remaining galaxies. We use the SDSS measured value of the Petrosian radius to create postage stamps from the SDSS fields for each galaxy with dimensions of 4 Petrosian radii, where the galaxy of interest is centered on the stamp. Galaxies located within 4 Petrosian radii of the edge of a field were excluded as we did not perform mosaicing. This removed 7962 galaxies from our sample.
+151,987 SDSS fields were successfully downloaded for the remaining galaxies in the sample. Because each SDSS field is $\sim$130 square arcminutes, most fields contain more than one galaxy in the GZ2 sample.  Postage stamps of each galaxy are cut from these fields where the dimensions of each cutout are 4$\times$Petrosian radius as measured by the SDSS pipeline. Galaxies located within 4 Petrosian radii of the edge of a field were excluded as image mosaicing was not performed. This removed 7962 galaxies from our sample resulting in a final sample of 282,350 GZ2 galaxy postage stamps. A random sample of these postage stamps is shown in Figure .  
 
-Thus, we retain 282350 GZ2 galaxies that undergo morphological diagnostic measurement. 
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/sextractor_example.pdf}
+\caption{I'MMA FUCKING CAPTION BISH}
+\label{fig: segmaps}
+\end{figure}
+
 
 \subsection{Image cleaning}
-Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo an extensive cleaning process. Sources in each stamp are identified via a two-stage SExtractor \citep[ver. 2.8.6;][]{sextractor} process. The first pass is designed to identify bright sources while the second pass is better optimized to pick up fainter objects. Segmentation maps are created for each pass and the main object is identified as that closest to the center of the stamp.  From these segmentation maps, the galaxy light in pixels of nearby sources are replaced with values that correspond to the distribution of the background for that postage stamp. 
+These postage stamps next undergo a cleaning process in order to remove the light from nearby sources so as not to contaminate the light profile of the galaxy of interest. Each stamp is processed through Source Extractor \citep[ver. 2.8.6;][]{sextractor}, a software that automatically detects sources in CCD imaging based on a set of input parameters that control its sensitivity. Two sets of parameters are used: the first is designed to identify bright sources while the second is better optimized to detect fainter objects. This software produces segmentation maps that identify the boundaries of each detected object in an image. By design, the galaxy of interest is located at the center of the cutout. Extraneous sources are then identifed from both the bright and faint segmentation maps and the pixels corresponding to these sources are replaced with a random value consistent with the background in that postage stamp.  An example of the segmentation maps created during this process is shown in Figure \ref{fig: segmaps}, while Figures XXX-XXX depict random samples of original and cleaned cutouts for a variety of ``difficulties''. To zeroth order, the difficulty of successfully cleaning an image of all stray light from other nearby sources is dependent upon how many other sources exist in the postage stamp and how close those sources are to the galaxy of interest. 
 
- GIVE EXAMPLES??  YES. 
-
- How many bad? How bad are the bad? What did I do to try to catch the bad? 
 
 % From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
 \begin{table}
