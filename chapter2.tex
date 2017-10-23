@@ -1,25 +1,90 @@
 %!TEX root = thesis.tex
 
-\chapter{Data: Galaxy Zoo and Nonparametric Morphology Diagnostics}
+\chapter{Galaxy Zoo and morphology too}
 \label{chap:2}
 
 
-Compare sample against sersic index, SDSS concentration, split by morphology, etc. 
-How galaxy zoo works -- how galaxy zoo got its data
+This chapter presents all data used in this research. It begins with an in depth overview of the Galaxy Zoo 2 project, including the galaxy sample and classification procurement. It then covers in considerable detail the methodology for obtaining the morphological structural indicators measured for the Galaxy Zoo 2 sample. 
 
-\section{Introduction}
-Add something to this intro about a brief overview of our method (??) Talk about why we choose Galaxy Zoo 2 in particular to run simulations on. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		SECTION: 	GALAXY SAMPLE SELECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Galaxy Zoo}
+Founded by co-creators Chris Lintott and Kevin Schawinksi, Galaxy Zoo is a crowd-sourced innitiative to visually classify large numbers of galaxies by asking members of the general public. It began in 2007 with the classification of 893,212 galaxy images from the Sloan Digital Sky Survey (SDSS) Data Release 6 with $r < 17.77$ Petrosian AB magnitudes \cite{Strauss2002,Adelman2008}. The first iteration of the project was simplistic, inviting volunteers to determine whether a galaxy was elliptical, spiral, or a star / artifact. The project was an immediate success both in terms of the public interest and the resulting science. Following the completion of GZ1 \cite{Lintott2008}, over a dozen peer-reviewed articles utilzing GZ1 classifications\footnote{\url{https://www.zooniverse.org/about/publications}} were published. In addition to explorations of galaxy morphology and its dependence on color and environment \cite{Skibba2009, Bamford2009}, significant results also included substantial populations of red disks \cite{Masters2010b}, blue ellipticals \cite{Schawinski2009}, and discoveries of rare objects such as the ``green peas'' \cite{Cardamone2009}, and Hanny's Voorwerp \cite{Lintott2009}, the first obvservation of a AGN ionization echo. 
+
+The early sucess of GZ1 led to several subsequent and progressively more complex projects. To date, Galaxy Zoo has provided morphologies for over a million galaxies from multiple imaging surveys of various wavebands and redshifts using classifications provided from over a million volunteers. A summary of Galaxy Zoo projects is given in Table XXX. The current research uses data specifically from the Galaxy Zoo 2 (GZ2) project \cite{Willett2013}, the immediate successor of GZ1. The following sections provide an overview of the project specifics including the galaxy sample, the decision tree structure, and a brief description of how volunteer ``clicks'' are converted into useful classifications. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		SUBSECTION:		GALAXY SAMPLE SELECTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Galaxy sample selection}
+The original GZ1 project sought broad classifications for nearly one million galaxies in SDSS. Due to the sheer number of galaxies to quantify, the morphologies collected were broad, seeking to determine between early-type, late-type and mergers. However, much can be gained by probing more detailed morpholgies such as the existance of bars, bulges, dust lanes, rings, etc. Galaxy Zoo 2 thus selected the nearest and brightest 25\% of galaxies from the original GZ1 sample, galaxies for which fine morphological structure could be resolved and classified. Pulled from Data Release 7 Legacy catalog \cite{Abazajian2009} which imaged the the North Galactic Cap, this galaxy sample required the Petrosian half-light magnitude be brighter than 17.0 in the r-band, along with a size limit such that petror90\_r $>3$, where petror90\_r is the radius containing 90\% of the r-band Petrosian aperture flux. Spectroscopic redshifts were pulled from the SDSS Main Galaxy Sample \cite{Strauss2002} and galaxies outside of $0.0005 < z < 0.25$ were removed, though objects without reported redshifts remained in the sample. This resulted in a sample of 273,783 galaxies. 
+
+In addition to the DR7 Legacy catalog, galaxies were included from Stripe 82, a multipy-imaged strip along the celestial equator in the Southern Galactic Cap. Galaxies in this region were selected to have $m_r\le17.7$. GZ2 included multiple sets from this region: a set of 21,522 single-exposure images (though only about half conformed to the shallower Legacy magnitude cut specified above), and two sets of $\sim$30K co-added images from multiple exposures resulting in an object detection limit approximately two magnitudes deeper than the normal depth imaging. The research presented in this thesis utilizes the final GZ2 single-depth sample consisting of 295,305 galaxies of which 11,334 have the deeper magnitude limit. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		SUBSECTION:		GZ2 DECISION TREE / PROJECT HISTORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{GZ2 decision tree and project history}
+Using GZ2 nomenclature, a \textit{classification} is the total amount of information about a subject obtained by completing all tasks in the decision tree. Each step in the tree is a \textit{task} consisting of a \textit{question} and a set of \textit{responses}. A volunteer's response is referred to as a \textit{vote}. With the exception of the first question, subsequent tasks depended on the response to the current question. The first question in the tree is a modification of the GZ1 project, asking volunteers to identify whether a galaxy is `smooth', has `features or a disk', or is a `star or artifact'. The full decision tree is shown in Figure \ref{fig: gz2 decision tree}. Volunteers are allowed to select a single option for each question and are immediately taken to the next task after responding. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		FIGURE: 	GZ2 DECISION TREE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{Figures/gz2_tree.pdf}
+\caption{AHMAH MUTHAFUCKIN CAPTION BITCHES}
+\label{fig: gz2 decision tree}
+\end{figure}
+
+For the single-depth sample, volunteers were shown color images generated from the SDSS ImgCutout web service. Each image is a $gri$ color composite scaled to $0.02\times$petror90\_r. Throughout the life of GZ2 these images were drawn randomly with the exception that towards the end of the project, galaxy images with few responses were shown more frequently in order to ensure that each galaxy had a sufficient number of classifications to adequately charactrize the likelihood of the classification distribution. This resulted in a median of 44 classifications per galaxy with a wide spread (Show Kyle's figure?). The full project spanned just over 14 months with the final dataset consisting of over 16 million classifications from over 80 thousand volunteers. 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		FIGURE: 	GZ2 WEB INTERFACE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{Figures/GZ2interface.pdf}
+\caption{AHMAH MUTHAFUCKIN CAPTION BITCHES}
+\label{fig: gz2 interface}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		SUBSECTION: 	DATA REDUCTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data reduction}
+The GZ2 catalog publishes several types of morphologies computed from volunteer classifications constisting of a vote fractrion for each response to every task, denoted $f_{\mathrm{response}}$. The most basic of these is computed simply as $f_r = n_r/n_t$, where $n_r$ is the number of votes of response $r$, and $n_t$ is the total number of votes for task $t$. In future chapters, this type of vote fraction is referred to as the \textit{raw} vote fraction as no post-processing has been performed. 
+
+All GZ project perform a weighting scheme that evaulates the consistency of individual volunteers by assessing how their votes deviate from the majority for each task in the decision tree. This process effectively downweights volunteers whose responses are consistent with a random classifier. A volunteer's consistency, $\kappa$, for a given task is defined as 
+
+\begin{equation}
+\kappa = \frac{1}{N_r}\sum_{i=1}^{N_r}{\kappa_i}
+\end{equation}
+where $N_r$ is the total number of responses to a task, and $\kappa_i$ is $f_r$ if the volunteer's vote corresponds to response $i$, otherwise $\kappa=(1-f_r)$. Each volunteer is then assigned a mean consistency, $\bar\kappa$, which is the average consistency over all tasks. A weighting function is then applied according to  
+
+\begin{equation}
+w = \min({1.0, (\bar\kappa/0.6)^{8.5}}).
+\end{equation}
+
+All vote fractions are then recomputed using the volunteer weights and the process is repeated three times to assure convergence. The resulting vote fractions are dubbed \textit{weighted}. For GZ2, $w=1$ for $\sim$95\% of volunteers and thus the majority are treated equally. It's important to note that there is no up-weighting of exceptionally consistent volunteers.
+
+
+Finally, when considering morphologies, be they visual or automatic, for a sample of galaxies in a small redshift range it is unlikely that galaxy evolution plays a major role in morphology variations. Thus, the presumed culprit is instead classification bias in that galaxies in the more distant universe tend to be, on average, smaller and dimmer. This obscures identification of features such as spiral arms, bars, and more. GZ2 corrects for this effect, briefly described below, producing \textit{debiased} vote fractions.
+
+The general approach is such that, for a galaxy of a given size and brightness, a sample of other galaxies with similar characteristics will statistically share the same mix of morphologies. Thus the GZ2 main galaxy sample is binned by Petrosian absolute magnitude (M$_r$) and the Petrosian half-light radius, R$_{50}$,  as well as by redshift. A baseline morphology ratio is computed in the lowest redshift bin for those galaxies in the same with confirmed spectroscopic redshifts and with sufficient numbers of votes to yield statistically reliable classifications. This basiline is then used to correct more distant redshift bins. A more detailed account can be found in \cite{Willett2013}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%		SECTION: 	AUTOMATIC MORPHOLOGY INDICATORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Automatic morphology indicators}
 Any machine classifier must have a set of features from which to learn to differentiate between classes. These features can be anything: pixel values, spectra, anything that can correlates well enough with the class boundary that the machine can learn that boundary. Choosing which features are most appropriate for each task is not necessarily straight-forward or easy. Too few features, and the machine will not be able to learn the things that define each class. Too many features and machine training time could increase substantially or, worse, training will be subjected to the Curse of Dimensionality: with increasing parameter space dimensionality, the number of samples required to learn that parameter space increases exponetially! 
 
 In this work we draw on the Zurich Estimator of Structural Types (ZEST~\citep{Scarlata2007}). ZEST utilized five features measured from the light profile of galaxy imaging combined with a PCA analaysis to determine morphology for 120K COSMOS galaxies. These features are well known to correlate strongly with the distinction between early- and late-type galaxies. In this chapter we discuss how we measure these same features for the SDSS galaxy sample of GZ2. 
 
-
-\section{Galaxy Zoo}
-Describe all things galaxy zoo here: the types of galaxies, the decision tree, the way the project was originally run. Basically, give an overview of Kyle's paper! 
-
-
-\section{Data}
+\subsection{Imaging data}
 The Galaxy Zoo 2 galaxy sample was originally composed of 295305 subjects. However, the catalog paper published by \cite{Willett2013} provided classifications for only 285XXX. In a private conversation with the author, the remaining $\sim$10K galaxies in the GZ2 sample were unfit for classification for one reason or another and were thus excluded. However, as we explain in the next chapter, we use volunteer classifications from the original GZ2 database which includes classifications of these $\sim$10K galaxies. Because it is possible that these galaxies could have their morphology more accurately characterized by machine (as opposed to human classifications during the GZ2 project), we thus attempted to obtain SDSS imaging for the full GZ2 sample. 
 
 We obtain $i$-band imaging from SDSS Data Release 12 for 290059 galaxies in the GZ2 project. We draw from the meta data associated with each subject in the catalog of GZ2 galaxies. This includes the RUN, CAMCOL, FIELD, etc. Because the original GZ2 project obtained imaging from DR7, we find that the route to some galaxies in DR12 no longer exists thus explaining the loss of 5246 galaxy images. Because this represents such a small percentage of the total population we did not dig further to find said imaging at this time. 
@@ -28,7 +93,7 @@ We successfully download SDSS fields for the remaining galaxies. We use the SDSS
 
 Thus, we retain 282350 GZ2 galaxies that undergo morphological diagnostic measurement. 
 
-\section{Image Cleaning}
+\subsection{Image cleaning}
 Because we seek to measure the galaxy's light profile, the existence of nearby galaxies will significantly hinder this endeavor. To mitigate this effect, postage stamps undergo an extensive cleaning process. Sources in each stamp are identified via a two-stage SExtractor \citep[ver. 2.8.6;][]{sextractor} process. The first pass is designed to identify bright sources while the second pass is better optimized to pick up fainter objects. Segmentation maps are created for each pass and the main object is identified as that closest to the center of the stamp.  From these segmentation maps, the galaxy light in pixels of nearby sources are replaced with values that correspond to the distribution of the background for that postage stamp. 
 
  GIVE EXAMPLES??  YES. 
@@ -36,8 +101,6 @@ Because we seek to measure the galaxy's light profile, the existence of nearby g
  How many bad? How bad are the bad? What did I do to try to catch the bad? 
 
 % From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
-GZ2 contained 295305 galaxies but only ~285K were published with actual classifications (Kyle told me why once but I forgot). Because all 295K are in the GZ2 database, I attempt to measure morphologies for all of them, whether or not they have a published GZ2 classification. (This is because the volunteer votes associated with these subjects remain in the database and are not excluded from our SWAP simulation.)
-
 \begin{table}
 	\begin{tabular}{|l|c|}
 		\hline
@@ -49,39 +112,55 @@ GZ2 contained 295305 galaxies but only ~285K were published with actual classifi
 		M$_{20}$					& 282154 \\
 		Asymmetry 					& 282256 \\
 		Gini coefficient			& 282252 \\
-		Elipticity ($1 - b/a$)		& 282337 \\
+		Ellipticity ($1 - b/a$)		& 282337 \\
 		\hline
 	\end{tabular}
 \end{table}
 
-\section{Morphology Diagnostics}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/measure_morph_bin1.pdf}
+\caption[Examples of image cleaning and morphology diagnostic measurements]{words words words I'm a fucking caption!}
+\label{fig: clean examples}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/measure_morph_hardest.pdf}
+\caption[Examples of image cleaning and morphology diagnostic measurements]{words words words I'm a fucking caption!}
+\label{fig: clean examples}
+\end{figure}
+
+
+\subsection{Morphology indicators}
 Once the postage stamps have been cleaned of nearby galaxies, measurements of the light profile can commence. The first stage in this process is the measurement of the Petrosian radius. 
->>> PETROSIAN 1979
 
 Compare my petro-rad to SDSS? --It doesn't look good. 
 
-We use the Petrosian radius to define the aperture size for some of the following morphology measurements. [why did I measure my own instead of using SDSS??]
+We use the Petrosian radius to define the aperture size for some of the following morphology measurements. [why did I measure my own instead of using SDSS??] I have no idea. 
 
-We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps:
+We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps
 
+
+\subsubsection{Concentration}
 Concentration is computed as $C = 5\log(r_{80}/ r_{20})$ where \rr{80} and \rr{20} are the
 radii containing 80\% and 20\% of the galaxy light respectively.  Small values of this ratio 
 tend to indicate disky galaxies, while larger values correlate with early-type ellipticals. 
 
-Asymmetry quantifies the degree of rotational symmetry in the galaxy light distribution
- (not necessarily the physical shape of the galaxy as this parameter is not highly sensitive 
-to low surface brightness features). A correction for background noise is applied (as in e.g.~\cite{Conselice2000}), i.e., 
+\subsubsection{Asymmetry}
+Asymmetry quantifies the degree of rotational symmetry in the galaxy light distribution (not necessarily the physical shape of the galaxy as this parameter is not highly sensitive to low surface brightness features). A correction for background noise is applied (as in e.g.~\cite{Conselice2000}), i.e., 
 \begin{equation}
 A = \frac{\sum_{x,y} |I - I_{180}|}{ 2\sum|I|} - B_{180}
 \end{equation}
 where $I$ is the galaxy flux in each pixel $(x, y)$, $I_{180}$ is the image rotated by 180 degrees about the galaxy's central pixel, and $B_{180}$ is the average asymmetry of the background. 
 
+\subsubsection{Gini coefficient}
 The Gini coefficient, $G$,~\citep{Glasser1962, Abraham2003} describes how uniformly distributed a galaxy's flux is.  If $G$ is 0, the flux is distributed homogeneously among all galaxy pixels; if $G$ is 1,  the light is contained within a single pixel. This term correlates with $C$, however, $G$ does not require that the flux be in the central region of the galaxy.  We follow~\cite{Lotz2004} by first ordering the pixels by increasing flux value, and then computing
 \begin{equation}
 G = \frac{1}{|\bar X|n(n-1)}\sum_i^n(2i-n-1)|X_i|
 \end{equation}
 where $n$ is the number of pixels assigned to the galaxy, and $\bar X$ is the mean pixel value. 
 
+\subsubsection{M$_{20}$}
 \M{20}~\citep{Lotz2004} is the second order moment of the brightest 20\% of the galaxy flux. We compute it as
 \begin{eqnarray}
  M_{tot} & = & \sum_i^nf_i[(x_i-x_c)^2 + (y_i-y_c)^2]  \\
@@ -89,15 +168,23 @@ where $n$ is the number of pixels assigned to the galaxy, and $\bar X$ is the me
 \end{eqnarray}
 where M$_{tot}$, the total moment, is computed first and $f_{tot}$ is the total flux. For centrally concentrated objects, \M{20} correlates with $C$ but is also sensitive to bright off-centre knots of light. 
 
+\subsubsection{Ellipticity}
 Finally, we use the ellipticity, $\epsilon = 1 - b/a$, of the light distribution as measured by SExtractor which computes the semi-major axis $a$ and semi-minor axis $b$ from the second-order moments of the galaxy light.  
 
 In total, we measure morphological indicators for 282,350 SDSS galaxies. The relations between these diagnostics for the full sample is shown in the right panel of Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
 
 
 
-\section{Comparison with other samples}
+\subsection{Comparison with other samples}
 \begin{figure*}[t!]
 \includegraphics[width=3.7in]{Figures/human_machine/A2b.pdf}
 \caption{\textit{Left.} Identifying~\feat~subjects is independent of identifying~\notfeat~subjects.  Both ROC curves use all subjects processed by SWAP where the score used to create the ROC curve is simply each subject's achieved posterior probability. The Featured curve demonstrates how well we identify~\feat~subjects with a threshold of 0.99, while the Not Featured curve demonstrates how well we identify~\notfeat~subjects with a threshold of 0.004. Typically, best performance is achieved by the score associated with the upper-left-most part of the curve. Our~\feat~threshold is nearly optimal, while our~\notfeat~threshold could be improved since the blue square is not as close to the upper left hand corner as other possible values of the subject posterior. \textit{Right.} Relation between measured morphology diagnostics for more than 280K SDSS galaxies. Most of these galaxies are processed through SWAP, receiving a posterior probability that estimates how likely each is to be~\feat~or~\notfeat.}
 \label{fig: morph thresh}
 \end{figure*}
+
+
+Compare sample against sersic index, SDSS concentration, split by morphology, etc. 
+
+
+\section{Catalog of morphological indicators for 282350 SDSS galaxies}
+Put in a big table here with a subsample of the catalog? Link to somewhere online where the rest of the catalog can be found? 

@@ -1,6 +1,12 @@
 \begin{thebibliography}{}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
+\bibitem[{{Abazajian} {et~al.}(2009){Abazajian}, {Adelman-McCarthy},
+  {Ag{\"u}eros}, {Allam}, {Allende Prieto}, {An}, {Anderson}, {Anderson},
+  {Annis}, {Bahcall}, \& et~al.}]{Abazajian2009}
+{Abazajian}, K.~N., {Adelman-McCarthy}, J.~K., {Ag{\"u}eros}, M.~A., {et~al.}
+  2009, \apjs, 182, 543
+
 \bibitem[{{Abraham} {et~al.}(1996){Abraham}, {Tanvir}, {Santiago}, {Ellis},
   {Glazebrook}, \& {van den Bergh}}]{Abraham1996}
 {Abraham}, R.~G., {Tanvir}, N.~R., {Santiago}, B.~X., {et~al.} 1996, \mnras,
@@ -14,6 +20,35 @@
 \bibitem[{{Abraham} {et~al.}(2003){Abraham}, {van den Bergh}, \&
   {Nair}}]{Abraham2003}
 {Abraham}, R.~G., {van den Bergh}, S., \& {Nair}, P. 2003, \apj, 588, 218
+
+\bibitem[{{Adelman-McCarthy} {et~al.}(2008){Adelman-McCarthy}, {Ag{\"u}eros},
+  {Allam}, {Allende Prieto}, {Anderson}, {Anderson}, {Annis}, {Bahcall},
+  {Bailer-Jones}, {Baldry}, {Barentine}, {Bassett}, {Becker}, {Beers}, {Bell},
+  {Berlind}, {Bernardi}, {Blanton}, {Bochanski}, {Boroski}, {Brinchmann},
+  {Brinkmann}, {Brunner}, {Budav{\'a}ri}, {Carliles}, {Carr}, {Castander},
+  {Cinabro}, {Cool}, {Covey}, {Csabai}, {Cunha}, {Davenport}, {Dilday}, {Doi},
+  {Eisenstein}, {Evans}, {Fan}, {Finkbeiner}, {Friedman}, {Frieman},
+  {Fukugita}, {G{\"a}nsicke}, {Gates}, {Gillespie}, {Glazebrook}, {Gray},
+  {Grebel}, {Gunn}, {Gurbani}, {Hall}, {Harding}, {Harvanek}, {Hawley},
+  {Hayes}, {Heckman}, {Hendry}, {Hindsley}, {Hirata}, {Hogan}, {Hogg}, {Hyde},
+  {Ichikawa}, {Ivezi{\'c}}, {Jester}, {Johnson}, {Jorgensen}, {Juri{\'c}},
+  {Kent}, {Kessler}, {Kleinman}, {Knapp}, {Kron}, {Krzesinski}, {Kuropatkin},
+  {Lamb}, {Lampeitl}, {Lebedeva}, {Lee}, {French Leger}, {L{\'e}pine}, {Lima},
+  {Lin}, {Long}, {Loomis}, {Loveday}, {Lupton}, {Malanushenko}, {Malanushenko},
+  {Mandelbaum}, {Margon}, {Marriner}, {Mart{\'{\i}}nez-Delgado}, {Matsubara},
+  {McGehee}, {McKay}, {Meiksin}, {Morrison}, {Munn}, {Nakajima}, {Neilsen},
+  {Newberg}, {Nichol}, {Nicinski}, {Nieto-Santisteban}, {Nitta}, {Okamura},
+  {Owen}, {Oyaizu}, {Padmanabhan}, {Pan}, {Park}, {Peoples}, {Pier}, {Pope},
+  {Purger}, {Raddick}, {Re Fiorentin}, {Richards}, {Richmond}, {Riess}, {Rix},
+  {Rockosi}, {Sako}, {Schlegel}, {Schneider}, {Schreiber}, {Schwope}, {Seljak},
+  {Sesar}, {Sheldon}, {Shimasaku}, {Sivarani}, {Allyn Smith}, {Snedden},
+  {Steinmetz}, {Strauss}, {SubbaRao}, {Suto}, {Szalay}, {Szapudi}, {Szkody},
+  {Tegmark}, {Thakar}, {Tremonti}, {Tucker}, {Uomoto}, {Vanden Berk},
+  {Vandenberg}, {Vidrih}, {Vogeley}, {Voges}, {Vogt}, {Wadadekar}, {Weinberg},
+  {West}, {White}, {Wilhite}, {Yanny}, {Yocum}, {York}, {Zehavi}, \&
+  {Zucker}}]{Adelman2008}
+{Adelman-McCarthy}, J.~K., {Ag{\"u}eros}, M.~A., {Allam}, S.~S., {et~al.} 2008,
+  \apjs, 175, 297
 
 \bibitem[{{Appenzeller} {et~al.}(1998){Appenzeller}, {Fricke}, {F{\"u}rtig},
   {G{\"a}ssler}, {H{\"a}fner}, {Harke}, {Hess}, {Hummel}, {J{\"u}rgens},
@@ -332,6 +367,12 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Lintott}, C.~J., {Schawinski}, K., {Slosar}, A., {et~al.} 2008, \mnras, 389,
   1179
 
+\bibitem[{{Lintott} {et~al.}(2009){Lintott}, {Schawinski}, {Keel}, {van Arkel},
+  {Bennert}, {Edmondson}, {Thomas}, {Smith}, {Herbert}, {Jarvis}, {Virani},
+  {Andreescu}, {Bamford}, {Land}, {Murray}, {Nichol}, {Raddick}, {Slosar},
+  {Szalay}, \& {Vandenberg}}]{Lintott2009}
+{Lintott}, C.~J., {Schawinski}, K., {Keel}, W., {et~al.} 2009, \mnras, 399, 129
+
 \bibitem[{{Loeb} \& {Rybicki}(1999)}]{LoebRybicki1999}
 {Loeb}, A., \& {Rybicki}, G.~B. 1999, \apj, 524, 527
 
@@ -349,6 +390,12 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Cornen}, {Baumer}, {Simpson}, {Lintott}, {Miller}, {Paget}, {Simpson},
   {Smith}, {K{\"u}ng}, {Saha}, \& {Collett}}]{Marshall2016}
 {Marshall}, P.~J., {Verma}, A., {More}, A., {et~al.} 2016, \mnras, 455, 1171
+
+\bibitem[{{Masters} {et~al.}(2010){Masters}, {Mosleh}, {Romer}, {Nichol},
+  {Bamford}, {Schawinski}, {Lintott}, {Andreescu}, {Campbell}, {Crowcroft},
+  {Doyle}, {Edmondson}, {Murray}, {Raddick}, {Slosar}, {Szalay}, \&
+  {Vandenberg}}]{Masters2010b}
+{Masters}, K.~L., {Mosleh}, M., {Romer}, A.~K., {et~al.} 2010, \mnras, 405, 783
 
 \bibitem[{{Masters} {et~al.}(2011){Masters}, {Nichol}, {Hoyle}, {Lintott},
   {Bamford}, {Edmondson}, {Fortson}, {Keel}, {Schawinski}, {Smith}, \&
@@ -493,6 +540,12 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   {Francis}, {Palunas}, {Siana}, {Williger}, \& {Woodgate}}]{Scarlata2009}
 {Scarlata}, C., {Colbert}, J., {Teplitz}, H.~I., {et~al.} 2009, \apj, 706, 1241
 
+\bibitem[{{Schawinski} {et~al.}(2009){Schawinski}, {Lintott}, {Thomas},
+  {Sarzi}, {Andreescu}, {Bamford}, {Kaviraj}, {Khochfar}, {Land}, {Murray},
+  {Nichol}, {Raddick}, {Slosar}, {Szalay}, {VandenBerg}, \&
+  {Yi}}]{Schawinski2009}
+{Schawinski}, K., {Lintott}, C., {Thomas}, D., {et~al.} 2009, \mnras, 396, 818
+
 \bibitem[{{Schawinski} {et~al.}(2014){Schawinski}, {Urry}, {Simmons},
   {Fortson}, {Kaviraj}, {Keel}, {Lintott}, {Masters}, {Nichol}, {Sarzi},
   {Skibba}, {Treister}, {Willett}, {Wong}, \& {Yi}}]{Schawinski2014}
@@ -548,6 +601,12 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 \bibitem[{{Simmons} \& {Stewart}(1985)}]{SimmonsStewart1985}
 {Simmons}, J.~F.~L., \& {Stewart}, B.~G. 1985, \aap, 142, 100
 
+\bibitem[{{Skibba} {et~al.}(2009){Skibba}, {Bamford}, {Nichol}, {Lintott},
+  {Andreescu}, {Edmondson}, {Murray}, {Raddick}, {Schawinski}, {Slosar},
+  {Szalay}, {Thomas}, \& {Vandenberg}}]{Skibba2009}
+{Skibba}, R.~A., {Bamford}, S.~P., {Nichol}, R.~C., {et~al.} 2009, \mnras, 399,
+  966
+
 \bibitem[{{Smethurst} {et~al.}(2016){Smethurst}, {Lintott}, {Simmons},
   {Schawinski}, {Bamford}, {Cardamone}, {Kruk}, {Masters}, {Urry}, {Willett},
   \& {Wong}}]{Smethurst2016}
@@ -598,6 +657,15 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   {York}}]{Strateva2001}
 {Strateva}, I., {Ivezi{\'c}}, {\v Z}., {Knapp}, G.~R., {et~al.} 2001, \aj, 122,
   1861
+
+\bibitem[{{Strauss} {et~al.}(2002){Strauss}, {Weinberg}, {Lupton}, {Narayanan},
+  {Annis}, {Bernardi}, {Blanton}, {Burles}, {Connolly}, {Dalcanton}, {Doi},
+  {Eisenstein}, {Frieman}, {Fukugita}, {Gunn}, {Ivezi{\'c}}, {Kent}, {Kim},
+  {Knapp}, {Kron}, {Munn}, {Newberg}, {Nichol}, {Okamura}, {Quinn}, {Richmond},
+  {Schlegel}, {Shimasaku}, {SubbaRao}, {Szalay}, {Vanden Berk}, {Vogeley},
+  {Yanny}, {Yasuda}, {York}, \& {Zehavi}}]{Strauss2002}
+{Strauss}, M.~A., {Weinberg}, D.~H., {Lupton}, R.~H., {et~al.} 2002, \aj, 124,
+  1810
 
 \bibitem[{{Taniguchi} \& {Shioya}(2000)}]{Taniguchi2000}
 {Taniguchi}, Y., \& {Shioya}, Y. 2000, \apjl, 532, L13
