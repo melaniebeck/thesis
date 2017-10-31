@@ -100,25 +100,7 @@ $i$-band imaging (with central wavelength 7480\AA) from SDSS Data Release 12 is 
 
 
 \subsection{Image cleaning}
-These postage stamps next undergo a cleaning process in order to remove the light from nearby sources so as not to contaminate the light profile of the galaxy of interest. Each stamp is processed through Source Extractor \citep[ver. 2.8.6;][]{sextractor}, a software that automatically detects sources in CCD imaging based on a set of input parameters that control its sensitivity. Two sets of parameters are used: the first is designed to identify bright sources while the second is better optimized to detect fainter objects. This software produces segmentation maps that identify the boundaries of each detected object in an image. By design, the galaxy of interest is located at the center of the cutout. Extraneous sources are then identifed from both the bright and faint segmentation maps and the pixels corresponding to these sources are replaced with a random value consistent with the background in that postage stamp.  An example of the segmentation maps created during this process is shown in Figure \ref{fig: segmaps}, while Figures XXX-XXX depict random samples of original and cleaned cutouts for a variety of ``difficulties''. To zeroth order, the difficulty of successfully cleaning an image of all stray light from other nearby sources is dependent upon how many other sources exist in the postage stamp and how close those sources are to the galaxy of interest. 
-
-
-% From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
-\begin{table}
-	\begin{tabular}{|l|c|}
-		\hline
-		Full Galaxy Zoo 2 sample 	& 295305 \\
-		\hline
-		\hline
-		Successful cutouts 			& 282350 \\
-		Concentration				& 281945 \\
-		M$_{20}$					& 282154 \\
-		Asymmetry 					& 282256 \\
-		Gini coefficient			& 282252 \\
-		Ellipticity ($1 - b/a$)		& 282337 \\
-		\hline
-	\end{tabular}
-\end{table}
+These postage stamps next undergo a cleaning process in order to remove the light from nearby sources so as not to contaminate the light profile of the galaxy of interest. Each stamp is processed through Source Extractor \citep[ver. 2.8.6;][]{sextractor}, a software that automatically detects sources in CCD imaging based on a set of input parameters that control its sensitivity. Two sets of parameters are used: the first is designed to identify bright sources while the second is better optimized to detect fainter objects. This software produces segmentation maps that identify the boundaries of each detected object in an image. By design, the galaxy of interest is located at the center of the cutout. Extraneous sources are then identifed from both the bright and faint segmentation maps and the pixels corresponding to these sources are replaced with a random value consistent with the background in that postage stamp.  An example of the segmentation maps created during this process is shown in Figure \ref{fig: segmaps}, while the first two columns in Figures XXX-XXX depict random samples of original and cleaned cutouts for a variety of ``difficulties''. To zeroth order, the difficulty of successfully cleaning an image of all stray light from other nearby sources is dependent upon how many other sources exist in the postage stamp and how close those sources are to the galaxy of interest. 
 
 
 \begin{figure}
@@ -135,48 +117,95 @@ These postage stamps next undergo a cleaning process in order to remove the ligh
 
 
 \subsection{Morphology indicators}
-Once the postage stamps have been cleaned of nearby galaxies, measurements of the light profile can commence. The first stage in this process is the measurement of the Petrosian radius. 
+Defining the flux associated with a galaxy is a challenging task: galaxies do not have constant radial surface brightness, hard edges, or uniform shapes. Ideally, one would measure the total flux associated with a galaxy but this requires modelling of the light profile in addition to high signal-to-noise ratio in the outermost parts of the galaxy. Instead one could measure the flux within some isophote but unfortunately the fraction of light included within is dependent on the amplitude of the galaxy's surface brightness which diminishes due to cosmological redshift and Galactic extinction. To combat these issues, it is common practice to use the \cite{Petrosian1976} system  which is computes a radius defined by the empirical shape of the galaxy's light profile. Specifically, the Petrosian radius, $r_p$, is such that the ratio of the surface brightness at $r_p$ to the mean surface brightness within $r_p$ is equal to a fixed value $\eta$, i.e., 
 
-Compare my petro-rad to SDSS? --It doesn't look good. 
-
-We use the Petrosian radius to define the aperture size for some of the following morphology measurements. [why did I measure my own instead of using SDSS??] I have no idea. 
-
-We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps
-
-
-\subsubsection{Concentration}
-Concentration is computed as $C = 5\log(r_{80}/ r_{20})$ where \rr{80} and \rr{20} are the
-radii containing 80\% and 20\% of the galaxy light respectively.  Small values of this ratio 
-tend to indicate disky galaxies, while larger values correlate with early-type ellipticals. 
-
-\subsubsection{Asymmetry}
-Asymmetry quantifies the degree of rotational symmetry in the galaxy light distribution (not necessarily the physical shape of the galaxy as this parameter is not highly sensitive to low surface brightness features). A correction for background noise is applied (as in e.g.~\cite{Conselice2000}), i.e., 
 \begin{equation}
-A = \frac{\sum_{x,y} |I - I_{180}|}{ 2\sum|I|} - B_{180}
+\eta = \frac{\mu(r_p)}{\bar\mu(r<r_p)}
 \end{equation}
-where $I$ is the galaxy flux in each pixel $(x, y)$, $I_{180}$ is the image rotated by 180 degrees about the galaxy's central pixel, and $B_{180}$ is the average asymmetry of the background. 
+where $\eta$ is traditionally set to 0.2. Because this is a ratio of surface brightnesses, cosmological factors affecting surface brightness no longer arise. 
 
-\subsubsection{Gini coefficient}
-The Gini coefficient, $G$,~\citep{Glasser1962, Abraham2003} describes how uniformly distributed a galaxy's flux is.  If $G$ is 0, the flux is distributed homogeneously among all galaxy pixels; if $G$ is 1,  the light is contained within a single pixel. This term correlates with $C$, however, $G$ does not require that the flux be in the central region of the galaxy.  We follow~\cite{Lotz2004} by first ordering the pixels by increasing flux value, and then computing
+In practice, $r_p$ is computed by first generating a set of elliptical annuli centered on the galaxy and equidistant in logspace. The number of annuli is determined by the size of the postage stamp. Elliptical apertures minimize the contribution from noisy background pixels. The position angle and galaxy center are taken from the SExtractor catalogs generated ealier. For each annulus, $\mu(r_i)$ is computed as the flux within the annulus divided by the annulus area, while $\mu(r<r_i)$ is computed as the total flux integrated to the center of that annulus divided by $\pi r_i^2$. This provides a crude estimate of $\eta$ which is then interpolated onto a finer set of radial values and $r_p$ is that radius for which the $eta$ intersects 0.2. Examples of surface brightness profilea are shown in Figure XXX. XX demonstrates a case in which the cleaning algorithm did not fully remove nearby contaminating light from other sources. This results in an $\eta$ that never crosses the 0.2 threshold. As a correction the excess light in the outer component is fit with a linear relation and a constant value subtracted from  the surface brightness profile. We next use these values of the Petrosian radius measured for X\% of our galaxies (\% catastrophic failures) to compute the following morphology diagnostics.
+
+%We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps
+
+
+%\subsubsection{Concentration}
+Concentration is defined in several slightly different ways with the aim being to measure the ratio of the light within an inner aperture to that within an outer aperture. Small values of this ratio typically indicate disky galaxies, while larger values correlate with early-type ellipticals. We use the following definition \citep{Bershady2000}:
+
+\begin{equation}{}
+C = 5\log\Big(\frac{r_{80}}{r_{20}}\Big) 
+\end{equation}
+where \rr{80} and \rr{20} are the radii containing 80\% and 20\% of the total galaxy light respectively where we define the total flux as that within $r_p$ and the galaxy center is that determined by the asymmetry minimization \cite[described below,][]{Lotz2004}. A random sample of concentration measurements can be seen in the middle column of Figures XXX-XXX. 
+
+The asymmetry parameter, $A$, quantifies the degree of rotational symmetry in the galaxy light distribution, not necessarily the physical shape of the galaxy as this is not highly sensitive to low surface brightness features. $A$ is measured by subtracting the galaxy image rotated by 180$^{\circ}$. A correction for background noise is applied (as in e.g.~\cite{Conselice2000, Lotz2004}), i.e., 
 \begin{equation}
-G = \frac{1}{|\bar X|n(n-1)}\sum_i^n(2i-n-1)|X_i|
+A = \frac{\sum_{x,y} |I(i,j) - I_{180}(i,j)|}{ 2\sum|I(i,j)|} - B_{180}
 \end{equation}
-where $n$ is the number of pixels assigned to the galaxy, and $\bar X$ is the mean pixel value. 
+where $I$ is the galaxy flux in each pixel $(x, y)$, $I_{180}$ is the image rotated by 180 degrees about the galaxy's central pixel, and $B_{180}$ is the average asymmetry of the background. $A$ is summed over all pixels within $r_p$ of the galaxy's center and then normalized by a corresponding measure in the original image. The center is determined by minimizing $A$ as described in \cite{Conselice2000}. Briefly, an initial central pixel is chosen and $A$ computed. Then asymmetry is calculated again in a $3\times3$ grid about that central pixel. If one of these produces a lower value of $A$, it becomes the new center and the process repeats until a minimum is found. This is a crucial step as \cite{Conselice2000} find that a small difference can change the asymmetry by up to 50\%. Additionally, the effects due to noise must also be corrected. This is accomplished by selecting a blank portion of the cutout with the same pixel area as defined for the $A$ measurement.  $A$ is computed as before, including the minimization, and this value then constitutes $B_{180}$. A random sample displaying the apertures and asymmetry centers are shown in the fourth columns of Figures XXX-XXX. 
 
-\subsubsection{M$_{20}$}
-\M{20}~\citep{Lotz2004} is the second order moment of the brightest 20\% of the galaxy flux. We compute it as
-\begin{eqnarray}
- M_{tot} & = & \sum_i^nf_i[(x_i-x_c)^2 + (y_i-y_c)^2]  \\
- M_{20} & = & \log_{10} (\frac{\sum_iM_i}{M_{tot}}), ~~\textrm{while} \sum_ifi < 0.2f_{tot}
-\end{eqnarray}
-where M$_{tot}$, the total moment, is computed first and $f_{tot}$ is the total flux. For centrally concentrated objects, \M{20} correlates with $C$ but is also sensitive to bright off-centre knots of light. 
+The Gini coefficient, $G$, has long been used in econometrics as a measure of inequality by estimating the concentration of wealth in a nation's population. It is based on the Lorenz curve \citep{Lorenz1905} which is constructed by mapping the cumulative proportion of the population ranked by wealth onto the corresponding cumulative proportion of the size of their wealth. More formally, if $X$ is a positive random variable with cumulative distribution function $F(x)$ then the Lorenz curve goes as   
+\begin{equation}
+L(p) = \frac{1}{\bar X}\int^p_0 F^{-1}(u)~du,
+\end{equation}
+where $p$ is the percentile of the poorest denizens, and $\bar X$ is the mean over all values of $X_i$, a random deviate drawn from $X$. $G$ is then a summary statistic of this curve describing the mean of the absolute difference between all combinations of $X_i$:
 
-\subsubsection{Ellipticity}
-Finally, we use the ellipticity, $\epsilon = 1 - b/a$, of the light distribution as measured by SExtractor which computes the semi-major axis $a$ and semi-minor axis $b$ from the second-order moments of the galaxy light.  
+\begin{equation}
+G = \frac{1}{2\bar Xn(n-1)}\sum_{i=1}^n\sum_{j=1}^n\Big|X_i - X_j\Big|.
+\end{equation}
+This statistic was first applied to the distribution of a galaxy's light by \cite{Abraham2003} and further developed by \cite{Lotz2004}. In these terms, $G$ is 0 when the galaxy's flux is distributed homogeneously among all assigned pixels, and 1 if the light is concentrated within a single pixel. $G$ can be calculated more efficiently if the $X_i$ are first sorted into increasing order and then computing \citep{Glasser1962}
+\begin{equation}
+G = \frac{1}{|\bar X|n(n-1)}\sum_i^n(2i-n-1)|X_i|,
+\end{equation}
+where $n$ is the number of pixels assigned to the galaxy. Here we follow \cite{Lotz2004} by taking the absolute value of the flux, $X_i$, because in pixels with low signal-to-noise the flux is scattered to values below the mean sky level resulting in negative flux values for the faintest pixels. 
 
-In total, we measure morphological indicators for 282,350 SDSS galaxies. The relations between these diagnostics for the full sample is shown in the right panel of Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
+Assigning pixels to each galaxy must be given due consideration. As \cite{Lotz2004} point out, including too many sky pixels will systematically increase $G$, while exclusion of low surface brightness galaxy pixels will decrease $G$. \cite{Abraham2003} measure $G$ for pixels above a given surface brightness threshold but this will fall prey to cosmological effects. In this work, we compute $G$ from all pixels within $r_p$. This will exclude some low surface brightness features, especially for galaxies with faint, extended elements. However, this definition puts every galaxy on equal footing, and as explained in Chapter ???, any inherent systematics due to this choice will have little affect on the outcome of our machine learning algorithm. The last column in Figures XXX-XXX show examples of $G$.
+
+%\subsubsection{M$_{20}$}
+\M{20}~\citep{Lotz2004} is the second order moment of the brightest 20\% of the galaxy flux. It traces the spacial distribution of any bright galactic features such as nuclei, bars, spiral arms, or star-forming clusters. It is computed by first calculating the total moment as
+\begin{equation}
+ M_{\mathrm{tot}} = \sum_i^n M_i = \sum_i^nf_i[(x_i-x_c)^2 + (y_i-y_c)^2] 
+\end{equation}
+where $f_i$ is the flux in pixel $x_i$, $y_i$, and $x_c$, $y_c$ is the galaxy's center which is determined by minimizing $M_{tot}$ in a similar fashion as is done for the asymmetry. The galaxy pixels are then ranked by flux in descending order and $M_i$ is summed over the brightest pixels until that sum equals 20\% of the total galaxy flux, normalized by $M_{\mathrm{tot}}$:
+\begin{equation}
+ M_{20} = \log_{10} \Big( \frac{\sum_iM_i}{M_{\mathrm{tot}}} \Big), ~~\textrm{while} \sum_if_i < 0.2f_{\mathrm{tot}}
+\end{equation}
+where $f_{tot}$ is the total flux defined within $r_p$. For centrally concentrated objects, \M{20} correlates with $C$ but is also sensitive to bright off-centre knots of light. 
+
+It's worth noting that both \M{20} and $G$ are correlated with $C$, but with key differences. Because $G$ is a measure of concentration it correlates strongly with $C$, especially for local galaxies \cite{Abraham2003}. However, $G$ is independent of spatial distribution: whereas $C$ measures the concentration in the central region of a galaxy, $G$ is sensitive to any concentration of light: centralized or not. M$_{20}$ takes this a step further with its key difference being a strong $r^2$ dependence. It is strongly weighted by the spatial distribution of bright regions but these need not be centralized either.  Indeed, when $G$ and \M{20} are taken together they are highly adept at identifying merging galaxies \citep{Lotz2004}.  
 
 
+%\subsubsection{Ellipticity}
+For our final morphology diagnostic, we use the ellipticity, $\epsilon = 1 - b/a$, of the light distribution as measured by SExtractor which computes the semi-major axis $a$ and semi-minor axis $b$ from the second-order moments of the galaxy light. The ellipticity of a galaxy correlates strongly with edge-on galaxies. 
+
+In total, we measure morphological indicators for 282,350 SDSS galaxies. Some galaxies are lost at each stage of the measurement process due to various failures. For example, if the Petrosian radius is not well measured, no morphology diagnostics are computed for that galaxy. The number of galaxies measured for each of the morphology diagnostics is listed in Table \ref{tab:morph numbers}.  The relations between these diagnostics for the full sample is shown in Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
+
+
+% From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
+\begin{table*}[]
+	\centering
+	\caption[Summary of morphology measurements]{}
+	\label{tab:morph numbers}
+	\let\mc\multicolumn
+	\begin{tabular}{lcccc}
+		\mc5c{ \textbf{Morphology measurement summary}} \\
+		\hline \hline
+		Full Galaxy Zoo 2 sample  & 	& 295305 &	 &   (\%) \\
+		\hline
+		Successful cutouts 		& 	& 282350 &	&	95.6 \\
+		Petrosian radius		&	& 282334 &	&	95.6 \\
+		Concentration			&	& 281957 &	&	95.5 \\
+		M$_{20}$				&	& 282166 &	&	95.6 \\
+		Asymmetry 				&	& 282269 &	&	95.3 \\
+		Gini coefficient		&	& 282337 &	&	95.6 \\
+		Ellipticity ($1 - b/a$)	&	& 282350 &	&	95.6 \\
+		\hline
+	\end{tabular}
+\end{table*}
+
+\subsection{Uncertainties and systematics}
+Here goes all the stuff I've worked on this week. 
+
+Gini coefficient sucks \citep{Lisker2008}.
 
 \subsection{Comparison with other samples}
 \begin{figure*}[t!]
@@ -191,3 +220,26 @@ Compare sample against sersic index, SDSS concentration, split by morphology, et
 
 \section{Catalog of morphological indicators for 282350 SDSS galaxies}
 Put in a big table here with a subsample of the catalog? Link to somewhere online where the rest of the catalog can be found? 
+
+
+\begin{deluxetable}{lccccccccc}
+\rotate
+\tablecolumns{10}
+\tablewidth{0pt}
+\tablecaption{Morphology Diagnostics for $\sim$283K SDSS Galaxies in the GZ2 Sample}
+\tablehead{
+	\colhead{DR7 objID} &
+	\colhead{RA}		&
+	\colhead{DEC}		&
+	\colhead{R$_p$}		&
+	\colhead{$C$}		&
+	\colhead{$A$}		&
+	\colhead{\M{20}}	&
+	\colhead{$G$}		&
+	\colhead{e}			&
+	\colhead{flags}		
+}
+\startdata
+587722981736054938 & 170.749 &	-1.25746 &	44.09 & 2.556 & 0.0243 & -1.888 & 0.539 & 4.289 &	\\
+\enddata
+\end{deluxetable}

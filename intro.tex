@@ -50,31 +50,75 @@ This thesis details a solution to the scalability of galaxy morphology designati
 Brief overview of how galaxies form and the dizzying variety of morphologies. 
 
 
-\secton{Standard morphological categorizations}
-briefly discuss the Hubble tuning fork. Explain the difference between elliptical, spiral and in-between galaxies. As well as irregulars/peculiars. 
+\section{Standard morphology designations}
+\begin{figure}
+\centering
+\includegraphics[width=4.5in]{Figures/Masters_tuningfork.jpg}
+\caption[Hubble tuning fork]{i'm a caption}
+\label{fig: tuning fork}
+\end{figure}
+
+The oldest and arguably simplest system for categorizing galaxy morphology dates back to the 1930s and Edwin Hubble's famous ``tuning fork''. Based on a small sample, Hubble classified galaxies into two major groups, elliptical and spiral. Visually, elliptical galaxies possessed a smooth light distribution while spirals are characterized by well-defined disk structure with spiral arms. Hubble assigned a number to elliptical galaxies denoting the degree of their ellipticity, where 0 corresponds to a nearly perfectly round galaxy and 7 being highly elongated. Spirals were given additional designation in the form of letters a through c, characterizing the compactness of their spiral arms. For example, ``Sa'' galaxies are tightly wound, whereas "Sc" spirals are looser. The spiral category was then further subdivided by galaxies that exhibited a central bar. There is also indications that the bulges inherent to many spiral galaxies share a close connection to elliptical galaxies. 
+
+It became common to call galaxies on the left side of the diagram ``early-types,'' and those on the right ``late-types''. Contrary to this author's belief, Hubble never intended these designations to imply galactic evolution. Instead, this terminology was borrowed from stars, where massive O and B stars were referred to as ``early-type'', while older stars were known as ``late-type''\citep{Buta2011}. It has subsequently become clear that, much to the contrary, ellipticals are dominated by late-type stars while disk galaxies are typically composed of young, early-type stars.  Unfortunately, the misnomer has stuck. 
+
+%This hybrid category, denoted S0 on the tuning-fork diagram, was originally thought to be a transition stage between these two fundamental galaxy types. Additionally, it was surmised that galaxies travelled along the Hubble tuning fork from left to right. While this theory has literally been turned on its head, astronomers are unfortunately left with the misnomer of ``early-'' and ``late''-type galaxies referring to ellipticals and spirals respectiively. 
+
+
+This method of galaxy classification was based on an extremely small sample of which only a few percent did not conform to the basic designations originally posited by Hubble. These leftover galaxies were dubbed ``Irregulars'' or ``peculiars''. It wasn't until much later that it was discovered these types of galaxies are far more prevalant than Hubble originally thought. Since this early attempt at classification, several other systems have been put forward but most share the same basic categories. Indeed, even this simplistic approach has yielded nearly a hundred years of science that has advanced our understanding of galaxy formation, structure, and evolution. 
+ 
 
 
 \section{Morphology as a tracer of galaxy evolution}
-then segue into how those different morphologies provide detailed insights into formation and evolution. Give examples of the science that can be gleaned from broad classifications (early- vs late-type galaxies), and how rare classifications can provide unique viewpoints (clumpy galaxies at low redshift, or green peas, i.e.)
+Though simple, these basic categories have proved to then segue into how those different morphologies provide detailed insights into formation and evolution. Give examples of the science that can be gleaned from broad classifications (early- vs late-type galaxies), and how rare classifications can provide unique viewpoints (clumpy galaxies at low redshift, or green peas, i.e.)
 
-Brief review of why we care about morphology -- i.e., it correlates with all kinds of sciency bits so we should keep doing it. 
+Any theory of galaxy formation and evolution will
+have to, at some point, account for the bewildering array of galactic forms. --Buta
+ Galaxy morphology is strongly correlated with galactic star formation history. Galaxies
+where star formation ceased gigayears ago tend to look very different from those where star
+formation continues at the present time. 
 
-\subsection{Mass and luminosity}
 
-\subsection{Morphology-density relation}
-A relationship between morphology and the density in which the galaxy resides has been known for some time. It has been found that in the richest and densest clusters of galaxies, the dominant morphology is elliptical, while for field galaxies, the dominant morphology is spiral. Furthermore, it's been determined that this relation evolves over time, at least for the densest environments. All of this points to scenarios in which the environment of a galaxy dictates, or influences its morphology and that the processes contributing to this effect have evolved with time. \citep[e.g.,][]{Fasano2000, Shen2003, Smith2005, Peng2010}
+\subsection{Stellar populations and star-formation histories}
+At its heart, morphology simply traces an integrated 2D projection of a galaxy's light distribution. As such, it encodes information on the distribution of a galaxy's stellar, gas, and dust content. However, these components are best traced through different wavelengths of light. 
 
-Spirals convert to S0/elliptical galaxies in clusters due to several processes: they should have lost their cold atomic and molecular gas via ram pressure stripping (but see Tonnesen & Bryan 2009, for the effect of ram
+Consider a coevolving stellar population with a mass distribution according to your favorite initial mass function. Stars on the Main Sequence (MS) radiate in the blue and ultraviolet (UV) end of the spectrum due to their high effective temperatures. The most massive quickly evolve off the MS and become red supergiants causing a decrease in the UV flux and an increase in the near infrared (NIR). As the low mass stars in this stellar population continue to evolve off the MS, the UV flux steadily decreases until eventually the red giant branch becomes the dominant source of flux, radiating in the IR. This so-called \textit{passive} evolution indicates that as a galaxy ages it becomes redder. A galaxy's morphology is tightly correlated with its color: massive elliptical galaxies are typically referred to as ``red and dead,'' possessing old stellar populations, while disk galaxies are generally still undergoing star formation and thus possess young, bluer stellar populations \citep[e.g.,][]{Strateva2001,Baldry2004b, Cirasuolo2007, Taylor2015}. This dichotomy is so prevalent that color has been used as a proxy for morphology when acquiring the latter was impractical \citep[e.g.,][]{Shen2003, Blanton2003c}. 
+
+Furthermore, this color bimodality correlates with luminosity resulting in the color-magnitude relation (CMR) \citep{Baldry2004a, Bell2004}. Now ubiquitous, this relation visualizes the separation of galaxy colors as a function of luminosity resulting in three main categories: the blue cloud, the red sequence and, more recently recognized, the green valley. Studies have shown that the red sequence is dominated by early-type galaxies like elliptical/S0 while disk galaxies reside in the blue cloud. There is a distinct gap between these two galaxy populations but recent studies have shown that, though sparse, galaxies also reside here. The top panel of Figure XXX \citep[credit:][]{Kormendy2012} shows an example of the color-magnitude relation for a sample of SDSS galaxies while the bottom panel depicts a schematic of the associated morphologies. 
+
+For early-type galaxies, the color-magnitude relationship is more significant and provides a tool to constrain the star-formation histories of this galaxy population \citep{Sandage1978, Tully1982}. There exists a degeneracy between the age and metallicity of stellar populations: though older stars tend to be redder, this effect can also be achieved through an increase in stellar metallicity. It is now believed that the slope of the CMR is due primarily to metallitcy effects \citep{Bower1992, Kodama1997}, which then allows for age estimates to be placed on the last episode of significant star formation in early-type galaxies \citep[e.g.,][]{LopezCruz2004}. The small scatter in this relation reflects that these galaxies have old, pasively evolving stellar populations. 
+
+put this somewhere \citep{Mei2009}
+%Galaxies contain more than just stars; gas and dust can also alter a galaxy's morphology. Dust is thought to be produced in AGB stars and distributed to the interstellar medium via stellar winds. Disk galaxies typically have more dust than ellipticals indicating that early-type galaxies expelled their dust content via dramatic mergers \citep{some people}. Blue light is more strongly attenuated than red light. This causes the dust to heat and radiate in the IR making a galaxy appear redder than it would otherwise. Another, more dramatic example of dust's effect on a galaxy's morphology is the dust lanes exhibited by many spiral galaxies. 
+
+%It is clear that to fully understand a galaxy's composition, studying the morphology through observations across the electromagnitic spectrum is necessary: cold dust indicative of recent galaxy-galaxy interaction can be determine through radio observations of HI gas; infrared observations shed light on the dust content and old stellar components, visual and UV observations trace ever stellar nurseries, and high energy observations like X-rays give a tantalizing peak at what lurks in the bulges of active galaxies. 
+
+
+\subsection{Mass and luminosity functions and galactic growth}
+The most fundamental characteristic of a galaxy is its mass, however, this is a difficult quantitty to measure. Much easier, instead, is a measurement of a galaxy's luminosity which takes only an image to estimate. Mass and luminosity are strongly correlated. The correlation of morphology with luminosity also implies a dependence on galaxy mass. A cottage industry for decades, constructing mass and luminosity functions has provided insights into baryonic mass build-up over cosmic time. 
+
+When you split galaxies up by their fundamental morphologies, early- and late-types, one finds that the brightest and hence, most massive systems are elliptical. 
+
+Mass build up over cosmic time: galaxies grow differently based on their morphology. Bivariate mass-luminosity function. Shen2003. Ellipticals gain X amount of mass since z~1 but only gain how much in size? On the other hand, disks are entirely different... suggests different growth mechanisms demarcated by optical morphology. 
+
+stellar mass functions for disks and spheriods \citep{Thanjavur2016,Bell2003}
+mass assembly history \citep{Bundy2005, Taylor2015, Brinchmann2000}
+luminosity and mass functions \citep{Blanton2003b, Blanton2001}
+
+
+\subsection{Morphology as a function of environment}
+A galaxy's environment also has a direct relationship with its morphology. First quantified by \cite{Dressler1980}, the morphology-density relation is an emperical observation that elliptical galaxies tend to reside in the densest environments, i.e., rich groups and clusters, at all stages of cosmic time. in the richest and densest clusters of galaxies, the dominant morphology is elliptical, while for field galaxies, the dominant morphology is spiral. Furthermore, it's been determined that this relation evolves over time, at least for the densest environments. All of this points to scenarios in which the environment of a galaxy dictates, or influences its morphology and that the processes contributing to this effect have evolved with time. \citep[e.g.,][]{Fasano2000, Shen2003, Smith2005, Peng2010}
+
+Much study has been done to separate the effects of environment from mass, i.e., secular, causes of morphological features. Peng, Shen,,etc. Cluster environments are, compared to the field, extremely hot and dense. Galaxies residing in these environments have faster velocity, on average. (What kind of v is that called again? I forgot.)  It's estimated that field galaxies are, on average, 1 per Mpc (?). The merging rate depends on the density of galaxies. In the past galaxies were closer together so merging was a bigger deal. Logically then, it would seem that merging happens all the timein clusters and that this then causes a morphological change from disk to elliptical. However, galaxies are moving so briskly in clusters that it becomes less likely that they collide! Instead, merging seems to be a predominant morphological mechanism in groups rather than clusters. In clusters, instead, other physical processes shape the way a galaxy evolves and looks over time. 
+
+Spirals convert to S0/elliptical galaxies in clusters due to several processes: they should have lost their cold atomic and molecular gas via ram pressure stripping (but see Tonnesen \& Bryan 2009, for the effect of ram
 pressure on molecular clouds), harassment (Moore et al. 1996),
-strangulation (Kawata & Mulchaey 2008), etc.
+strangulation (Kawata \& Mulchaey 2008), etc.
 
 
-\subsection{Color}
-
-\subsection{Star formation history}
 
 \subsection{Insights from rare morophologies}
-What have we learned from the green peas? Clumpy galaxies at low redshift? Ring galaxies? 
+So far I've examined insights gleaned by considering large populations of galaxies split into broad categories of early- and late-types. Though unbeknownst to Hubble, it is now well known that galaxy structure and hence the integrated light profile is much more complicated and varied. Examing both finer galactic structure such as bars, as well as rare morphologies like the ``green peas'' has pushed the boundaries on our collective knowledge of galaxy evolution. What have we learned from the green peas? Clumpy galaxies at low redshift? Ring galaxies? 
 
 -- insights concerning dynamical disks; star formation; blah. 
 
@@ -105,7 +149,13 @@ Non-paramteric structural indicators require fewer assumptions on the data and a
 Closely related to the Sersic index is the non-paramatric diagnostic of concentration. A galaxy's concentration aims to identify how dense a galaxy's central surface brightness profile is. Concentration, originally conceived by Abraham(?) has had several definitions over the years. The most common consider the ratio of the aggregated light within two concentric apertures about the galaxy's center. Typically, these apertures contain 50 and 90\% of the galaxy's light (another common approach is to use 50\% and 80\%). Because 
 
 
+Example of using parametric Sersic profile to classify galaxies as early-/late-type:
+``We show that the wavelength-dependence of n may be employed to separate visually-classified early- and late-type galaxies in a manner similar to the use of colour and n. Furthermore, we find that the wavelength variation of n can recover galaxies that are misclassified by these other morphological proxies."\citep{Vika2015}
+
 Peng(?) [was that the first?] developed the first model to decompose a galaxy's light profile into 
+
+The radial luminosity profile of a disk is usually exponential, with departures from an
+exponential being due to the presence of other structures. --Buta
 
 Another approach has been the automated extraction of morphologies with the development of parametric \citep{Sersic1968, Odewahn2002, Peng2002}, and non-parametric 
 \citep{Abraham1994, 

@@ -62,6 +62,18 @@
   {Makarov}, {Makarova}, {McCracken}, {Bijaoui}, \& {Tasca}}]{Baillard2011}
 {Baillard}, A., {Bertin}, E., {de Lapparent}, V., {et~al.} 2011, \aap, 532, A74
 
+\bibitem[{{Baldry} {et~al.}(2004{\natexlab{a}}){Baldry}, {Balogh}, {Bower},
+  {Glazebrook}, \& {Nichol}}]{Baldry2004b}
+{Baldry}, I.~K., {Balogh}, M.~L., {Bower}, R., {Glazebrook}, K., \& {Nichol},
+  R.~C. 2004{\natexlab{a}}, in American Institute of Physics Conference Series,
+  Vol. 743, The New Cosmology: Conference on Strings and Cosmology, ed. R.~E.
+  {Allen}, D.~V. {Nanopoulos}, \& C.~N. {Pope}, 106--119
+
+\bibitem[{{Baldry} {et~al.}(2004{\natexlab{b}}){Baldry}, {Glazebrook},
+  {Brinkmann}, {Ivezi{\'c}}, {Lupton}, {Nichol}, \& {Szalay}}]{Baldry2004a}
+{Baldry}, I.~K., {Glazebrook}, K., {Brinkmann}, J., {et~al.}
+  2004{\natexlab{b}}, \apj, 600, 681
+
 \bibitem[{{Ball} {et~al.}(2004){Ball}, {Loveday}, {Fukugita}, {Nakamura},
   {Okamura}, {Brinkmann}, \& {Brunner}}]{Ball2004}
 {Ball}, N.~M., {Loveday}, J., {Fukugita}, M., {et~al.} 2004, \mnras, 348, 1038
@@ -80,6 +92,15 @@
 \bibitem[{{Basu-Zych} \& {Scharf}(2004)}]{Basu-Zych2004}
 {Basu-Zych}, A., \& {Scharf}, C. 2004, \apjl, 615, L85
 
+\bibitem[{{Bell} {et~al.}(2003){Bell}, {McIntosh}, {Katz}, \&
+  {Weinberg}}]{Bell2003}
+{Bell}, E.~F., {McIntosh}, D.~H., {Katz}, N., \& {Weinberg}, M.~D. 2003, \apjs,
+  149, 289
+
+\bibitem[{{Bell} {et~al.}(2004){Bell}, {Wolf}, {Meisenheimer}, {Rix}, {Borch},
+  {Dye}, {Kleinheinrich}, {Wisotzki}, \& {McIntosh}}]{Bell2004}
+{Bell}, E.~F., {Wolf}, C., {Meisenheimer}, K., {et~al.} 2004, \apj, 608, 752
+
 \bibitem[{{Bershady} {et~al.}(2000){Bershady}, {Jangren}, \&
   {Conselice}}]{Bershady2000}
 {Bershady}, M.~A., {Jangren}, A., \& {Conselice}, C.~J. 2000, \aj, 119, 2645
@@ -87,12 +108,35 @@
 \bibitem[{{Bertin} \& {Arnouts}(1996)}]{sextractor}
 {Bertin}, E., \& {Arnouts}, S. 1996, \aaps, 117, 393
 
-\bibitem[{{Blanton} {et~al.}(2003){Blanton}, {Hogg}, {Bahcall}, {Baldry},
-  {Brinkmann}, {Csabai}, {Eisenstein}, {Fukugita}, {Gunn}, {Ivezi{\'c}},
-  {Lamb}, {Lupton}, {Loveday}, {Munn}, {Nichol}, {Okamura}, {Schlegel},
-  {Shimasaku}, {Strauss}, {Vogeley}, \& {Weinberg}}]{Blanton2003}
-{Blanton}, M.~R., {Hogg}, D.~W., {Bahcall}, N.~A., {et~al.} 2003, \apj, 594,
-  186
+\bibitem[{{Blanton} {et~al.}(2001){Blanton}, {Dalcanton}, {Eisenstein},
+  {Loveday}, {Strauss}, {SubbaRao}, {Weinberg}, {Anderson}, {Annis}, {Bahcall},
+  {Bernardi}, {Brinkmann}, {Brunner}, {Burles}, {Carey}, {Castander},
+  {Connolly}, {Csabai}, {Doi}, {Finkbeiner}, {Friedman}, {Frieman}, {Fukugita},
+  {Gunn}, {Hennessy}, {Hindsley}, {Hogg}, {Ichikawa}, {Ivezi{\'c}}, {Kent},
+  {Knapp}, {Lamb}, {Leger}, {Long}, {Lupton}, {McKay}, {Meiksin}, {Merelli},
+  {Munn}, {Narayanan}, {Newcomb}, {Nichol}, {Okamura}, {Owen}, {Pier}, {Pope},
+  {Postman}, {Quinn}, {Rockosi}, {Schlegel}, {Schneider}, {Shimasaku},
+  {Siegmund}, {Smee}, {Snir}, {Stoughton}, {Stubbs}, {Szalay}, {Szokoly},
+  {Thakar}, {Tremonti}, {Tucker}, {Uomoto}, {Vanden Berk}, {Vogeley},
+  {Waddell}, {Yanny}, {Yasuda}, \& {York}}]{Blanton2001}
+{Blanton}, M.~R., {Dalcanton}, J., {Eisenstein}, D., {et~al.} 2001, \aj, 121,
+  2358
+
+\bibitem[{{Blanton} {et~al.}(2003{\natexlab{a}}){Blanton}, {Hogg}, {Bahcall},
+  {Baldry}, {Brinkmann}, {Csabai}, {Eisenstein}, {Fukugita}, {Gunn},
+  {Ivezi{\'c}}, {Lamb}, {Lupton}, {Loveday}, {Munn}, {Nichol}, {Okamura},
+  {Schlegel}, {Shimasaku}, {Strauss}, {Vogeley}, \& {Weinberg}}]{Blanton2003c}
+{Blanton}, M.~R., {Hogg}, D.~W., {Bahcall}, N.~A., {et~al.} 2003{\natexlab{a}},
+  \apj, 594, 186
+
+\bibitem[{{Blanton} {et~al.}(2003{\natexlab{b}}){Blanton}, {Hogg}, {Bahcall},
+  {Brinkmann}, {Britton}, {Connolly}, {Csabai}, {Fukugita}, {Loveday},
+  {Meiksin}, {Munn}, {Nichol}, {Okamura}, {Quinn}, {Schneider}, {Shimasaku},
+  {Strauss}, {Tegmark}, {Vogeley}, \& {Weinberg}}]{Blanton2003b}
+---. 2003{\natexlab{b}}, \apj, 592, 819
+
+\bibitem[{{Bower} {et~al.}(1992){Bower}, {Lucey}, \& {Ellis}}]{Bower1992}
+{Bower}, R.~G., {Lucey}, J.~R., \& {Ellis}, R.~S. 1992, \mnras, 254, 601
 
 \bibitem[{{Brandt} \& {Chamberlain}(1959)}]{Brandt1959}
 {Brandt}, J.~C., \& {Chamberlain}, J.~W. 1959, \apj, 130, 670
@@ -103,10 +147,19 @@
 \bibitem[{Breiman(2001)}]{Breiman2001}
 Breiman, L. 2001, Machine Learning, 45, 5
 
+\bibitem[{{Brinchmann} \& {Ellis}(2000)}]{Brinchmann2000}
+{Brinchmann}, J., \& {Ellis}, R.~S. 2000, \apjl, 536, L77
+
+\bibitem[{{Bundy} {et~al.}(2005){Bundy}, {Ellis}, \& {Conselice}}]{Bundy2005}
+{Bundy}, K., {Ellis}, R.~S., \& {Conselice}, C.~J. 2005, \apj, 625, 621
+
 \bibitem[{{Bunker} {et~al.}(2003){Bunker}, {Smith}, {Spinrad}, {Stern}, \&
   {Warren}}]{Bunker2003}
 {Bunker}, A., {Smith}, J., {Spinrad}, H., {Stern}, D., \& {Warren}, S. 2003,
   \apss, 284, 357
+
+\bibitem[{{Buta}(2011)}]{Buta2011}
+{Buta}, R.~J. 2011, arXiv:1102.0550
 
 \bibitem[{{Cantalupo} {et~al.}(2012){Cantalupo}, {Lilly}, \&
   {Haehnelt}}]{Cantalupo2012}
@@ -130,6 +183,12 @@ Breiman, L. 2001, Machine Learning, 45, 5
 \bibitem[{{Chapman} {et~al.}(2004){Chapman}, {Scott}, {Windhorst}, {Frayer},
   {Borys}, {Lewis}, \& {Ivison}}]{Chapman2004}
 {Chapman}, S.~C., {Scott}, D., {Windhorst}, R.~A., {et~al.} 2004, \apj, 606, 85
+
+\bibitem[{{Cirasuolo} {et~al.}(2007){Cirasuolo}, {McLure}, {Dunlop}, {Almaini},
+  {Foucaud}, {Smail}, {Sekiguchi}, {Simpson}, {Eales}, {Dye}, {Watson}, {Page},
+  \& {Hirst}}]{Cirasuolo2007}
+{Cirasuolo}, M., {McLure}, R.~J., {Dunlop}, J.~S., {et~al.} 2007, \mnras, 380,
+  585
 
 \bibitem[{{Colbert} {et~al.}(2011){Colbert}, {Scarlata}, {Teplitz}, {Francis},
   {Palunas}, {Williger}, \& {Woodgate}}]{Colbert2011}
@@ -331,8 +390,14 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series,
   6
 
+\bibitem[{{Kodama} \& {Arimoto}(1997)}]{Kodama1997}
+{Kodama}, T., \& {Arimoto}, N. 1997, \aap, 320, 41
+
 \bibitem[{{Kormendy}(1977)}]{Kormendy1977}
 {Kormendy}, J. 1977, \apj, 217, 406
+
+\bibitem[{{Kormendy} \& {Bender}(2012)}]{Kormendy2012}
+{Kormendy}, J., \& {Bender}, R. 2012, \apjs, 198, 2
 
 \bibitem[{{Kormendy} \& {Kennicutt}(2004)}]{KK04}
 {Kormendy}, J., \& {Kennicutt}, Jr., R.~C. 2004, \araa, 42, 603
@@ -373,8 +438,20 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Szalay}, \& {Vandenberg}}]{Lintott2009}
 {Lintott}, C.~J., {Schawinski}, K., {Keel}, W., {et~al.} 2009, \mnras, 399, 129
 
+\bibitem[{{Lisker}(2008)}]{Lisker2008}
+{Lisker}, T. 2008, \apjs, 179, 319
+
 \bibitem[{{Loeb} \& {Rybicki}(1999)}]{LoebRybicki1999}
 {Loeb}, A., \& {Rybicki}, G.~B. 1999, \apj, 524, 527
+
+\bibitem[{{L{\'o}pez-Cruz} {et~al.}(2004){L{\'o}pez-Cruz}, {Barkhouse}, \&
+  {Yee}}]{LopezCruz2004}
+{L{\'o}pez-Cruz}, O., {Barkhouse}, W.~A., \& {Yee}, H.~K.~C. 2004, \apj, 614,
+  679
+
+\bibitem[{{Lorenz}(1905)}]{Lorenz1905}
+{Lorenz}, M.~O. 1905, Publications of the American Statistical Association,
+  Volume 9, Number 70, p.~209-219, 9, 209
 
 \bibitem[{{Lotz} {et~al.}(2004){Lotz}, {Primack}, \& {Madau}}]{Lotz2004}
 {Lotz}, J.~M., {Primack}, J., \& {Madau}, P. 2004, \aj, 128, 163
@@ -420,6 +497,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 
 \bibitem[{{Meert} {et~al.}(2016){Meert}, {Vikram}, \& {Bernardi}}]{Meert2016}
 {Meert}, A., {Vikram}, V., \& {Bernardi}, M. 2016, \mnras, 455, 2440
+
+\bibitem[{{Mei} {et~al.}(2009){Mei}, {Holden}, {Blakeslee}, {Ford}, {Franx},
+  {Homeier}, {Illingworth}, {Jee}, {Overzier}, {Postman}, {Rosati}, {Van der
+  Wel}, \& {Bartlett}}]{Mei2009}
+{Mei}, S., {Holden}, B.~P., {Blakeslee}, J.~P., {et~al.} 2009, \apj, 690, 42
 
 \bibitem[{{More} {et~al.}(2016){More}, {Verma}, {Marshall}, {More}, {Baeten},
   {Wilcox}, {Macmillan}, {Cornen}, {Kapadia}, {Parrish}, {Snyder}, {Davis},
@@ -496,6 +578,9 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   {Simons}}]{Peth2016}
 {Peth}, M.~A., {Lotz}, J.~M., {Freeman}, P.~E., {et~al.} 2016, \mnras, 458, 963
 
+\bibitem[{{Petrosian}(1976)}]{Petrosian1976}
+{Petrosian}, V. 1976, \apjl, 209, L1
+
 \bibitem[{{Plaszczynski} {et~al.}(2014){Plaszczynski}, {Montier}, {Levrier}, \&
   {Tristram}}]{Plaszczynski2014}
 {Plaszczynski}, S., {Montier}, L., {Levrier}, F., \& {Tristram}, M. 2014,
@@ -528,6 +613,9 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 
 \bibitem[{{Sandage}(1961)}]{Sandage1961}
 {Sandage}, A. 1961, {The Hubble atlas of galaxies}
+
+\bibitem[{{Sandage} \& {Visvanathan}(1978)}]{Sandage1978}
+{Sandage}, A., \& {Visvanathan}, N. 1978, \apj, 223, 707
 
 \bibitem[{{Scarlata} {et~al.}(2007){Scarlata}, {Carollo}, {Lilly}, {Sargent},
   {Feldmann}, {Kampczyk}, {Porciani}, {Koekemoer}, {Scoville}, {Kneib},
@@ -670,11 +758,32 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 \bibitem[{{Taniguchi} \& {Shioya}(2000)}]{Taniguchi2000}
 {Taniguchi}, Y., \& {Shioya}, Y. 2000, \apjl, 532, L13
 
+\bibitem[{{Taylor} {et~al.}(2015){Taylor}, {Hopkins}, {Baldry},
+  {Bland-Hawthorn}, {Brown}, {Colless}, {Driver}, {Norberg}, {Robotham},
+  {Alpaslan}, {Brough}, {Cluver}, {Gunawardhana}, {Kelvin}, {Liske},
+  {Conselice}, {Croom}, {Foster}, {Jarrett}, {Lara-Lopez}, \&
+  {Loveday}}]{Taylor2015}
+{Taylor}, E.~N., {Hopkins}, A.~M., {Baldry}, I.~K., {et~al.} 2015, \mnras, 446,
+  2144
+
+\bibitem[{Thanjavur {et~al.}(2016)Thanjavur, Simard, Bluck, \&
+  Mendel}]{Thanjavur2016}
+Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
+  of the Royal Astronomical Society, 459, 44
+
+\bibitem[{{Tully} {et~al.}(1982){Tully}, {Mould}, \& {Aaronson}}]{Tully1982}
+{Tully}, R.~B., {Mould}, J.~R., \& {Aaronson}, M. 1982, \apj, 257, 527
+
 \bibitem[{{van den Bergh}(1976)}]{vandenBergh1976}
 {van den Bergh}, S. 1976, \apj, 206, 883
 
 \bibitem[{{van Dokkum}(2001)}]{vanDokkum2001}
 {van Dokkum}, P.~G. 2001, \pasp, 113, 1420
+
+\bibitem[{{Vika} {et~al.}(2015){Vika}, {Vulcani}, {Bamford}, {H{\"a}u{\ss}ler},
+  \& {Rojas}}]{Vika2015}
+{Vika}, M., {Vulcani}, B., {Bamford}, S.~P., {H{\"a}u{\ss}ler}, B., \& {Rojas},
+  A.~L. 2015, \aap, 577, A97
 
 \bibitem[{{Vinokur}(1965)}]{Vinokur1965}
 {Vinokur}, M. 1965, Annales d'Astrophysique, 28, 412
