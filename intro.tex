@@ -82,11 +82,17 @@ formation continues at the present time.
 \subsection{Stellar populations and star-formation histories}
 At its heart, morphology simply traces an integrated 2D projection of a galaxy's light distribution. As such, it encodes information on the distribution of a galaxy's stellar, gas, and dust content. However, these components are best traced through different wavelengths of light. 
 
-Consider a coevolving stellar population with a mass distribution according to your favorite initial mass function. Stars on the Main Sequence (MS) radiate in the blue and ultraviolet (UV) end of the spectrum due to their high effective temperatures. The most massive quickly evolve off the MS and become red supergiants causing a decrease in the UV flux and an increase in the near infrared (NIR). As the low mass stars in this stellar population continue to evolve off the MS, the UV flux steadily decreases until eventually the red giant branch becomes the dominant source of flux, radiating in the IR. This so-called \textit{passive} evolution indicates that as a galaxy ages it becomes redder. A galaxy's morphology is tightly correlated with its color: massive elliptical galaxies are typically referred to as ``red and dead,'' possessing old stellar populations, while disk galaxies are generally still undergoing star formation and thus possess young, bluer stellar populations \citep[e.g.,][]{Strateva2001,Baldry2004b, Cirasuolo2007, Taylor2015}. This dichotomy is so prevalent that color has been used as a proxy for morphology when acquiring the latter was impractical \citep[e.g.,][]{Shen2003, Blanton2003c}. 
+Consider a coevolving stellar population with a mass distribution according to your favorite initial mass function. Stars on the Main Sequence (MS) radiate in the blue and ultraviolet (UV) end of the spectrum due to their high effective temperatures. The most massive quickly evolve off the MS and become red supergiants causing a decrease in the UV flux and an increase in the near infrared (NIR). As the low mass stars in this stellar population continue to evolve off the MS, the UV flux steadily decreases until eventually the red giant branch becomes the dominant source of flux, radiating in the IR. This so-called \textit{passive} evolution indicates that as a galaxy ages it becomes redder. A galaxy's morphology is tightly correlated with its color: massive elliptical galaxies are typically referred to as ``red and dead,'' possessing old stellar populations, while disk galaxies are generally still undergoing star formation and thus possess young, bluer stellar populations \citep[e.g.,][]{Strateva2001,Baldry2004b, Cirasuolo2007, Lee2013, Taylor2015}. This dichotomy is so prBevalent that color has been used as a proxy for morphology when acquiring the latter was impractical \citep[e.g.,][]{Shen2003, Blanton2003c}. 
 
 Furthermore, this color bimodality correlates with luminosity resulting in the color-magnitude relation (CMR) \citep{Baldry2004a, Bell2004}. Now ubiquitous, this relation visualizes the separation of galaxy colors as a function of luminosity resulting in three main categories: the blue cloud, the red sequence and, more recently recognized, the green valley. Studies have shown that the red sequence is dominated by early-type galaxies like elliptical/S0 while disk galaxies reside in the blue cloud. There is a distinct gap between these two galaxy populations but recent studies have shown that, though sparse, galaxies also reside here. The top panel of Figure XXX \citep[credit:][]{Kormendy2012} shows an example of the color-magnitude relation for a sample of SDSS galaxies while the bottom panel depicts a schematic of the associated morphologies. 
 
-For early-type galaxies, the color-magnitude relationship is more significant and provides a tool to constrain the star-formation histories of this galaxy population \citep{Sandage1978, Tully1982}. There exists a degeneracy between the age and metallicity of stellar populations: though older stars tend to be redder, this effect can also be achieved through an increase in stellar metallicity. It is now believed that the slope of the CMR is due primarily to metallitcy effects \citep{Bower1992, Kodama1997}, which then allows for age estimates to be placed on the last episode of significant star formation in early-type galaxies \citep[e.g.,][]{LopezCruz2004}. The small scatter in this relation reflects that these galaxies have old, pasively evolving stellar populations. 
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{Figures/kormendy_CMR.png}
+\caption{Color-magnitude (mass) relation schematic \citep[credit:][]{Kormendy2012}.}
+\end{figure}
+
+For early-type galaxies, the color-magnitude relationship is more significant and provides a tool to constrain the star-formation histories of this galaxy population \citep{Sandage1978, Tully1982}. There exists a degeneracy between the age and metallicity of stellar populations: though older stars tend to be redder, this effect can also be achieved through an increase in stellar metallicity. It is now believed that the slope of the CMR is due primarily to metallitcy effects \citep{Bower1992, Kodama1997}, which then allows for age estimates to be placed on the last episode of significant star formation in early-type galaxies \citep[e.g.,][]{LopezCruz2004}. The small scatter in this relation reflects that these galaxies have old, passively evolving stellar populations. 
 
 put this somewhere \citep{Mei2009}
 %Galaxies contain more than just stars; gas and dust can also alter a galaxy's morphology. Dust is thought to be produced in AGB stars and distributed to the interstellar medium via stellar winds. Disk galaxies typically have more dust than ellipticals indicating that early-type galaxies expelled their dust content via dramatic mergers \citep{some people}. Blue light is more strongly attenuated than red light. This causes the dust to heat and radiate in the IR making a galaxy appear redder than it would otherwise. Another, more dramatic example of dust's effect on a galaxy's morphology is the dust lanes exhibited by many spiral galaxies. 
@@ -95,15 +101,40 @@ put this somewhere \citep{Mei2009}
 
 
 \subsection{Mass and luminosity functions and galactic growth}
-The most fundamental characteristic of a galaxy is its mass, however, this is a difficult quantitty to measure. Much easier, instead, is a measurement of a galaxy's luminosity which takes only an image to estimate. Mass and luminosity are strongly correlated. The correlation of morphology with luminosity also implies a dependence on galaxy mass. A cottage industry for decades, constructing mass and luminosity functions has provided insights into baryonic mass build-up over cosmic time. 
+The most fundamental characteristic of a galaxy is its mass, however, this is a difficult quantity to measure. Much easier, instead, is a measurement of a galaxy's luminosity which takes only an image to estimate. Because the luminosity is, in large part, an integration of stellar light, mass generally scales with luminosity. The correlation of morphology with luminosity thus also implies a dependence on galaxy mass. A cottage industry for decades, constructing mass and luminosity functions has provided insights into the build-up of baryonic mass over cosmic time. 
+In priniciple, the star formation density at a given epoch should represent the integral of the SF density up to that redshift. 
 
-When you split galaxies up by their fundamental morphologies, early- and late-types, one finds that the brightest and hence, most massive systems are elliptical. 
+Stellar mass functions (SMFs) are a key first-order observatble that allows one to statistically trace back the formation of stars in the universe. Comparison with predicted SMFs further constrains the mechanisms with which galaxies converst 
+
+Nearly half of the stellar mass in the local universe resides in early-type galaxies with half in late-type disk structures \citep{Kelvin2014}. However, this was not always the case.  Prior to z of 2, Hubble type morphologies become vague and are dominated by pecular galaxies \citep{Dickenson2000,Papovich2005,Cameron2011,Conselice2005,Conselice2011,Buitrago2013}and thus considerable evolution has taken place since that epoch. It has been shown that the Hubble morphologies emerge between 1 < z < 3 indicating that the peculiar high-redshift systems settle down into the galaxies we see in the local universe \citep{Mortlock2013}. 
+
+It has been postulated that these early galaxies' evolution is dominated by violent mergers into spheroidal systems\citep{Driver2013,Bluck2009,Man2012}. After redshift 2 the dominant mechanism for galaxy evolution switches to cold gas accretion and hence the formation of of disk galaxies \citep{Conselice2013}. Of course, these processes are also presumed to be mass-dependent with the most massive galaxies settling into the familar Hubble sequence more quickly than low-mass galaxies \citep{Buitrago2013,Conselice2011,Mortlock2013}
+
+Understanding the rate of growth and distribution of baryonic mass in galaxies provides constraints on the mechanisms necessary to produce such observations. It is well known that there was a period of increased star formation at z>2 when many galaxies rapidly formed stars at rates not typically observed in the local universe. However this formation was not distributed equally among all galaxies and types and the subsequent evolution of the star formation density of the universe paints a picture in which.. blah blah blah. 
+
+A z$\sim$2, most of the stellar mass density is in irregular galaxies \citep{HuertasCompany2016} but this drops with redshift until, in the local universe, irregulars only dominate the SF density in low-mass galaxies. The abundance of passive (early-type) galaxies steadily increases from z 4 up until the present epoch. 
+
+The quenching of star formation produces the color bimodality of galaxies, is likely the cause of the decrease in the star-formation rate density in the universe since z of 2 and could also be associated with morphological transformations within galaxies. 
+
+The shape of the SMFs of galaxies has a knee corresponding to a characteristic stellar mass around 10^10.7 which appears to be independent of redshift. This implies that galaies tend to cease forming stars at this characteristic mass. This takes place primarily at z > 1 because, at later times, there are more passive, early-type galaxies than late-type star-forming galaxies with this particular mass. 
+
 
 Mass build up over cosmic time: galaxies grow differently based on their morphology. Bivariate mass-luminosity function. Shen2003. Ellipticals gain X amount of mass since z~1 but only gain how much in size? On the other hand, disks are entirely different... suggests different growth mechanisms demarcated by optical morphology. 
 
 stellar mass functions for disks and spheriods \citep{Thanjavur2016,Bell2003}
 mass assembly history \citep{Bundy2005, Taylor2015, Brinchmann2000}
 luminosity and mass functions \citep{Blanton2003b, Blanton2001}
+
+
+In heirarchical models, morphologies transform according to the mass characteristics of mergers. We find no evidence for any change in the mass density of
+spiral galaxies, suggesting the merging of spiral galaxies into
+elliptical galaxies between and the present cannot be a z = 1
+dominant process. Moreover, the total stellar mass density
+hardly increases over the range sampled. Both results support
+the contention that most massive galaxies formed their stars
+prior to or around . Lower mass galaxies remain active z = 1
+to much more recent epochs, consistent with the “downsizing”
+picture introduced by Cowie and collaborators. --Brinchmann and Ellis
 
 
 \subsection{Morphology as a function of environment}
@@ -116,6 +147,8 @@ pressure on molecular clouds), harassment (Moore et al. 1996),
 strangulation (Kawata \& Mulchaey 2008), etc.
 
 
+role of mergers CANDELS \citep{Karteltepe2010}
+mergers and AGN \citep{Kocevski2012, Villforth2014}
 
 \subsection{Insights from rare morophologies}
 So far I've examined insights gleaned by considering large populations of galaxies split into broad categories of early- and late-types. Though unbeknownst to Hubble, it is now well known that galaxy structure and hence the integrated light profile is much more complicated and varied. Examing both finer galactic structure such as bars, as well as rare morphologies like the ``green peas'' has pushed the boundaries on our collective knowledge of galaxy evolution. What have we learned from the green peas? Clumpy galaxies at low redshift? Ring galaxies? 
@@ -136,6 +169,8 @@ This necessitated the birth of the Galaxy Zoo project, the first effort to crowd
 While the Galaxy Zoo project has provided a solution that scales visual classification for current surveys  by harnessing the combined power of thousands of volunteers \citep{Lintott2008, Lintott2011, Willett2013, Willett2017, Simmons2017},  producing a prolific amount of scientific output \citep[e.g.,][]{Land2008, Bamford2009, Darg2010, Schawinski2014, Galloway2015, Smethurst2016}; upcoming surveys such as \textit{LSST} and \textit{Euclid} will require a different approach, imaging more than a billion new galaxies  \citep{LSST, Euclid}.  If detailed morphologies can be extracted for just  0.1\% of this imaging, we will have millions of images to contend with. A project of this magnitude would take more than sixty years to classify at Galaxy Zoo's current rate and configuration. Standard visual morphology 
 methods will thus be unable to cope with the scale of data. 
 
+
+Visual classification by experts: CANDELS \citep{Kartaltepe2015}
 
 \subsection{Automated classifications}
 Another approach has been the automated extraction of galaxy morpholgies with the development of both parametric and non-parametric structural indicators. 

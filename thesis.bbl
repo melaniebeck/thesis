@@ -348,6 +348,13 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Huertas-Company}, M., {Gravet}, R., {Cabrera-Vives}, G., {et~al.} 2015, \apjs,
   221, 8
 
+\bibitem[{{Huertas-Company} {et~al.}(2016){Huertas-Company}, {Bernardi},
+  {P{\'e}rez-Gonz{\'a}lez}, {Ashby}, {Barro}, {Conselice}, {Daddi}, {Dekel},
+  {Dimauro}, {Faber}, {Grogin}, {Kartaltepe}, {Kocevski}, {Koekemoer}, {Koo},
+  {Mei}, \& {Shankar}}]{HuertasCompany2016}
+{Huertas-Company}, M., {Bernardi}, M., {P{\'e}rez-Gonz{\'a}lez}, P.~G.,
+  {et~al.} 2016, \mnras, 462, 4495
+
 \bibitem[{{Humphrey} {et~al.}(2013){Humphrey}, {Vernet},
   {Villar-Mart{\'{\i}}n}, {di Serego Alighieri}, {Fosbury}, \&
   {Cimatti}}]{Humphrey2013}
@@ -390,6 +397,23 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series,
   6
 
+\bibitem[{{Kelvin} {et~al.}(2014){Kelvin}, {Driver}, {Robotham}, {Taylor},
+  {Graham}, {Alpaslan}, {Baldry}, {Bamford}, {Bauer}, {Bland-Hawthorn},
+  {Brown}, {Colless}, {Conselice}, {Holwerda}, {Hopkins}, {Lara-L{\'o}pez},
+  {Liske}, {L{\'o}pez-S{\'a}nchez}, {Loveday}, {Norberg}, {Phillipps},
+  {Popescu}, {Prescott}, {Sansom}, \& {Tuffs}}]{Kelvin2014}
+{Kelvin}, L.~S., {Driver}, S.~P., {Robotham}, A.~S.~G., {et~al.} 2014, \mnras,
+  444, 1647
+
+\bibitem[{{Kocevski} {et~al.}(2012){Kocevski}, {Faber}, {Mozena}, {Koekemoer},
+  {Nandra}, {Rangel}, {Laird}, {Brusa}, {Wuyts}, {Trump}, {Koo}, {Somerville},
+  {Bell}, {Lotz}, {Alexander}, {Bournaud}, {Conselice}, {Dahlen}, {Dekel},
+  {Donley}, {Dunlop}, {Finoguenov}, {Georgakakis}, {Giavalisco}, {Guo},
+  {Grogin}, {Hathi}, {Juneau}, {Kartaltepe}, {Lucas}, {McGrath}, {McIntosh},
+  {Mobasher}, {Robaina}, {Rosario}, {Straughn}, {van der Wel}, \&
+  {Villforth}}]{Kocevski2012}
+{Kocevski}, D.~D., {Faber}, S.~M., {Mozena}, M., {et~al.} 2012, \apj, 744, 148
+
 \bibitem[{{Kodama} \& {Arimoto}(1997)}]{Kodama1997}
 {Kodama}, T., \& {Arimoto}, N. 1997, \aap, 320, 41
 
@@ -417,6 +441,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   \& et~al.}]{Euclid}
 {Laureijs}, R., {Amiaux}, J., {Arduini}, S., {et~al.} 2011, ArXiv e-prints,
   arXiv:1110.3193
+
+\bibitem[{{Lee} {et~al.}(2013){Lee}, {Giavalisco}, {Williams}, {Guo}, {Lotz},
+  {Van der Wel}, {Ferguson}, {Faber}, {Koekemoer}, {Grogin}, {Kocevski},
+  {Conselice}, {Wuyts}, {Dekel}, {Kartaltepe}, \& {Bell}}]{Lee2013}
+{Lee}, B., {Giavalisco}, M., {Williams}, C.~C., {et~al.} 2013, \apj, 774, 47
 
 \bibitem[{{Lee} \& {Ahn}(1998)}]{LeeAhn1998}
 {Lee}, H.-W., \& {Ahn}, S.-H. 1998, \apjl, 504, L61
@@ -511,6 +540,13 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 
 \bibitem[{{Mori} \& {Umemura}(2006)}]{Mori2006}
 {Mori}, M., \& {Umemura}, M. 2006, \nat, 440, 644
+
+\bibitem[{{Mortlock} {et~al.}(2013){Mortlock}, {Conselice}, {Hartley},
+  {Ownsworth}, {Lani}, {Bluck}, {Almaini}, {Duncan}, {van der Wel},
+  {Koekemoer}, {Dekel}, {Dav{\'e}}, {Ferguson}, {de Mello}, {Newman}, {Faber},
+  {Grogin}, {Kocevski}, \& {Lai}}]{Mortlock2013}
+{Mortlock}, A., {Conselice}, C.~J., {Hartley}, W.~G., {et~al.} 2013, \mnras,
+  433, 1185
 
 \bibitem[{{Nair} \& {Abraham}(2010)}]{NairAbraham2010}
 {Nair}, P.~B., \& {Abraham}, R.~G. 2010, \apjs, 186, 427
@@ -784,6 +820,14 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
   \& {Rojas}}]{Vika2015}
 {Vika}, M., {Vulcani}, B., {Bamford}, S.~P., {H{\"a}u{\ss}ler}, B., \& {Rojas},
   A.~L. 2015, \aap, 577, A97
+
+\bibitem[{{Villforth} {et~al.}(2014){Villforth}, {Hamann}, {Rosario},
+  {Santini}, {McGrath}, {van der Wel}, {Chang}, {Guo}, {Dahlen}, {Bell},
+  {Conselice}, {Croton}, {Dekel}, {Faber}, {Grogin}, {Hamilton}, {Hopkins},
+  {Juneau}, {Kartaltepe}, {Kocevski}, {Koekemoer}, {Koo}, {Lotz}, {McIntosh},
+  {Mozena}, {Somerville}, \& {Wild}}]{Villforth2014}
+{Villforth}, C., {Hamann}, F., {Rosario}, D.~J., {et~al.} 2014, \mnras, 439,
+  3342
 
 \bibitem[{{Vinokur}(1965)}]{Vinokur1965}
 {Vinokur}, M. 1965, Annales d'Astrophysique, 28, 412
