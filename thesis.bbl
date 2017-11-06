@@ -1,6 +1,38 @@
 \begin{thebibliography}{}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
+\bibitem[{{Abazajian} {et~al.}(2003){Abazajian}, {Adelman-McCarthy},
+  {Ag{\"u}eros}, {Allam}, {Anderson}, {Annis}, {Bahcall}, {Baldry}, {Bastian},
+  {Berlind}, {Bernardi}, {Blanton}, {Blythe}, {Bochanski}, {Boroski},
+  {Brewington}, {Briggs}, {Brinkmann}, {Brunner}, {Budav{\'a}ri}, {Carey},
+  {Carr}, {Castander}, {Chiu}, {Collinge}, {Connolly}, {Covey}, {Csabai},
+  {Dalcanton}, {Dodelson}, {Doi}, {Dong}, {Eisenstein}, {Evans}, {Fan},
+  {Feldman}, {Finkbeiner}, {Friedman}, {Frieman}, {Fukugita}, {Gal},
+  {Gillespie}, {Glazebrook}, {Gonzalez}, {Gray}, {Grebel}, {Grodnicki}, {Gunn},
+  {Gurbani}, {Hall}, {Hao}, {Harbeck}, {Harris}, {Harris}, {Harvanek},
+  {Hawley}, {Heckman}, {Helmboldt}, {Hendry}, {Hennessy}, {Hindsley}, {Hogg},
+  {Holmgren}, {Holtzman}, {Homer}, {Hui}, {Ichikawa}, {Ichikawa}, {Inkmann},
+  {Ivezi{\'c}}, {Jester}, {Johnston}, {Jordan}, {Jordan}, {Jorgensen},
+  {Juri{\'c}}, {Kauffmann}, {Kent}, {Kleinman}, {Knapp}, {Kniazev}, {Kron},
+  {Krzesi{\'n}ski}, {Kunszt}, {Kuropatkin}, {Lamb}, {Lampeitl}, {Laubscher},
+  {Lee}, {Leger}, {Li}, {Lidz}, {Lin}, {Loh}, {Long}, {Loveday}, {Lupton},
+  {Malik}, {Margon}, {McGehee}, {McKay}, {Meiksin}, {Miknaitis}, {Moorthy},
+  {Munn}, {Murphy}, {Nakajima}, {Narayanan}, {Nash}, {Neilsen}, {Newberg},
+  {Newman}, {Nichol}, {Nicinski}, {Nieto-Santisteban}, {Nitta}, {Odenkirchen},
+  {Okamura}, {Ostriker}, {Owen}, {Padmanabhan}, {Peoples}, {Pier}, {Pindor},
+  {Pope}, {Quinn}, {Rafikov}, {Raymond}, {Richards}, {Richmond}, {Rix},
+  {Rockosi}, {Schaye}, {Schlegel}, {Schneider}, {Schroeder}, {Scranton},
+  {Sekiguchi}, {Seljak}, {Sergey}, {Sesar}, {Sheldon}, {Shimasaku}, {Siegmund},
+  {Silvestri}, {Sinisgalli}, {Sirko}, {Smith}, {Smol{\v c}i{\'c}}, {Snedden},
+  {Stebbins}, {Steinhardt}, {Stinson}, {Stoughton}, {Strateva}, {Strauss},
+  {SubbaRao}, {Szalay}, {Szapudi}, {Szkody}, {Tasca}, {Tegmark}, {Thakar},
+  {Tremonti}, {Tucker}, {Uomoto}, {Vanden Berk}, {Vandenberg}, {Vogeley},
+  {Voges}, {Vogt}, {Walkowicz}, {Weinberg}, {West}, {White}, {Wilhite},
+  {Willman}, {Xu}, {Yanny}, {Yarger}, {Yasuda}, {Yip}, {Yocum}, {York},
+  {Zakamska}, {Zehavi}, {Zheng}, {Zibetti}, \& {Zucker}}]{Abazajian2003}
+{Abazajian}, K., {Adelman-McCarthy}, J.~K., {Ag{\"u}eros}, M.~A., {et~al.}
+  2003, \aj, 126, 2081
+
 \bibitem[{{Abazajian} {et~al.}(2009){Abazajian}, {Adelman-McCarthy},
   {Ag{\"u}eros}, {Allam}, {Allende Prieto}, {An}, {Anderson}, {Anderson},
   {Annis}, {Bahcall}, \& et~al.}]{Abazajian2009}
@@ -108,32 +140,23 @@
 \bibitem[{{Bertin} \& {Arnouts}(1996)}]{sextractor}
 {Bertin}, E., \& {Arnouts}, S. 1996, \aaps, 117, 393
 
-\bibitem[{{Blanton} {et~al.}(2001){Blanton}, {Dalcanton}, {Eisenstein},
-  {Loveday}, {Strauss}, {SubbaRao}, {Weinberg}, {Anderson}, {Annis}, {Bahcall},
-  {Bernardi}, {Brinkmann}, {Brunner}, {Burles}, {Carey}, {Castander},
-  {Connolly}, {Csabai}, {Doi}, {Finkbeiner}, {Friedman}, {Frieman}, {Fukugita},
-  {Gunn}, {Hennessy}, {Hindsley}, {Hogg}, {Ichikawa}, {Ivezi{\'c}}, {Kent},
-  {Knapp}, {Lamb}, {Leger}, {Long}, {Lupton}, {McKay}, {Meiksin}, {Merelli},
-  {Munn}, {Narayanan}, {Newcomb}, {Nichol}, {Okamura}, {Owen}, {Pier}, {Pope},
-  {Postman}, {Quinn}, {Rockosi}, {Schlegel}, {Schneider}, {Shimasaku},
-  {Siegmund}, {Smee}, {Snir}, {Stoughton}, {Stubbs}, {Szalay}, {Szokoly},
-  {Thakar}, {Tremonti}, {Tucker}, {Uomoto}, {Vanden Berk}, {Vogeley},
-  {Waddell}, {Yanny}, {Yasuda}, \& {York}}]{Blanton2001}
-{Blanton}, M.~R., {Dalcanton}, J., {Eisenstein}, D., {et~al.} 2001, \aj, 121,
-  2358
+\bibitem[{{Blanton} {et~al.}(2003{\natexlab{a}}){Blanton}, {Brinkmann},
+  {Csabai}, {Doi}, {Eisenstein}, {Fukugita}, {Gunn}, {Hogg}, \&
+  {Schlegel}}]{Blanton2003a}
+{Blanton}, M.~R., {Brinkmann}, J., {Csabai}, I., {et~al.} 2003{\natexlab{a}},
+  \aj, 125, 2348
 
-\bibitem[{{Blanton} {et~al.}(2003{\natexlab{a}}){Blanton}, {Hogg}, {Bahcall},
+\bibitem[{{Blanton} {et~al.}(2003{\natexlab{b}}){Blanton}, {Hogg}, {Bahcall},
   {Baldry}, {Brinkmann}, {Csabai}, {Eisenstein}, {Fukugita}, {Gunn},
   {Ivezi{\'c}}, {Lamb}, {Lupton}, {Loveday}, {Munn}, {Nichol}, {Okamura},
   {Schlegel}, {Shimasaku}, {Strauss}, {Vogeley}, \& {Weinberg}}]{Blanton2003c}
-{Blanton}, M.~R., {Hogg}, D.~W., {Bahcall}, N.~A., {et~al.} 2003{\natexlab{a}},
+{Blanton}, M.~R., {Hogg}, D.~W., {Bahcall}, N.~A., {et~al.} 2003{\natexlab{b}},
   \apj, 594, 186
 
-\bibitem[{{Blanton} {et~al.}(2003{\natexlab{b}}){Blanton}, {Hogg}, {Bahcall},
-  {Brinkmann}, {Britton}, {Connolly}, {Csabai}, {Fukugita}, {Loveday},
-  {Meiksin}, {Munn}, {Nichol}, {Okamura}, {Quinn}, {Schneider}, {Shimasaku},
-  {Strauss}, {Tegmark}, {Vogeley}, \& {Weinberg}}]{Blanton2003b}
----. 2003{\natexlab{b}}, \apj, 592, 819
+\bibitem[{{Bluck} {et~al.}(2009){Bluck}, {Conselice}, {Bouwens}, {Daddi},
+  {Dickinson}, {Papovich}, \& {Yan}}]{Bluck2009}
+{Bluck}, A.~F.~L., {Conselice}, C.~J., {Bouwens}, R.~J., {et~al.} 2009, \mnras,
+  394, L51
 
 \bibitem[{{Bower} {et~al.}(1992){Bower}, {Lucey}, \& {Ellis}}]{Bower1992}
 {Bower}, R.~G., {Lucey}, J.~R., \& {Ellis}, R.~S. 1992, \mnras, 254, 601
@@ -150,6 +173,11 @@ Breiman, L. 2001, Machine Learning, 45, 5
 \bibitem[{{Brinchmann} \& {Ellis}(2000)}]{Brinchmann2000}
 {Brinchmann}, J., \& {Ellis}, R.~S. 2000, \apjl, 536, L77
 
+\bibitem[{{Buitrago} {et~al.}(2013){Buitrago}, {Trujillo}, {Conselice}, \&
+  {H{\"a}u{\ss}ler}}]{Buitrago2013}
+{Buitrago}, F., {Trujillo}, I., {Conselice}, C.~J., \& {H{\"a}u{\ss}ler}, B.
+  2013, \mnras, 428, 1460
+
 \bibitem[{{Bundy} {et~al.}(2005){Bundy}, {Ellis}, \& {Conselice}}]{Bundy2005}
 {Bundy}, K., {Ellis}, R.~S., \& {Conselice}, C.~J. 2005, \apj, 625, 621
 
@@ -160,6 +188,10 @@ Breiman, L. 2001, Machine Learning, 45, 5
 
 \bibitem[{{Buta}(2011)}]{Buta2011}
 {Buta}, R.~J. 2011, arXiv:1102.0550
+
+\bibitem[{{Cameron} {et~al.}(2011){Cameron}, {Carollo}, {Oesch}, {Bouwens},
+  {Illingworth}, {Trenti}, {Labb{\'e}}, \& {Magee}}]{Cameron2011}
+{Cameron}, E., {Carollo}, C.~M., {Oesch}, P.~A., {et~al.} 2011, \apj, 743, 146
 
 \bibitem[{{Cantalupo} {et~al.}(2012){Cantalupo}, {Lilly}, \&
   {Haehnelt}}]{Cantalupo2012}
@@ -204,14 +236,52 @@ Breiman, L. 2001, Machine Learning, 45, 5
   {Jangren}}]{Conselice2000}
 {Conselice}, C.~J., {Bershady}, M.~A., \& {Jangren}, A. 2000, \apj, 529, 886
 
+\bibitem[{{Conselice} {et~al.}(2005){Conselice}, {Blackburne}, \&
+  {Papovich}}]{Conselice2005}
+{Conselice}, C.~J., {Blackburne}, J.~A., \& {Papovich}, C. 2005, \apj, 620, 564
+
+\bibitem[{{Conselice} {et~al.}(2013){Conselice}, {Mortlock}, {Bluck},
+  {Gr{\"u}tzbauch}, \& {Duncan}}]{Conselice2013}
+{Conselice}, C.~J., {Mortlock}, A., {Bluck}, A.~F.~L., {Gr{\"u}tzbauch}, R., \&
+  {Duncan}, K. 2013, \mnras, 430, 1051
+
+\bibitem[{{Conselice} {et~al.}(2011){Conselice}, {Bluck}, {Buitrago}, {Bauer},
+  {Gr{\"u}tzbauch}, {Bouwens}, {Bevan}, {Mortlock}, {Dickinson}, {Daddi},
+  {Yan}, {Scott}, {Chapman}, {Chary}, {Ferguson}, {Giavalisco}, {Grogin},
+  {Illingworth}, {Jogee}, {Koekemoer}, {Lucas}, {Mobasher}, {Moustakas},
+  {Papovich}, {Ravindranath}, {Siana}, {Teplitz}, {Trujillo}, {Urry}, \&
+  {Weinzirl}}]{Conselice2011}
+{Conselice}, C.~J., {Bluck}, A.~F.~L., {Buitrago}, F., {et~al.} 2011, \mnras,
+  413, 80
+
+\bibitem[{{Cowie} {et~al.}(1996){Cowie}, {Songaila}, {Hu}, \&
+  {Cohen}}]{Cowie1996}
+{Cowie}, L.~L., {Songaila}, A., {Hu}, E.~M., \& {Cohen}, J.~G. 1996, \aj, 112,
+  839
+
 \bibitem[{{Darg} {et~al.}(2010){Darg}, {Kaviraj}, {Lintott}, {Schawinski},
   {Sarzi}, {Bamford}, {Silk}, {Andreescu}, {Murray}, {Nichol}, {Raddick},
   {Slosar}, {Szalay}, {Thomas}, \& {Vandenberg}}]{Darg2010}
 {Darg}, D.~W., {Kaviraj}, S., {Lintott}, C.~J., {et~al.} 2010, \mnras, 401,
   1552
 
-\bibitem[{{de Vaucouleurs}(1959)}]{deVauc1959}
+\bibitem[{{de Vaucouleurs}(1959)}]{deVaucouleurs1959}
 {de Vaucouleurs}, G. 1959, Handbuch der Physik, 53, 275
+
+\bibitem[{{de Vaucouleurs}(1963)}]{deVaucouleurs1963}
+---. 1963, \apjs, 8, 31
+
+\bibitem[{{de Vaucouleurs} {et~al.}(1991){de Vaucouleurs}, {de Vaucouleurs},
+  {Corwin}, {Buta}, {Paturel}, \& {Fouqu{\'e}}}]{deVaucouleurs1991}
+{de Vaucouleurs}, G., {de Vaucouleurs}, A., {Corwin}, Jr., H.~G., {et~al.}
+  1991, {Third Reference Catalogue of Bright Galaxies. Volume I: Explanations
+  and references. Volume II: Data for galaxies between 0$^{h}$ and 12$^{h}$.
+  Volume III: Data for galaxies between 12$^{h}$ and 24$^{h}$.}
+
+\bibitem[{{Dickinson}(2000)}]{Dickinson2000}
+{Dickinson}, M. 2000, in Philosophical Transactions of the Royal Society of
+  London Series A, Vol. 358, Astronomy, physics and chemistry of H$^{+}$$_{3}$,
+  2001
 
 \bibitem[{{Dieleman} {et~al.}(2015){Dieleman}, {Willett}, \&
   {Dambre}}]{Dieleman2015}
@@ -228,6 +298,11 @@ Breiman, L. 2001, Machine Learning, 45, 5
 
 \bibitem[{{Dressler}(1980)}]{Dressler1980}
 {Dressler}, A. 1980, \apj, 236, 351
+
+\bibitem[{{Driver} {et~al.}(2013){Driver}, {Robotham}, {Bland-Hawthorn},
+  {Brown}, {Hopkins}, {Liske}, {Phillipps}, \& {Wilkins}}]{Driver2013}
+{Driver}, S.~P., {Robotham}, A.~S.~G., {Bland-Hawthorn}, J., {et~al.} 2013,
+  \mnras, 430, 2622
 
 \bibitem[{{Elmegreen} {et~al.}(2008){Elmegreen}, {Bournaud}, \&
   {Elmegreen}}]{Elmegreen2008}
@@ -261,6 +336,11 @@ Breiman, L. 2001, Machine Learning, 45, 5
 \bibitem[{{Freeman} {et~al.}(2013){Freeman}, {Izbicki}, {Lee}, {Newman},
   {Conselice}, {Koekemoer}, {Lotz}, \& {Mozena}}]{Freeman2013}
 {Freeman}, P.~E., {Izbicki}, R., {Lee}, A.~B., {et~al.} 2013, \mnras, 434, 282
+
+\bibitem[{{Fukugita} {et~al.}(2007){Fukugita}, {Nakamura}, {Okamura}, {Yasuda},
+  {Barentine}, {Brinkmann}, {Gunn}, {Harvanek}, {Ichikawa}, {Lupton},
+  {Schneider}, {Strauss}, \& {York}}]{Fukugita2007}
+{Fukugita}, M., {Nakamura}, O., {Okamura}, S., {et~al.} 2007, \aj, 134, 579
 
 \bibitem[{{Furlanetto} {et~al.}(2005){Furlanetto}, {Schaye}, {Springel}, \&
   {Hernquist}}]{Furlanetto2005}
@@ -309,6 +389,25 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Griffith}, R.~L., {Cooper}, M.~C., {Newman}, J.~A., {et~al.} 2012, \apjs, 200,
   9
 
+\bibitem[{{Grogin} {et~al.}(2011){Grogin}, {Kocevski}, {Faber}, {Ferguson},
+  {Koekemoer}, {Riess}, {Acquaviva}, {Alexander}, {Almaini}, {Ashby}, {Barden},
+  {Bell}, {Bournaud}, {Brown}, {Caputi}, {Casertano}, {Cassata}, {Castellano},
+  {Challis}, {Chary}, {Cheung}, {Cirasuolo}, {Conselice}, {Roshan Cooray},
+  {Croton}, {Daddi}, {Dahlen}, {Dav{\'e}}, {de Mello}, {Dekel}, {Dickinson},
+  {Dolch}, {Donley}, {Dunlop}, {Dutton}, {Elbaz}, {Fazio}, {Filippenko},
+  {Finkelstein}, {Fontana}, {Gardner}, {Garnavich}, {Gawiser}, {Giavalisco},
+  {Grazian}, {Guo}, {Hathi}, {H{\"a}ussler}, {Hopkins}, {Huang}, {Huang},
+  {Jha}, {Kartaltepe}, {Kirshner}, {Koo}, {Lai}, {Lee}, {Li}, {Lotz}, {Lucas},
+  {Madau}, {McCarthy}, {McGrath}, {McIntosh}, {McLure}, {Mobasher},
+  {Moustakas}, {Mozena}, {Nandra}, {Newman}, {Niemi}, {Noeske}, {Papovich},
+  {Pentericci}, {Pope}, {Primack}, {Rajan}, {Ravindranath}, {Reddy}, {Renzini},
+  {Rix}, {Robaina}, {Rodney}, {Rosario}, {Rosati}, {Salimbeni}, {Scarlata},
+  {Siana}, {Simard}, {Smidt}, {Somerville}, {Spinrad}, {Straughn}, {Strolger},
+  {Telford}, {Teplitz}, {Trump}, {van der Wel}, {Villforth}, {Wechsler},
+  {Weiner}, {Wiklind}, {Wild}, {Wilson}, {Wuyts}, {Yan}, \& {Yun}}]{Grogin2011}
+{Grogin}, N.~A., {Kocevski}, D.~D., {Faber}, S.~M., {et~al.} 2011, \apjs, 197,
+  35
+
 \bibitem[{{Haiman} \& {Rees}(2001)}]{HaimanRees2001}
 {Haiman}, Z., \& {Rees}, M.~J. 2001, \apj, 556, 87
 
@@ -333,8 +432,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Holwerda}, B.~W., {Mu{\~n}oz-Mateos}, J.-C., {Comer{\'o}n}, S., {et~al.} 2014,
   \apj, 781, 12
 
+\bibitem[{{Hubble}(1926)}]{Hubble1926}
+{Hubble}, E.~P. 1926, \apj, 64, doi:10.1086/143018
+
 \bibitem[{{Hubble}(1936)}]{Hubble1936}
-{Hubble}, E.~P. 1936, {The Realm of the Nebulae} ({Yale University Press})
+---. 1936, {The Realm of the Nebulae} ({Yale University Press})
 
 \bibitem[{{Huertas-Company} {et~al.}(2008){Huertas-Company}, {Rouan}, {Tasca},
   {Soucail}, \& {Le F{\`e}vre}}]{HuertasCompany2008}
@@ -405,17 +507,31 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Kelvin}, L.~S., {Driver}, S.~P., {Robotham}, A.~S.~G., {et~al.} 2014, \mnras,
   444, 1647
 
-\bibitem[{{Kocevski} {et~al.}(2012){Kocevski}, {Faber}, {Mozena}, {Koekemoer},
-  {Nandra}, {Rangel}, {Laird}, {Brusa}, {Wuyts}, {Trump}, {Koo}, {Somerville},
-  {Bell}, {Lotz}, {Alexander}, {Bournaud}, {Conselice}, {Dahlen}, {Dekel},
-  {Donley}, {Dunlop}, {Finoguenov}, {Georgakakis}, {Giavalisco}, {Guo},
-  {Grogin}, {Hathi}, {Juneau}, {Kartaltepe}, {Lucas}, {McGrath}, {McIntosh},
-  {Mobasher}, {Robaina}, {Rosario}, {Straughn}, {van der Wel}, \&
-  {Villforth}}]{Kocevski2012}
-{Kocevski}, D.~D., {Faber}, S.~M., {Mozena}, M., {et~al.} 2012, \apj, 744, 148
-
 \bibitem[{{Kodama} \& {Arimoto}(1997)}]{Kodama1997}
 {Kodama}, T., \& {Arimoto}, N. 1997, \aap, 320, 41
+
+\bibitem[{{Koekemoer} {et~al.}(2011){Koekemoer}, {Faber}, {Ferguson}, {Grogin},
+  {Kocevski}, {Koo}, {Lai}, {Lotz}, {Lucas}, {McGrath}, {Ogaz}, {Rajan},
+  {Riess}, {Rodney}, {Strolger}, {Casertano}, {Castellano}, {Dahlen},
+  {Dickinson}, {Dolch}, {Fontana}, {Giavalisco}, {Grazian}, {Guo}, {Hathi},
+  {Huang}, {van der Wel}, {Yan}, {Acquaviva}, {Alexander}, {Almaini}, {Ashby},
+  {Barden}, {Bell}, {Bournaud}, {Brown}, {Caputi}, {Cassata}, {Challis},
+  {Chary}, {Cheung}, {Cirasuolo}, {Conselice}, {Roshan Cooray}, {Croton},
+  {Daddi}, {Dav{\'e}}, {de Mello}, {de Ravel}, {Dekel}, {Donley}, {Dunlop},
+  {Dutton}, {Elbaz}, {Fazio}, {Filippenko}, {Finkelstein}, {Frazer}, {Gardner},
+  {Garnavich}, {Gawiser}, {Gruetzbauch}, {Hartley}, {H{\"a}ussler},
+  {Herrington}, {Hopkins}, {Huang}, {Jha}, {Johnson}, {Kartaltepe},
+  {Khostovan}, {Kirshner}, {Lani}, {Lee}, {Li}, {Madau}, {McCarthy},
+  {McIntosh}, {McLure}, {McPartland}, {Mobasher}, {Moreira}, {Mortlock},
+  {Moustakas}, {Mozena}, {Nandra}, {Newman}, {Nielsen}, {Niemi}, {Noeske},
+  {Papovich}, {Pentericci}, {Pope}, {Primack}, {Ravindranath}, {Reddy},
+  {Renzini}, {Rix}, {Robaina}, {Rosario}, {Rosati}, {Salimbeni}, {Scarlata},
+  {Siana}, {Simard}, {Smidt}, {Snyder}, {Somerville}, {Spinrad}, {Straughn},
+  {Telford}, {Teplitz}, {Trump}, {Vargas}, {Villforth}, {Wagner}, {Wandro},
+  {Wechsler}, {Weiner}, {Wiklind}, {Wild}, {Wilson}, {Wuyts}, \&
+  {Yun}}]{Koekemoer2011}
+{Koekemoer}, A.~M., {Faber}, S.~M., {Ferguson}, H.~C., {et~al.} 2011, \apjs,
+  197, 36
 
 \bibitem[{{Kormendy}(1977)}]{Kormendy1977}
 {Kormendy}, J. 1977, \apj, 217, 406
@@ -485,11 +601,13 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 \bibitem[{{Lotz} {et~al.}(2004){Lotz}, {Primack}, \& {Madau}}]{Lotz2004}
 {Lotz}, J.~M., {Primack}, J., \& {Madau}, P. 2004, \aj, 128, 163
 
-\bibitem[{{LSST Science Collaboration} {et~al.}(2009){LSST Science
-  Collaboration}, {Abell}, {Allison}, {Anderson}, {Andrew}, {Angel}, {Armus},
-  {Arnett}, {Asztalos}, {Axelrod}, \& et~al.}]{LSST}
-{LSST Science Collaboration}, {Abell}, P.~A., {Allison}, J., {et~al.} 2009,
-  ArXiv e-prints, arXiv:0912.0201
+\bibitem[{{Madau} \& {Dickinson}(2014)}]{Madau2014}
+{Madau}, P., \& {Dickinson}, M. 2014, \araa, 52, 415
+
+\bibitem[{{Man} {et~al.}(2012){Man}, {Toft}, {Zirm}, {Wuyts}, \& {van der
+  Wel}}]{Man2012}
+{Man}, A.~W.~S., {Toft}, S., {Zirm}, A.~W., {Wuyts}, S., \& {van der Wel}, A.
+  2012, \apj, 744, 85
 
 \bibitem[{{Marshall} {et~al.}(2016){Marshall}, {Verma}, {More}, {Davis},
   {More}, {Kapadia}, {Parrish}, {Snyder}, {Wilcox}, {Baeten}, {Macmillan},
@@ -573,6 +691,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Palunas}, P., {Teplitz}, H.~I., {Francis}, P.~J., {Williger}, G.~M., \&
   {Woodgate}, B.~E. 2004, \apj, 602, 545
 
+\bibitem[{{Papovich} {et~al.}(2005){Papovich}, {Dickinson}, {Giavalisco},
+  {Conselice}, \& {Ferguson}}]{Papovich2005}
+{Papovich}, C., {Dickinson}, M., {Giavalisco}, M., {Conselice}, C.~J., \&
+  {Ferguson}, H.~C. 2005, \apj, 631, 101
+
 \bibitem[{{Patat} {et~al.}(2011){Patat}, {Moehler}, {O'Brien}, {Pompei},
   {Bensby}, {Carraro}, {de Ugarte Postigo}, {Fox}, {Gavignaud}, {James},
   {Korhonen}, {Ledoux}, {Randall}, {Sana}, {Smoker}, {Stefl}, \&
@@ -650,6 +773,10 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 \bibitem[{{Sandage}(1961)}]{Sandage1961}
 {Sandage}, A. 1961, {The Hubble atlas of galaxies}
 
+\bibitem[{{Sandage} \& {Tammann}(1981)}]{SandageTammann1981}
+{Sandage}, A., \& {Tammann}, G.~A. 1981, {A revised Shapley-Ames Catalog of
+  bright galaxies}
+
 \bibitem[{{Sandage} \& {Visvanathan}(1978)}]{Sandage1978}
 {Sandage}, A., \& {Visvanathan}, N. 1978, \apj, 223, 707
 
@@ -663,6 +790,10 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 \bibitem[{{Scarlata} {et~al.}(2009){Scarlata}, {Colbert}, {Teplitz}, {Bridge},
   {Francis}, {Palunas}, {Siana}, {Williger}, \& {Woodgate}}]{Scarlata2009}
 {Scarlata}, C., {Colbert}, J., {Teplitz}, H.~I., {et~al.} 2009, \apj, 706, 1241
+
+\bibitem[{{Schawinski} {et~al.}(2007){Schawinski}, {Thomas}, {Sarzi},
+  {Maraston}, {Kaviraj}, {Joo}, {Yi}, \& {Silk}}]{Schawinski2007}
+{Schawinski}, K., {Thomas}, D., {Sarzi}, M., {et~al.} 2007, \mnras, 382, 1415
 
 \bibitem[{{Schawinski} {et~al.}(2009){Schawinski}, {Lintott}, {Thomas},
   {Sarzi}, {Andreescu}, {Bamford}, {Kaviraj}, {Khochfar}, {Land}, {Murray},
@@ -815,19 +946,6 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
 
 \bibitem[{{van Dokkum}(2001)}]{vanDokkum2001}
 {van Dokkum}, P.~G. 2001, \pasp, 113, 1420
-
-\bibitem[{{Vika} {et~al.}(2015){Vika}, {Vulcani}, {Bamford}, {H{\"a}u{\ss}ler},
-  \& {Rojas}}]{Vika2015}
-{Vika}, M., {Vulcani}, B., {Bamford}, S.~P., {H{\"a}u{\ss}ler}, B., \& {Rojas},
-  A.~L. 2015, \aap, 577, A97
-
-\bibitem[{{Villforth} {et~al.}(2014){Villforth}, {Hamann}, {Rosario},
-  {Santini}, {McGrath}, {van der Wel}, {Chang}, {Guo}, {Dahlen}, {Bell},
-  {Conselice}, {Croton}, {Dekel}, {Faber}, {Grogin}, {Hamilton}, {Hopkins},
-  {Juneau}, {Kartaltepe}, {Kocevski}, {Koekemoer}, {Koo}, {Lotz}, {McIntosh},
-  {Mozena}, {Somerville}, \& {Wild}}]{Villforth2014}
-{Villforth}, C., {Hamann}, F., {Rosario}, D.~J., {et~al.} 2014, \mnras, 439,
-  3342
 
 \bibitem[{{Vinokur}(1965)}]{Vinokur1965}
 {Vinokur}, M. 1965, Annales d'Astrophysique, 28, 412
