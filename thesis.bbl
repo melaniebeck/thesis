@@ -232,6 +232,9 @@ Breiman, L. 2001, Machine Learning, 45, 5
 \bibitem[{{Conselice}(2006)}]{Conselice2006}
 ---. 2006, \mnras, 373, 1389
 
+\bibitem[{{Conselice}(2014)}]{Conselice2014}
+---. 2014, \araa, 52, 291
+
 \bibitem[{{Conselice} {et~al.}(2000){Conselice}, {Bershady}, \&
   {Jangren}}]{Conselice2000}
 {Conselice}, C.~J., {Bershady}, M.~A., \& {Jangren}, A. 2000, \apj, 529, 886
@@ -937,6 +940,9 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   Mendel}]{Thanjavur2016}
 Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
   of the Royal Astronomical Society, 459, 44
+
+\bibitem[{{Toomre}(1964)}]{Toomre1964}
+{Toomre}, A. 1964, \apj, 139, 1217
 
 \bibitem[{{Tully} {et~al.}(1982){Tully}, {Mould}, \& {Aaronson}}]{Tully1982}
 {Tully}, R.~B., {Mould}, J.~R., \& {Aaronson}, M. 1982, \apj, 257, 527
