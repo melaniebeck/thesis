@@ -111,22 +111,20 @@ These postage stamps next undergo a cleaning process in order to remove the ligh
 
 \begin{figure}
 \includegraphics[width=\textwidth]{Figures/measure_morph_hardest.pdf}
-\caption[Examples of image cleaning and morphology diagnostic measurements]{words words words I'm a fucking caption!}
+\caption[Examples of image cleaning and morphology diagnostic measurements]{REMAKE THESE -- NEW RADII}
 \label{fig: clean examples}
 \end{figure}
 
 
 \subsection{Morphology indicators}
-Defining the flux associated with a galaxy is a challenging task: galaxies do not have constant radial surface brightness, hard edges, or uniform shapes. Ideally, one would measure the total flux associated with a galaxy but this requires modelling of the light profile in addition to high signal-to-noise ratio in the outermost parts of the galaxy. Instead one could measure the flux within some isophote but unfortunately the fraction of light included within is dependent on the amplitude of the galaxy's surface brightness which diminishes due to cosmological redshift and Galactic extinction. To combat these issues, it is common practice to use the \cite{Petrosian1976} system  which is computes a radius defined by the empirical shape of the galaxy's light profile. Specifically, the Petrosian radius, $r_p$, is such that the ratio of the surface brightness at $r_p$ to the mean surface brightness within $r_p$ is equal to a fixed value $\eta$, i.e., 
+Defining the flux associated with a galaxy is a challenging task: galaxies do not have constant radial surface brightness, hard edges, or uniform shapes. Ideally, one would measure the total flux associated with a galaxy but this requires modelling of the light profile in addition to high signal-to-noise ratio in the outermost parts of the galaxy. Instead one could measure the flux within some isophote but unfortunately the fraction of light included within is dependent on the amplitude of the galaxy's surface brightness which diminishes due to cosmological redshift and Galactic extinction. To combat these issues, it is common practice to use the \cite{Petrosian1976} system  which computes a radius defined by the empirical shape of the galaxy's light profile. Specifically, the Petrosian radius, $r_p$, is such that the ratio of the surface brightness at $r_p$ to the mean surface brightness within $r_p$ is equal to a fixed value $\eta$, i.e., 
 
 \begin{equation}
 \eta = \frac{\mu(r_p)}{\bar\mu(r<r_p)}
 \end{equation}
 where $\eta$ is traditionally set to 0.2. Because this is a ratio of surface brightnesses, cosmological factors affecting surface brightness no longer arise. 
 
-In practice, $r_p$ is computed by first generating a set of elliptical annuli centered on the galaxy and equidistant in logspace. The number of annuli is determined by the size of the postage stamp. Elliptical apertures minimize the contribution from noisy background pixels. The position angle and galaxy center are taken from the SExtractor catalogs generated ealier. For each annulus, $\mu(r_i)$ is computed as the flux within the annulus divided by the annulus area, while $\mu(r<r_i)$ is computed as the total flux integrated to the center of that annulus divided by $\pi r_i^2$. This provides a crude estimate of $\eta$ which is then interpolated onto a finer set of radial values and $r_p$ is that radius for which the $eta$ intersects 0.2. Examples of surface brightness profilea are shown in Figure XXX. XX demonstrates a case in which the cleaning algorithm did not fully remove nearby contaminating light from other sources. This results in an $\eta$ that never crosses the 0.2 threshold. As a correction the excess light in the outer component is fit with a linear relation and a constant value subtracted from  the surface brightness profile. We next use these values of the Petrosian radius measured for X\% of our galaxies (\% catastrophic failures) to compute the following morphology diagnostics.
-
-%We compute the following widely adopted nonparametric measurements of the galaxy light distribution on the cleaned postage stamps
+In practice, $r_p$ is computed by first generating a set of elliptical annuli centered on the galaxy and equidistant in logspace. At least 20 annuli are used for each postage stamp. Elliptical apertures minimize the contribution from noisy background pixels. The position angle and galaxy center are taken from the SExtractor catalogs generated ealier. For each annulus, $\mu(r_i)$ is computed as the flux within the annulus divided by the annulus area, while $\mu(r<r_i)$ is computed as the total flux integrated to the center of that annulus divided by $\pi r_i^2$. This provides a crude estimate of $\eta$ which is then interpolated onto a finer set of radial values.  $r_p$ is that radius for which $\eta$ intersects 0.2. Examples of surface brightness profile are shown in Figure XXX. XX demonstrates a case in which the cleaning algorithm did not fully remove nearby contaminating light from other sources. This results in an $\eta$ that never crosses the 0.2 threshold. To correct for this, the excess light in the outer component is fit with a linear relation and a constant value subtracted from the surface brightness profile. Even with these measures, some failures persist, however, we are only unable to obtain $r_p$ for 16 galaxies, a vanishingly small fraction of our sample. We use these values of the Petrosian radius to compute the following morphology diagnostics.
 
 
 %\subsubsection{Concentration}
@@ -177,13 +175,12 @@ It's worth noting that both \M{20} and $G$ are correlated with $C$, but with key
 %\subsubsection{Ellipticity}
 For our final morphology diagnostic, we use the ellipticity, $\epsilon = 1 - b/a$, of the light distribution as measured by SExtractor which computes the semi-major axis $a$ and semi-minor axis $b$ from the second-order moments of the galaxy light. The ellipticity of a galaxy correlates strongly with edge-on galaxies. 
 
-In total, we measure morphological indicators for 282,350 SDSS galaxies. Some galaxies are lost at each stage of the measurement process due to various failures. For example, if the Petrosian radius is not well measured, no morphology diagnostics are computed for that galaxy. The number of galaxies measured for each of the morphology diagnostics is listed in Table \ref{tab:morph numbers}.  The relations between these diagnostics for the full sample is shown in Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
-
+In total, we measure morphological indicators for 282,350 SDSS galaxies. Some galaxies are lost at each stage of the measurement process due to various failures which we discuss in detail below. For example, if the Petrosian radius is not well measured, no morphology diagnostics are computed for that galaxy. The number of galaxies measured for each of the morphology diagnostics is listed in Table \ref{tab:morph numbers}.  The relations between these diagnostics for the full sample is shown in Figure~\ref{fig: morph thresh}. The code developed to clean and compute these morphology indicators is open source and can be found at \url{https://github.com/melaniebeck/measure_morphology}.
 
 % From the Selecting Random Subsamples for Thesis Chap3 (jupyter notebook)
 \begin{table*}[]
 	\centering
-	\caption[Summary of morphology measurements]{}
+	\caption[Summary of morphology measurements (UPDATE THIS)]{}
 	\label{tab:morph numbers}
 	\let\mc\multicolumn
 	\begin{tabular}{lcccc}
@@ -202,20 +199,50 @@ In total, we measure morphological indicators for 282,350 SDSS galaxies. Some ga
 	\end{tabular}
 \end{table*}
 
-\subsection{Uncertainties and systematics}
-Here goes all the stuff I've worked on this week. 
+\subsection{Quality and consistency}
+We perform several checks to determine the quality and consistency of our morphology diagnostics. Due to the wealth of information provided by the SDSS pipeline, we can compare some of our diagnostics against SDSS values. Obviously there are some instances where our measurements will outperform the SDSS pipeline and vice versa. We first check our values of the Petrosian radius as shown in Figure \ref{fig: Rp comparison}. Our \rp~are on average $\sim$35\% larger than those computed by SDSS. The biggest reason for this discrepancy is due to aperture shape: SDSS compute \rp~using circular annuli while we use elliptical. [Mention the weird ones where our \rp~is tiny but SDSS's is huge? Show some examples where my code does better than SDSS? And where mine fails?]
 
-Gini coefficient sucks \citep{Lisker2008}.
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/PetroRad_compare_cleanSample_forThesis.png}
+\caption[Comparison of Petrosian radius from this work to that computed in SDSS pipeline]{Comparison of the Petrosian radius R$_p$ computed in the SDSS pipeline to that caluclated in this work. Most of the discrepancy between these values is due to the apertures used: the SDSS pipeline defines R$_p$ in circular annuli while we use elliptical.}
+\label{fig: Rp comparison}
+\end{figure}
 
-\subsection{Comparison with other samples}
+Of greater importance, however, are the values of the morphology diagnostics as these are used as features to train our machine learning algorithm in Chapter \ref{chap:4}. Though SDSS does not measure all of the structural indicators we tackle here, they do provide a means to compute the concentration index via \texttt{PETROR50} and \texttt{PETROR90}, the Petrosian radius containing 50\% and 90\% of the galaxy total light, respectively. The left panel of Figure \ref{fig: concentrations}~shows our $C$ against that computed from SDSS. Our values are systematically $\sim$1 point larger than SDSS values but otherwise retain a strikingly tight correlation. This is suprising considering the drasticly different ways these values are computed between. Besides the obvious difference of the choosen radii used to compute each index (SDSS's 50\% and 90\% vs our 20\% and 80\%), SDSS values are again computed using ciruclar annuli whereas we use elliptical annuli for all measurements. That aperture shape affects $C$ is well known and explored in depth in \cite{Bershady2000}. The right panel of Figure \ref{fig: concentrations} show the ratio of our $C$ to SDSS's $C$ as a function of galaxy elongation which is tightly correlated with ellipticity. [Say something else smart here once you think of it.]
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/compare_concentrations.png}
+\caption[Comparison of concentration index from this work to that computed from SDSS.]{The left panel shows our measured concentration index against that computed from values taken from SDSS DR7. That the major difference is simply a systematic shift towards larger values of $C$ for what we compute here is exceptional. SDSS DR7 provide values of $\mathtt{PETROR50}$ and $\mathtt{PETROR90}$, the radii containing 50\% and 90\% of the total galaxy light respectively, whereas we compute $C$ using radii corresponding to 20\% and 80\% of the galaxy total light. Additionally, SDSS use circular annuli for all measurements whereas we use elliptical. The right panel shows the ratio of our $C$ to SDSS's $C$ as a function of a galaxy's elongation, intimately related to its ellipticity. This indicates that there is ???}
+\label{fig: concentrations}
+\end{figure}
+
+
+SDSS does not provide any other direct morphology diagnostics comparable to what we measure here so we next assess the quality of our structural indicators by estimating the fraction of catastrophic failures. We consider the galaxy central coordinates assigned at various stages during the cleaning and measuring process and compare those to the original SDSS galaxy coordinates. SExtractor assigns galaxy central coordinates for each postage stamp based on the first order momemnt of light. Additionally, the asymmetry and \M{20}~measurements each determine their own galaxy center via the minimization of their respective quantity and thus do not necessarily overlap. We compute the coordinate difference in arcseconds for each of these three centers as compared to the SDSS coordinates. [Quote all the percentages of differences greater than 2arcsec -- show a figure?? Why 2 arcsec? ].  
+Thus we find very good agreement between SDSS and SExtractor galaxy centers, indicating that we correctly identify the galaxy of interest in each postage stamp. We also find good agreement between SDSS and both the $A$ and \M{20} centers indicating that our minimizing algorithm fails only a small percentage of the time. We are thus confidant that our measurements of these quantities are robust at least in this respect. 
+
+Though all of these morphological diagnostics are subject to resolution, signal-to-noise, and aperture size and shape variability, the Gini coefficient is arguably the most susceptible to such issues \citep{Lisker2008}. 
+
+Finally we consider the overall distribution of our measured structural indicators. It is well known that different galaxy types live in different parts of morphology parameter space. For example, in the $G$-\M{20} plane, early-type galaxies are typically found in the upper right with late-type galaxies residing in the lower left, and merging systems in the upper left. Similar relations exist in the $C$-$G$, and $G$-\M{20}~planes. In Figure \ref{fig: morphs as a fcn of fsmooth}~we select a random samlpe of 5000 galaxies and plot them in each possible planar combination of our morphology diagnostics where the points are colored according to their Galaxy Zoo 2 debiased \fsmooth~fraction. Because \fsmooth~correlates well with early-type galaxies we see the expected trends discussed above. 
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/morph_params_random_sample_fsmooth_colored_clean.png}
+\caption[Automated morphologies as a function of Galaxy Zoo 2 \fsmooth]{Here a random sample of 5000 galaxies are plotted in every possible planar combination of automated morphologies where the color denotes the galaxy's \fsmooth~fraction. As expected, galaxies with higher \fsmooth~are found in locations where early-types are typically seen: notably they have larger $C$ and $G$, and smaller \M{20}.}
+\label{fig: morphs as a fcn of fsmooth}
+\end{figure}
+
+
+%Gini coefficient sucks \citep{Lisker2008}.
+
+
 \begin{figure*}[t!]
 \includegraphics[width=3.7in]{Figures/human_machine/A2b.pdf}
-\caption{\textit{Left.} Identifying~\feat~subjects is independent of identifying~\notfeat~subjects.  Both ROC curves use all subjects processed by SWAP where the score used to create the ROC curve is simply each subject's achieved posterior probability. The Featured curve demonstrates how well we identify~\feat~subjects with a threshold of 0.99, while the Not Featured curve demonstrates how well we identify~\notfeat~subjects with a threshold of 0.004. Typically, best performance is achieved by the score associated with the upper-left-most part of the curve. Our~\feat~threshold is nearly optimal, while our~\notfeat~threshold could be improved since the blue square is not as close to the upper left hand corner as other possible values of the subject posterior. \textit{Right.} Relation between measured morphology diagnostics for more than 280K SDSS galaxies. Most of these galaxies are processed through SWAP, receiving a posterior probability that estimates how likely each is to be~\feat~or~\notfeat.}
-\label{fig: morph thresh}
+\caption[Automated morphologies for the full GZ2 sample.]{\textit{Right.} Relation between measured morphology diagnostics for more than 280K SDSS galaxies.}
+\label{fig: morphs}
 \end{figure*}
 
-
-Compare sample against sersic index, SDSS concentration, split by morphology, etc. 
 
 
 \section{Catalog of morphological indicators for 282350 SDSS galaxies}

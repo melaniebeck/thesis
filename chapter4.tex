@@ -107,31 +107,15 @@ generalize to unseen subjects? The field of machine learning provides few hard r
 for answering these questions, only guidelines and best practices. 
 Here we briefly discuss our approach for the development of our decision engine.
 
-%%%-------------------------------------------------------
-%%%  FIGURE:    FULL GZX PERFORMANCE
-%%%-------------------------------------------------------
-\begin{figure*}[t!]
-\centering
-\includegraphics[width=5.5in]{Figures/human_machine/f7.pdf}
-\caption[Performance of the human+machine combination -- Galaxy Zoo: Express]{By incorporating a machine classifier, GZX (red) increases the classification rate by an order of magnitude compared to GZ2 (dashed dark blue) and out-performs the SWAP-only run (light blue), retiring more than 200K subjects in just 27 days of GZ2 project time. The dashed black line marks the first night the machine trains. After several additional nights of training, it is deemed optimized and allowed to retire subjects. Both humans and machine then contribute to retirement. We end the simulation after 32 days having retired over 210K galaxies. See Table~\ref{tab: summary} for details. \label{fig: money}}
-\end{figure*}
-
 
 As discussed in detail in Section~\ref{sec: SWAP}, SWAP yields a probability that 
 a subject exhibits the feature of interest. While some machine algorithms can 
-accept continuous input labels, the RF requires distinct classes. We thus use only 
-those subjects which have crossed either of the retirement thresholds. 
+accept continuous input labels, the RF requires distinct classes. We thus use only those subjects which have crossed either of the retirement thresholds. 
 Though we find that SWAP consistently retires 35-40\%~\feat~subjects on 
-any given day of the simulation, a balanced ratio of~\feat~to~\notfeat~isn't guaranteed.
- Highly unbalanced training samples should be resampled to correct the imbalance; 
-however, as we exhibit only a mild lopsidedness, we allow the machine to train on all 
-SWAP-retired subjects.  
+any given day of the simulation, a balanced ratio of~\feat~to~\notfeat~isn't guaranteed. Highly unbalanced training samples should be resampled to correct the imbalance; however, as we exhibit only a mild lopsidedness, we allow the machine to train on all SWAP-retired subjects.  
 
 SWAP retires a few hundred subjects during the first days of the simulation.
-In principle,  a machine can be trained with such a small sample, but will be unable
-to generalize to unseen data. We estimate a minimum number of training samples
-and the machine's ability to generalize by considering a learning curve, an illustration
-of a machine's performance with increasing sample size for fixed hyperparameters. 
+In principle, a machine can be trained with such a small sample, but will be unable to generalize to unseen data. We estimate a minimum number of training samples and the machine's ability to generalize by considering a learning curve, an illustration of a machine's performance with increasing sample size for fixed hyperparameters. 
 Figure~\ref{fig: learning curve} demonstrates such a curve wherein we plot
 the accuracy from both the 10-fold cross-validation, and the trained machine
 applied to its own training sample for a random sample of GZ2 subjects
@@ -185,7 +169,14 @@ not retired by the machine can instead be retired by humans, thus providing
 the machine a more fully sampled morphology parameter space on future 
 training sessions. 
 
-
+%%%-------------------------------------------------------
+%%%  FIGURE:    FULL GZX PERFORMANCE
+%%%-------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Figures/human_machine/GZ2_sup_PLPD5_p5_flipfeature2b_moneyplot.pdf}
+\caption[Performance of the human+machine combination -- Galaxy Zoo: Express]{By incorporating a machine classifier, GZX (red) increases the classification rate by an order of magnitude compared to GZ2 (dashed dark blue) and out-performs the SWAP-only run (light blue), retiring more than 200K subjects in just 27 days of GZ2 project time. The dashed black line marks the first night the machine trains. After several additional nights of training, it is deemed optimized and allowed to retire subjects. Both humans and machine then contribute to retirement. We end the simulation after 32 days having retired over 210K galaxies. See Table~\ref{tab: summary} for details. \label{fig: money}}
+\end{figure}
 
 
 %%----------------------------------------------------------------------------------------------------------------------------------------------
@@ -193,69 +184,15 @@ training sessions.
 %%----------------------------------------------------------------------------------------------------------------------------------------------
 \section{Results} \label{sec: results}
 We perform a full GZX simulation incorporating our RF with the fiducial 
-SWAP run discussed in Section~\ref{sec: fiducial}. 
-The machine attempts its first training on Day 8 with an initial training
-sample of $\sim$20K subjects. It undergoes several additional nights 
-of training, each time with a larger training sample. 
-By Day 12, SWAP has provided over 40K subjects for training and the machine's 
-agent has deemed the machine optimized. 
-The machine predicts class labels for the remaining 230K GZ2 subjects. 
-Of those, the machine retires over 70K, dramatically increasing the 
-subset of retired subjects. 
-We end the simulation after 32 days, having retired $\sim$210K subjects
-as detailed in Table~\ref{tab: summary}. 
+SWAP run discussed in Section~\ref{sec: fiducial}. The machine attempts its first training on Day 8 with an initial training sample of $\sim$20K subjects. It undergoes several additional nights of training, each time with a larger training sample. By Day 12, SWAP has provided over 40K subjects for training and the machine's agent has deemed the machine optimized. The machine predicts class labels for the remaining 230K GZ2 subjects. Of those, the machine retires over 70K, dramatically increasing the subset of retired subjects. We end the simulation after 32 days, having retired $\sim$210K subjects as detailed in Table~\ref{tab: summary}. 
 
 We present these results in Figure~\ref{fig: money} where subject retirement 
-with GZX (red) is compared to our fiducial SWAP-only run (light blue) and GZ2 (dashed dark blue). 
-Using the~\raw~labels as before, we compute our usual quality metrics on the 
-full sample of GZX-retired subjects; reported in Table~\ref{tab: summary}. 
-Accuracy and purity remain within a few percent of the SWAP-only run at 93.5\% 
-and 84.2\% respectively. Instead we see a 5\% decline in the completeness. 
+with GZX (red) is compared to our fiducial SWAP-only run (light blue) and GZ2 (dashed dark blue). Using the~\raw~labels as before, we compute our usual quality metrics on the full sample of GZX-retired subjects; reported in Table~\ref{tab: summary}. Accuracy and purity remain within a few percent of the SWAP-only run at 93.1\% and 83.2\% respectively. Instead we see a 5\% decline in the completeness. 
 While the SWAP-only run identified 99\% of~\feat~subjects, incorporation
-of the machine seems to miss a significant portion thus dropping GZX completeness to 94.3\%. 
-We discuss this behaviour below.
-
-By dynamically generating a training sample through a more sophisticated analysis of 
-human classifications coupled with a machine classifier, we retire more than 200K 
-GZ2 subjects in just 27 days.  Visual classification through SWAP alone retires as 
-many in 50 days, while GZ2 requires a full year.  
-Though our analysis considers only the top-level task of GZ2's decision tree, GZX suggests a tantalizing potential to increase the classification rate by an order of magnitude over the traditional crowd-sourced approach.
-We next explore the composition of those classifications.
+of the machine seems to miss a significant portion thus dropping GZX completeness to 94.0\%. We discuss this behaviour below.
 
 
-
-%%----------------------------------------------------------------------------------------------------------------------------------------------
-%%   WHO RETIRES WHAT, WHEN? 
-%%----------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Who retires what, when?}  
-
-In the top panel of Figure~\ref{fig: gzx components} we explore the individual 
-contributions to GZX subject retirement from the RF (dash-dotted teal) 
-and SWAP (dashed orange). The solid black line shows the total GZX retirement (SWAP+RF), while the dotted grey line depicts the fiducial SWAP-only run from 
-Section~\ref{sec: fiducial} for reference. 
-Two things are immediately obvious. First, each component shoulders approximately
-half of the retirement burden with the machine and SWAP responsible for 
-$\sim$$100$K and $\sim$$110$K subjects respectively.  
-Secondly, the rate of retirement exhibited by the two components is in stark contrast.
-SWAP retires at a relatively constant rate while the machine retires 
-dramatically at the beginning of its application, quickly surpassing the human 
-contribution, and plateaus thereafter. 
-We thus clearly see three epochs of subject retirement.
-In the first phase, humans are the only contributors to subject retirement.  
-Once the machine is optimized, it immediately contributes more to retirement than humans.
-However, the machine's performance plateaus quickly;  the third 
-phase is again dominated by human classifications.
-
-%%%-------------------------------------------------------
-%%%  FIGURE:    GZX COMPONENT CONTRIBUTIONS
-%%%-------------------------------------------------------
-\begin{figure}[t!]
-\includegraphics[width=3.5in]{Figures/human_machine/f8.pdf}
-\caption[Individual contributions of human and machine to galaxy classification]{Contributions to subject retirement by both classifying agents of GZX: human (SWAP) and machine. The top panel shows cumulative subject retirement for GZX as a whole (solid black), along with that attributed to the RF (dash-dotted teal), and SWAP (dashed orange). The dotted grey line shows the fiducial SWAP-only run for comparison. Retirement totals for humans and machine are nearly equal over the course of the simulation but display different behaviours: SWAP's retirement rate is almost constant while the RF contributes substantially after its initial application and then plateaus.  The bottom panels show what fraction of GZ2 subjects are retired, separated by class label. Overall, GZX retires 73.6\% of the entire GZ2 sample in 32 days, retiring the same proportion of~\feat~and~\notfeat~subjects as indicated by the black lines. However, humans retire 30\% more~\feat~subjects than the machine, while both components retire a similar proportion of~\notfeat~subjects. \label{fig: gzx components}}
-\end{figure}
-
-
-\begin{table*}[]
+\begin{table}
 	\rotate
 	\centering
 	\caption[Simulation summary]{Summary of key quantities for GZ2 and our various simulations. All quality metrics are calculated using~\raw~labels.}
@@ -265,125 +202,96 @@ phase is again dominated by human classifications.
 		
 		\mc7c{ \textbf{Simulation Summary} } \\
 		\hline \hline
-			& Days	& Subjects Retired & Human Effort 	&  Accuracy 	& Purity 	& Completeness\\
-		\mc2c{} 		& 	 	& (classifications) 	&  (\%)	    	& (\%)		& (\%)	\\
+			& Days	& Subjects & Human Effort 	&  Accuracy 	& Purity 	& Completeness\\
+		\mc2c{} 		& 	Retired	& (classifications) 	&  (\%)	    	& (\%)		& (\%)	\\
 		\hline
 			
 		Galaxy Zoo 2	&	430 	& 285962  	& 16,340,298 	& --   	& --    	 & --   \\
 		SWAP only	&	92    	& 226124          & 2,298,772	& 95.7 	& 86.7	 & 99.0     \\
-		SWAP+RF   	& 32  	& 210543 	& 932,017 	& 93.5    	& 84.2    	& 94.3      \\
+		SWAP+RF   	& 32  	& 210803 	& 936,887 	& 93.1    	& 83.2    	& 94.0      \\
 		\hline
 	\end{tabular}
-\end{table*}
+\end{table}
+
+By dynamically generating a training sample through a more sophisticated analysis of human classifications coupled with a machine classifier, we retire more than 200K GZ2 subjects in just 27 days.  Visual classification through SWAP alone retires as many in 50 days, while GZ2 requires a full year. Though our analysis considers only the top-level task of GZ2's decision tree, GZX suggests a tantalizing potential to increase the classification rate by an order of magnitude over the traditional crowd-sourced approach. We next explore the composition of those classifications.
 
 
+%%%-------------------------------------------------------
+%%%  FIGURE:    GZX COMPONENT CONTRIBUTIONS
+%%%-------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[width=3.7in]{Figures/human_machine/GZX_component_contributions.pdf}
+\caption[Individual contributions of human and machine to galaxy classification]{Contributions to subject retirement by both classifying agents of GZX: human (SWAP) and machine. The top panel shows cumulative subject retirement for GZX as a whole (solid black), along with that attributed to the RF (dash-dotted teal), and SWAP (dashed orange). The dotted grey line shows the fiducial SWAP-only run for comparison. Retirement totals for humans and machine are nearly equal over the course of the simulation but display different behaviours: SWAP's retirement rate is almost constant while the RF contributes substantially after its initial application and then plateaus.  The bottom panels show what fraction of GZ2 subjects are retired, separated by class label. Overall, GZX retires 73.7\% of the entire GZ2 sample in 32 days, retiring the same proportion of~\feat~and~\notfeat~subjects as indicated by the black lines. However, humans retire 30\% more~\feat~subjects than the machine, while both components retire a similar proportion of~\notfeat~subjects. \label{fig: gzx components}}
+\end{figure}
+
+%%----------------------------------------------------------------------------------------------------------------------------------------------
+%%   WHO RETIRES WHAT, WHEN? 
+%%----------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Who retires what, when?}  
+
+In the top panel of Figure~\ref{fig: gzx components} we explore the individual 
+contributions to GZX subject retirement from the RF (dash-dotted teal) 
+and SWAP (dashed orange). The solid black line shows the total GZX retirement (SWAP+RF), while the dotted grey line depicts the fiducial SWAP-only run from 
+Section~\ref{sec: fiducial} for reference. Two things are immediately obvious. First, each component shoulders approximately half of the retirement burden with the machine and SWAP responsible for $\sim$$98$K and $\sim$$112$K subjects respectively. Secondly, the rate of retirement exhibited by the two components is in stark contrast. SWAP retires at a relatively constant rate while the machine retires dramatically at the beginning of its application, quickly surpassing the human contribution, and plateaus thereafter. We thus clearly see three epochs of subject retirement. In the first phase, humans are the only contributors to subject retirement. Once the machine is optimized, it immediately contributes more to retirement than humans. However, the machine's performance plateaus quickly; the third phase is again dominated by human classifications.
+
+%932,017
 
 %%%-------------------------------------------------------
 %%%  FIGURE:    MACHINE GETS IT RIGHT!!!
 %%%-------------------------------------------------------
-\begin{figure*}[t!]
+\begin{figure}
 \centering
-\includegraphics[width=6.5in]{Figures/human_machine/f9.pdf}
+\includegraphics[width=\textwidth]{Figures/human_machine/f9.pdf}
 \caption[Random subsample of galaxy jpegs identified as false positives by the Random Forest]{A random subsample of subjects identified as false positives: labelled by machine as~\feat, but as~\notfeat~according to~\raw. We display \fsmooth~in the lower left corner, that is, the fraction of volunteers who classified the subject as `smooth' (\notfeat). Values are typically between 0.5 and 0.65 indicating that GZ2 volunteers did not reach a strong consensus. Fortunately, the machine is able to identify these subjects as~\feat~due to their measured morphology diagnostics. \label{fig: machine false pos}}
-\end{figure*}
+\end{figure}
 
 
 %%%-------------------------------------------------------
 %%%  FIGURE:   CAS DISTRIBUTIONS 
 %%%-------------------------------------------------------
-\begin{figure*}[t!]
+\begin{figure}
 \centering
-\includegraphics[width=7in]{Figures/human_machine/f10.pdf}
+\includegraphics[width=\textwidth]{Figures/human_machine/morph_params_raw_labels_4paper.pdf}
 \caption[Distributions of measured galaxy morphology features.]{The RF is trained on a 5-dimensional morphology parameter space. We show the distribution of each morphology indicator for machine-retired~\feat~(blue) and~\notfeat~(orange) subjects compared to the full GZ2 subject sample (black). The difference between~\feat~and~\notfeat~subjects is in stark contrast for all distributions except, perhaps, \M{20}.  \label{fig: morph params}}
-\end{figure*}
+\end{figure}
 
 In the bottom panels of Figure~\ref{fig: gzx components}, we consider the class
-composition of subjects retired by SWAP and the RF. 
-The left (right) panel shows the retired fraction of GZ2 subjects identified 
-as~\feat~(\notfeat) according to their~\raw~labels as a function of GZ2 project time. 
-Overall, GZX retires 73.6\% of the GZ2 subject sample and this is evenly 
-distributed between~\feat~and~\notfeat~subjects as indicated by the solid
-black lines in both panels. 
-However, SWAP retires more than 50\% of all~\feat~subjects while the machine
-retires only 18\%. This divergence does not exist for~\notfeat~subjects where
-each component contributes 33-37\%. 
+composition of subjects retired by SWAP and the RF. The left (right) panel shows the retired fraction of GZ2 subjects identified as~\feat~(\notfeat) according to their~\raw~labels as a function of GZ2 project time. Overall, GZX retires 73.7\% of the GZ2 subject sample and this is almost evenly distributed between~\feat~and~\notfeat~subjects as indicated by the solid black lines in both panels. However, SWAP retires 50\% of all~\feat~subjects while the machine retires only 20\%. This divergence does not exist for~\notfeat~subjects where each component contributes 33-34\%. 
 
-What is the source of this discrepancy? 
-Each night the machine trains on a sample composed consistently of 30-40\%~\feat~subjects but does not retire a similar proportion, indicating
-that the 30\% of non-retired~\feat~subjects do not receive high~\pmachine. 
-In the following section we explore whether this is an artefact of our choice in machine 
-or in the human-machine combination implemented here. 
+What is the source of this discrepancy? Each night the machine trains on a sample composed consistently of 30-40\%~\feat~subjects but does not retire a similar proportion, indicating that the 30\% of non-retired~\feat~subjects do not receive high~\pmachine. In the following section we explore whether this is an artefact of our choice in machine or in the human-machine combination implemented here. 
+
 
 \subsection{Machine performance}\label{sec: machine performance}
 
 Throughout our analysis we have defined~\feat~and~\notfeat~subjects by 
-their~\raw~labels as this was the most compatible choice for comparison with SWAP output.  
-However, the machine does not learn in the same way, nor is it presented with the 
-same information. Machine and human classifications 
-each provide valuable and complementary information for identifying \feat~galaxies.
+their~\raw~labels as this was the most compatible choice for comparison with SWAP output. However, the machine does not learn in the same way, nor is it presented with the same information. Machine and human classifications each provide valuable and complementary information for identifying \feat~galaxies.
 
-We isolate the 6127 subjects that were deemed false positives, i.e., galaxies 
+We isolate the 7,060 subjects that were deemed false positives, i.e., galaxies 
 retired by the machine as~\feat~that have~\notfeat~\raw~labels, a sample that
-comprises only 6.25\% of all subjects the machine retires.
-We visually examine several hundred
-and assess that, to the expert eye, a majority are, in fact, \feat.  
-A random sample is shown in Figure~\ref{fig: machine false pos}. 
+comprises 7.2\% of all subjects the machine retires. We visually examine several hundred and assess that, to the expert eye, a majority are in fact \feat. A random sample is shown in Figure~\ref{fig: machine false pos}. 
 
 
 That the machine strongly identifies these galaxies as \feat~
-(\pmachine~$\ge 0.9$) where humans instead classify them as \notfeat~(\ffeat~$< 0.5$) 
-has several contributing factors: 1) as discussed in Section~\ref{sec: swap gz2 disagree}, 
-the threshold we chose carries with it a confidence interval such that subjects with 
-$0.4 <$~\ffeat+\fstar~$< 0.6$ are most likely to receive disagreeing labels from 
-other classifying agents, 2) the first task of the GZ2 decision tree asks a 
-question that does not necessarily correlate with a split between early- and
+(\pmachine~$\ge 0.9$) where humans instead classify them as \notfeat~(\ffeat~$< 0.5$) has several contributing factors: 1) as discussed in Section~\ref{sec: swap gz2 disagree}, the threshold we chose carries with it a confidence interval such that subjects with $0.4 <$~\ffeat+\fstar~$< 0.6$ are most likely to receive disagreeing labels from other classifying agents, 2) the first task of the GZ2 decision tree asks a question that does not necessarily correlate with a split between early- and
  late-type galaxies, and 3) the machine learns on morphology diagnostics
  that are very different from visual inspection.
 
-We find that 41.4\% of these false positives have $0.4 \le$~\ffeat+\fstar$<0.5$ 
+We find that 40\% of these false positives have $0.4 \le$~\ffeat+\fstar$<0.5$ 
 indicating that the disagreement between humans and machine is likely due to the 
-labels we assign at our given threshold. However, we also find that 43.5\% of false 
-positives have \ffeat+\fstar~$\le0.35$, and this discrepancy is not as easily explained. 
- In Figure~\ref{fig: machine false pos} we examine a random sample of false positives 
-in this regime where, for clarity, we display only the \ffeat~value in the lower left corner. 
-The majority of these subjects are discs lacking features such as spiral arms or strong bars. 
-Whether this is the reason the majority of volunteers classify these objects as 
-``smooth" is beyond the scope of this paper, however, this behaviour might be 
-modified by providing actual training images and live feedback as performed in
- \cite{Marshall2016}. We suggest that, at least for this particular question, 
-if either human or machine identifies a subject as \feat, it is likely the subject 
-is discy and worth further investigation.
-
+labels we assign at our given threshold. However, we also find that 45\% of false
+positives have \ffeat+\fstar~$\le0.35$, and this discrepancy is not as easily explained. In Figure~\ref{fig: machine false pos} we examine a random sample of false positives in this regime where, for clarity, we display only the \ffeat~value in the lower left corner. The majority of these subjects are disks lacking features such as spiral arms or strong bars. Whether this is the reason the majority of volunteers classify these objects as ``smooth" is beyond the scope of this paper, however, this behaviour might be modified by providing actual training images and live feedback as performed in \cite{Marshall2016}. We suggest that, at least for this particular question, if either human or machine identifies a subject as \feat, it is likely the subject is disky and worth further investigation.
 
 %%%-------------------------------------------------------
 %%%  FIGURE:   FEATURE IMPORTANCES
 %%%-------------------------------------------------------
-\begin{figure}[t]
-\includegraphics[width=3.5in]{Figures/human_machine/f11.pdf}
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{Figures/human_machine/RF_feature_importance_4paper.pdf}
 \caption[Random Forest's feature importances]{The RF's ranked feature importance averaged over all nights of training with black bars indicating the standard deviation. A larger value corresponds to higher importance. The machine computes feature importance according to how much each feature increases the purity of the resulting split averaged over all trees in the forest. The RF places great importance in the Gini coefficient though we note that it can under-represent the importance of highly correlated features such as concentration.\label{fig: feature importance}}
 \end{figure}
 
-Accordingly, this suggests that, in some cases, the morphology indicators we measure are 
-sufficient for the machine to recognize~\feat~galaxies regardless of the labels humans provide. 
-Figure~\ref{fig: morph params} shows the distribution of each 
-morphology indicator for all subjects the machine retires as~\feat~(blue) 
-and~\notfeat~(orange) compared to the full GZ2 subject set. 
-The difference between~\feat~and~\notfeat~is stark in all but the \M{20} distribution. 
-This can be seen explicitly in Figure~\ref{fig:  feature importance} in which
-we show the RF's ranked feature importances, where large values indicate higher importance. 
-Feature importance is computed as how much each feature decreases the impurity 
-of a split in a tree. The impurity decrease from each feature is then averaged over
-all trees and ranked. 
-We show the feature importance averaged over all nights of training with 
-black bars indicating the standard deviation. The machine finds the Gini coefficient 
-most important for class prediction, placing little emphasis on \M{20}. 
-It is well known that the Gini coefficient is more sensitive to noise than other diagnostics, 
-however, we point out that when a machine is faced with two or more correlated features 
-any of them can be used as the predictor. Once chosen, the importance of the others is reduced. 
-This explains why Concentration is ranked much lower than Gini even though they 
-are strongly correlated as seen in Figure~\ref{fig: morph thresh}. 
-That the machine relies heavily on these two morphology diagnostics is unsurprising as
-concentration has long been an automated predictor between early- and late-type galaxies~\citep{Abraham1994, Abraham1996, Shen2003}.
+Accordingly, this suggests that, in some cases, the morphology indicators we measure are sufficient for the machine to recognize~\feat~galaxies regardless of the labels humans provide. Figure~\ref{fig: morph params} shows the distribution of each morphology indicator for all subjects the machine retires as~\feat~(blue) and~\notfeat~(orange) compared to the full GZ2 subject set. The difference between~\feat~and~\notfeat~is stark in all but the \M{20} distribution. This can be seen explicitly in Figure~\ref{fig:  feature importance} in which we show the RF's ranked feature importances, where large values indicate higher importance. Feature importance is computed as how much each feature decreases the impurity of a split in a tree. The impurity decrease from each feature is then averaged over all trees and ranked. We show the feature importance averaged over all nights of training with black bars indicating the standard deviation. The machine finds the Gini coefficient most important for class prediction, placing little emphasis on \M{20}. It is well known that the Gini coefficient is more sensitive to noise than other diagnostics, however, we point out that when a machine is faced with two or more correlated features any of them can be used as the predictor. Once chosen, the importance of the others is reduced. This explains why Concentration is ranked much lower than Gini even though they are strongly correlated as seen in Figure~\ref{fig: morph thresh}. That the machine relies heavily on these two morphology diagnostics is unsurprising asconcentration has long been an automated predictor between early- and late-type galaxies~\citep{Abraham1994, Abraham1996, Shen2003}.
 
 
 The complementary nature of human and machine classification can 
