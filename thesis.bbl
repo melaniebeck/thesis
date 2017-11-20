@@ -774,6 +774,10 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
   {Akiyama}, \& {Yoshida}}]{Saito2006}
 {Saito}, T., {Shimasaku}, K., {Okamura}, S., {et~al.} 2006, \apj, 648, 54
 
+\bibitem[{{Salim} {et~al.}(2016){Salim}, {Lee}, {Janowiecki}, {da Cunha},
+  {Dickinson}, {Boquien}, {Burgarella}, {Salzer}, \& {Charlot}}]{Salim2016}
+{Salim}, S., {Lee}, J.~C., {Janowiecki}, S., {et~al.} 2016, \apjs, 227, 2
+
 \bibitem[{{Sandage}(1961)}]{Sandage1961}
 {Sandage}, A. 1961, {The Hubble atlas of galaxies}
 
@@ -991,6 +995,11 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
   {Schawinski}, {Smethurst}, \& {Smith}}]{Willett2017}
 {Willett}, K.~W., {Galloway}, M.~A., {Bamford}, S.~P., {et~al.} 2017, \mnras,
   464, 4176
+
+\bibitem[{{Wisnioski} {et~al.}(2012){Wisnioski}, {Glazebrook}, {Blake},
+  {Poole}, {Green}, {Wyder}, \& {Martin}}]{Wisnioski2012}
+{Wisnioski}, E., {Glazebrook}, K., {Blake}, C., {et~al.} 2012, \mnras, 422,
+  3339
 
 \bibitem[{{Yang} {et~al.}(2009){Yang}, {Zabludoff}, {Tremonti}, {Eisenstein},
   \& {Dav{\'e}}}]{Yang2009}

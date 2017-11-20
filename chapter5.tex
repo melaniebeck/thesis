@@ -13,14 +13,15 @@ Observationally, the situation is still unclear. The large gas-to-baryonic fract
 The lack of existing observational constraints below 10 10 M is of particular concern. It is pre-cisely in this mass range that most of the con-straining power resides. In fact, state of the art simulations that directly resolve the interstellar medium of individual galaxies while capturing their cosmological environment show that low mass galaxies are the mostly a↵ected by preven-tive feedback (e.g., FIRE Muratov et al.2015; 11
 GASOLINE Christensen et al. 2015; and MU-FASA Dav ́ e et al.2016).These simulations show that in galaxies with M<10 10 supernova-driven fast outflows can lower the gas inflow rate, and consequently the rate at which clumps are formed in-situ, compared to more massive galax-ies. If clumps are the result of minor merging, on the other hand, the dependency with stellar mass would depend on the specifics of the dy-namics of the mergers. 
 
+Throughout this chapter we assume a flat Planck cosmology with H$_0=67.8$ and $\Omega_m = 0.308$ where appropriate. 
+
+
 \section{Sample Selection \& Data} \label{sec:chap5-sample}
-We identify a sample of clumpy galaxies in the local universe by considering classifications from both the Galaxy Zoo 2 (GZ2) \citep{Willett2013} and Galaxy Zoo: Hubble (GZH) \citep{Willett2017} projects. We provide a brief overview of each of these projects here. 
 
-The GZ2 subject sample consists of 285,962 galaxies identified as the brightest 25\% ($r$-band magnitude $< 17$) residing in the SDSS North Galactic Cap region from Data Release 7 and included subjects with both spectroscopic and photometric redshifts out to $z < 0.25$. In addition to the DR7 Legacy catalog, galaxies were included from Stripe 82, a multipy-imaged strip along the celestial equator in the Southern Galactic Cap. Galaxies in this region were selected to have $m_r\le17.7$ and petror90\_r $>3$, where petror90\_r is the radius containing 90\% of the r-band Petrosian aperture flux.
+We identify a sample of clumpy galaxies in the local universe by considering classifications from both the Galaxy Zoo 2 \citep[GZ2][]{Willett2013} and Galaxy Zoo: Hubble \citep[GZH][]{Willett2017} projects. We provide a brief overview of each of these projects here. 
 
-The GZH project contains images drawn from several dedicated surveys and sample selection criteria. Most samples are drawn from various Hubble fields such as AEGIS, GOODS and COSMOS; however also included are the single-epoch and co-added images from Stripe 82 of the SDSS Data Release 7 that were part of the GZ2 project. The single-epoch imaging allows for local comparison to higher redshift galaxies, while the co-added imaging allows for image depth analyses. 
+The GZ2 subject sample consists of 285,962 galaxies identified as the brightest 25\% ($r$-band magnitude $< 17$) residing in the SDSS North Galactic Cap region from Data Release 7 and included subjects with both spectroscopic and photometric redshifts out to $z < 0.25$. In addition to the DR7 Legacy catalog, galaxies were included from Stripe 82, a multiply-imaged strip along the celestial equator in the Southern Galactic Cap. Galaxies in this region were selected to have $m_r\le17.7$ and petror90\_r $>3$, where petror90\_r is the radius containing 90\% of the r-band Petrosian aperture flux.
 
-The most notable difference between these two projects is the decision tree presented to volunteers. The goal of GZH was to collect detailed morphologies for galaxies in Hubble imaging which extends to much higher redshift than those of the SDSS sample. Galaxies at higher redshift do not necessarily follow the traditional Hubble sequence and thus a new branch of questioning was added to the decision tree for this project, shown in Figure \ref{fig: gzh decision tree}. This included several questions concerning the clumpy nature of galaxies, a morphological feature well known to exist at higher redshift. Because GZH included galaxies from the GZ2 project, we can draw on both sets of decision trees to identify clumpy features for galaxies in Stripe 82.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{Figures/gz3_tree_resized.pdf}
@@ -28,42 +29,79 @@ The most notable difference between these two projects is the decision tree pres
 \label{fig: gzh decision tree}
 \end{figure}
 
+The GZH project contains images drawn from several dedicated surveys and sample selection criteria. Most samples are drawn from various Hubble fields such as AEGIS, GOODS and COSMOS; however also included are the single-epoch and co-added images from Stripe 82 of the SDSS Data Release 7 that were part of the GZ2 project. The single-epoch imaging allows for local comparison to higher redshift galaxies, while the co-added imaging allows for image depth analyses. 
+
+The most notable difference between these two projects is the decision tree presented to volunteers. The goal of GZH was to collect detailed morphologies for galaxies in Hubble imaging which extends to much higher redshift than those of the SDSS sample. Galaxies at higher redshift do not necessarily follow the traditional Hubble sequence and thus a new branch of questioning was added to the decision tree for this project, shown in Figure \ref{fig: gzh decision tree}. This included several questions concerning the clumpy nature of galaxies, a morphological feature well known to exist at higher redshift. Because GZH included galaxies from the GZ2 project, we can draw on both sets of decision trees to identify clumpy features for galaxies in Stripe 82.
+
 
 To select a sample of ``clumpy" galaxies from the GZH Stripe 82 sample, we consider only those subjects with large featured (\ffeat) and clumpy (\fclump) vote fractions: the fraction of volunteers who voted a subject as `featured or disk' in response to the first question ``Is the galaxy simply smooth and rounded, with no sign of a disk?'' and who answered `yes' to the question ``Does the galaxy have a mostly clumpy appearance?'' Specifically, we select galaxies which satisfy \ffeat~$\ge0.5$ and \fclump~$\ge0.5$ Additionally, we require $N_{\mathrm{votes}} \ge 20$, where $N_{\mathrm{votes}}$ is the number of volunteers who answerd the clumpy question. This insures that \fclump~is statistically significant and not a product of too few votes.  This yields a sample of 629 galaxies: 273 single-epoch imaging and 356 from the co-added imaging. After visual inspection we find that this is hardly a pure sample of clumpy galaxies in the traditional sense, instead including a sizeable sample of tight groups of elliptical galaxies, as well as galaxies in various merging states, possessing multiple nuclei. [\textbf{show example image?}] After excluding these and duplicate imaging, we retain 92 coadd-depth and 105 single-depth clumpy galaxies, of which 156 are unique systems (some objects are common to both the single-epoch and coadd-depth imaging). Finally, we exclude galaxies with $z>0.06$ in order to retain a sample wherein the physical scale as observed by SDSS is similar to Hubble's at $z\sim3$ to allow for comparison with high redshift samples. Our final sample contains 105 unique galaxies. 
 
 
-We obtain SDSS Data Release 12 (DR12) \textit{ugriz} coadd imaging, as well as all optical spectra associated with each galaxy. The wavelength range of the SDSS spectra is $3800-9200$\AA~with a resolution of $R\sim 1500$ at $\sim3800$\AA. The $3$\arcsec~SDSS fibers cover 2.9 kpc at $z=0.05$. We visually inspect these spectra to verify that the fiber was positioned over a star-forming region rather than the galactic bulge or other structure. Through this inspection we determine that one clumpy galaxy is actually a juxtoposition of three galaxies at disparate redshifts flagged as clumpy in GZH due to the low resolution of SDSS imaging. We exclude this subject from our sample. Our final list includes 175 spectra. Approximately half of the galaxies in our sample have more than one spectrum with a handful having three or four spectra.  
- 
-%The physical scale at z= 0.06 is 1"=1.1kpc. SDSS pixel scale is 0.396"/pixel. --> 0.43 kpc/pixel -->  ~2.3 pixels = 1kpc.  
+We obtain SDSS Data Release 12 (DR12) \textit{ugriz} coadd imaging, as well as all optical spectra associated with each galaxy. The wavelength range of the SDSS spectra is $3800-9200$\AA~with a resolution of $R\sim 1500$ at $\sim3800$\AA. The $3$\arcsec~SDSS fibers cover 2.9 kpc at $z=0.05$. We visually inspect all spectra to verify that they are associated with an object in our sample as opposed to a nearby object or overlapping star. Through this inspection we determine that one clumpy galaxy is actually a juxtoposition of three galaxies at disparate redshifts flagged as clumpy in GZH due to the low resolution of SDSS imaging. We exclude this subject from our sample. Our final list includes 171 spectra. Approximately half of the galaxies in our sample have more than one spectrum with a handful having three or four spectra.  
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/mass_z_sfr.png}
+\caption[Stellar mass, redshift, and Star-formation rate for a subset of our ``clumpy'' galaxies as measured by the GSWLC.]{Stellar mass, redshift, and star-formation rate (SFR) for a subset of 89 ``clumpy'' galaxies as measured by the GSWLC \citep{Salim2016}.}
+\end{figure}
+
+We also draw on the \textit{GALEX}-SDSS-\textit{WISE} Legacy Catalog \citep[GSWLC,][]{Salim2016} which provides stellar mass, star formation rates and dust attenuations for 700,000 low-redshift galaxies. Specifically we obtain the GSWLC-X version which contains measurements using the deepest imaging available for each galaxy in the sample. We provide a brief overview of their methodology here.  Galaxy physical properties were obtained from UV and optical spectral energy distribution (SED) fitting utilizing imaging data from the \textit{Galaxy Evolution Explorer}, SDSS, and \textit{Wide-field Infrared Survey Explorer} surveys for galaxies with $z<0.3$, covering up to 90\% of the SDSS footprint. \cite{Salim2016} use a Bayesian fitting methodology that includes corrections for photometry blending and emission-line.  We match our sample against this catalog to objects within $15\arcsec$, of which we find 95. Of these, 6 are flagged as having failed the SED fitting and are thus excluded. Thus we retain 89 galaxies with estimates of global galactic paramters. This distribution of the resulting sample is shown in Figure \ref{fig: clumpy galaxy properties} where we plot the log stellar mass against redshift with color denoting the log SFR. The median log galaxy mass and SED star-formation rate (SFR) are $\sim$9 M$_{\odot}$ and XXX respectively. 
 
 
-\section{Analysis}
-During visual inspection of galaxy images we discover that the SDSS pipeline assigns central galactic coordinates incorrectly, likely due to these galaxies having low overall surface brightness with several bright clumps. The clumps are often marked as individual objects by the SDSS pipeline but, to the human eye, are obviously part of a larger system. As we need to determine accurate photometry and stellar masses for these galaxies we thus reevaluate their isophotal areas. We create postage stamps of each galaxy for all \textit{ugriz} SDSS fields.  Where possible, the size of the postage stamp is taken to be five times $\mathtt{petrorad\_r}$, the Petrosian radius as measured in the $r$-band by the SDSS pipeline. However, for those galaxies which are improperly measured, we create the cutout by eye to include the full extent of the galactic light profile. 
+%The physical scale at z= 0.06 is 1"=1.1kpc. SDSS pixel scale is 0.396"/pixel. --> 0.43 kpc/pixel -->  ~2.3 pixels = 1kpc.  We visually inspect these spectra and verify that the fiber was positioned over a star-forming region in the majority of cases rather than the galactic bulge or other structure. 
 
-We next process the $r$-band (maybe g-band cuz that's more blue?) postage stamp with Source Extractor (Bertin and whoever) using parameters designed to detect low surface brightness features. Important parameters are detailed in Table X that doesn't exist yet. Though these parameters adequately identify most of our sample, galaxies that fail are redone individually and SE parameters are tweaked for each particular case. These segmentation maps define the galaxy extent for all future analysis. 
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/jpeg_fits_spec_examples.png}
+\caption[Sample of ``clumpy'' galaxies determined by Galaxy Zoo: Hubble]{Sample of ``clumpy'' galaxies. The first column shows the SDSS $gri$ color composite image where the red squares denote locations of SDSS spectroscopy. The middle column shows our postage stamp for the object where the colored circles show the same spectral locations, however these circles are color coded to the third panel which shows the spectra associated with each object.}
+\label{fig: clumpy galaxy properties}
+\end{figure}
+
+\section{Are these star-forming regions analogs of high-redshift clumps?}
+Many studies have been conducted (cite cite cite) comparing HII regions to high-redshift star-forming regions and the debate between whether these regions arise due to the same physical processes is still under debate. 
+
+We create postage stamps of each galaxy from the $r$-band SDSS fields.  Where possible, the size of the postage stamp is taken to be 5$\times\mathtt{petrorad\_r}$, the Petrosian radius as measured in the $r$-band by the SDSS pipeline. We then run Source Extractor \citep{sextractor} on each postage stamp. During visual inspection of these cutouts we discover that the SDSS coordinates are occasionally incorrectly assigned, that is, star-forming clumps are mistaken for individual galaxies likely due to the low surface brightness of some of these systems. An example is shown in the final row of Figure XXX where the first panel shows the SDSS $gri$ color composite in which it is clear that the central coordinates are not well aligned with the galactic center. The middle panel depicts our postage stamp in which we have corrected the galaxy's coordinates using the galactic center given by SExtractor which is based on the second order moment of light. The final panel shows the spectra associated with this object in arbitrary units. It is clear that their are strong \ha~and \oiii~emission lines. 
+
+
+
+%We next process the $r$-band (maybe g-band cuz that's more blue?) postage stamp with Source Extractor (Bertin and whoever) using parameters designed to detect low surface brightness features. Important parameters are detailed in Table X that doesn't exist yet. Though these parameters adequately identify most of our sample, galaxies that fail are redone individually and SE parameters are tweaked for each particular case. These segmentation maps define the galaxy extent for all future analysis. 
 
 
 
 \subsection{Measuring clump radial distance} \label{subsec:radii}
+Most SDSS fibers are either centered on a star-forming clump or on/near the galactic center. We thus compute the galactic radial distance of each fiber from the galaxy center as given by SExtractor. The distribution of radial galacto-centric distance is shown in the third panel of Figure \ref{fig: clump properties}. We find no trend between clump galacto-centric distance and \ha~equivalent width as measured by SDSS. This could be due to the interpoping ``bulge'' regions that were not excluded from the spectral analysis. 
 
+\subsection{Distribution of clump diameters}
+If clumps form through disk instabilities as is traditionally thought, the relation between clump velocity distribution and physical size can be theoretically derived as detailed in \citep[e.g.,][]{Wisnioski2012}. Show it???
 
-\subsection{Clump Halpha Hbeta ratios [Dust]} \label{subsec:dust}
+\cite{Wisnioski2012} develop empirical relations between clump size, luminosity, and velocity dispersion for a sample of local HII regions along with a sample of high redshift clumps. They demonstrate that these relations hold over three orders of magnitude in clump diameter and five orders of magnitude in \ha~luminosity for thousands of local HII regions and high-redshift clumps taken from 11 different studies. Specifically, we invert the following relation to estimate the clump diameter from the SDSS measurement of the \ha~velocity dispersion
 
-\subsection{Clumpy Halpha equivalent widths} \label{subsec:ew}
+\begin{equation}\label{eqn: clump diameter}
+\log(\sigma) = (0.42 \pm 0.03) \times \log(d) + (0.33 \pm 0.09)
+\end{equation}
 
-
-
-
+The resulting clump diameter distribution is shown in the middle panel of Figure \ref{fig: clump properties}. The median diameter is $\sim$1 kpc which is larger than the average local HII region but slightly smaller than high redshift clumps.  Keep in mind that some of these ``clumps'' could actually be the central bulge region of some of these systems as we do not specifically separate the two so as to bias against the possibility of older (and hence redder, less star formation) clumps at smaller galactic radius (discussed below). The central regions will typically have much lower rates of star formation as measured by \ha~and subsequently, smaller velocity dispersion, thus they will have significantly smaller sizes according to this relation. In a more detailed analysis, clump sizes should be confirmed independently through what is known as ``core'' analysis:  describe it. 
 %% If you wish to include an acknowledgments section in your paper,
 %% separate it off from the body of the text using the \acknowledgments
 %% command.
 
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/clump_sizes_and_sfr_density.png}
+\caption[Properties of ``clumps'': velocity dispersion, clump diameter, and clump galactic radial distance.]{Clump properties. }
+\label{fig: clump properties}
+\end{figure}
+
+Though preliminary, this analysis demonstrates that star-forming regions in this galaxy sample are likely more similar to high-redshift clumps than to typical local HII regions. This motivates not only a more in depth analysis of this sample but also justifies the search for similar galaxies in the local universe. These clumpy galaxies were found as a consequence of SDSS Stripe 82 galaxies being included in the GZH project. We next detail a new project that will potentially find an order of magnitude more galaxies similar to the sample presented here.
+
 \section{Clump Scout}
-Discuss the SDSS non-Stripe 82 sample -- since it was not included in GZH there is no information about the clumpiness of these galaxies. However, because we find a substantial sample in Stripe 82, this motivates an additional pass of the rest of GZ2's galaxy sample to find more. 
+The above analysis was performed on a subsample of galaxies determined as ``clumpy'' from the SDSS Stripe 82 sample included in the GZH project. The area covered by Stripe 82 was only a fraction of the full SDSS sky coverage. In this section we describe the \textit{Clump Scout} project, a citizen-science initiative to discover more ``clumpy'' galaxies in the remaining SDSS footprint. We thus consider the remaining non-Stripe 82 SDSS galaxies that were originally part of the GZ2 project. We first exclude any galaxies with $z>0.06$ in order to satisfy the resolution requirements discussed above. We also make a cut such that \fsmooth~$\le0.8$ in order to exclude those galaxies which are obviously elliptical and thus would likely not have travelled down the clumpy track of the GZH decision tree. These criteria yield a sample of $\sim66$K galaxies. 
 
-We choose a subset of GZ2 non-Stripe 82 galaxies for clumpy examination. They must be low redshift ($z\le0.06$) and with \fsmooth~$\le0.8$ to exclude those galaxies which are obviously elliptical and thus would not have travelled down the clumpy track of the GZH decision tree. These criteria yield a sample of $\sim45$K galaxies. 
+The goal of the project would be to collect additional volunteer morphology information so as to identify which of these has clumps similar to the sample presented above. Because the galaxy sample is so large and because we only considered the first question of the clumpy branch of questioning in the GZH decision tree, we will only ask volunteers to complete two tasks for each galaxy in the non-Stripe 82 GZ2 sample. The first would be identical to the top-level clumpy branch question of GZH: "quote it. " If they volunteer answers in the afirmative, they will then be asked to use the Zooniverse point tool, a drag and drop circle that can be placed around the clump(s) they see in the galaxy image. This will provide localization information as well as a very coarse measurement of clump size. 
 
-Describe the project: We would ask only the top-level clumpy question from the GZH decision tree: ``Does the galaxy have a mostly clumpy appearance?'' If volunteers respond in the affirmative, a second task will ask them to identify the location of these clumps by using the Zooniverse point tool: a drag and drop circle which can be placed anywhere on the image and sized according to fit the clump within the confines of the circle. 
+[INSERT FIGURE: distribution of GZ2 non-stripe 82 galaxies as a function of redshit and \fsmooth.]
+
+[INSERT FIGURE: mass distribution of non-stripe 82 sample for those that will go in -- what mass catalog did i match them to??? I don't remember.... ]
+
+
 
 The goal of this project is to identify additional low redshift galaxies with bright star-forming clumps. This will allow multiple avenues of study: determining the fraction of clumpy galaxies in the local universe, a task which today is quite difficult and at this low redshift has very large error bars -- cite who?? Guo?? And the other one which I forgot. Go find the NSF proposal!
 
