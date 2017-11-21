@@ -1,7 +1,7 @@
 %!TEX root = thesis.tex
 
 \chapter{A population of ``clumpy'' galaxies in local Universe}\label{chap:5}
-Simultaneous to the development of this research was the publishing of the Galaxy Zoo: Hubble galaxy classification catalog. A portion of the original GZ2 SDSS galaxy sample was included in Galaxy Zoo: Hubble because the decision tree for the latter was more complex than that for GZ2. This enabled a comparison between different decision trees and led to the identification of a rare sample of extremely low redshift clumpy galaxies. This chapter details the identification of such a sample, preliminary analysis of the star-forming clumps, and methods to identify more such galaxies in the local universe as these may be analogs of high redshift galaxies with similar properties.
+Simultaneous to the development of this research was the publishing of the Galaxy Zoo: Hubble galaxy morphology classification catalog. A portion of the original GZ2 SDSS galaxy sample was included in Galaxy Zoo: Hubble because the decision tree for the latter was more complex than that for GZ2. This enabled a comparison between different decision trees and led to the identification of a rare sample of low redshift clumpy galaxies. This chapter details the identification of such a sample, preliminary analysis of the star-forming clumps, and methods to identify more such galaxies in the local universe as these may be analogs of high redshift galaxies with similar properties.
 
 \section{Introduction}
 Structural properties of typical galaxies today wereforgedover the5billionyearsbetween the peakof the cosmic star-formation history at z ⇠ 1.5  2 and now.From the theoretical perspective,galaxies’ growth is predominantly governed by the baryonic physics of gas accre-tion and energy feedback, rather than by merg-ers that induce starbursts (e.g., Somerville and Dav ́ e, 2015). Gas inflow modulates galaxies’ star formation history and plays a crucial role in the dynamical state of the galaxy.A varying gas fraction changes the amount of fragmentation within the gaseous disk, the star-formation rates (SFR), strengths and lifetimes of disk structural components, and possibly the fueling rate of the AGN. As a consequence of the gas accretion pro-cess, the small-scale structure within disk galax-ies is also predicted to change over time, with the appearance of stable “grand design” spiral arms only at later epochs (e.g. Oppenheimer et al., 2010; Bouch ́ e et al., 2010; Dav ́ e et al., 2011a,b; Lilly et al., 2013; Hirschmann et al., 2013). 
@@ -36,41 +36,59 @@ The most notable difference between these two projects is the decision tree pres
 
 To select a sample of ``clumpy" galaxies from the GZH Stripe 82 sample, we consider only those subjects with large featured (\ffeat) and clumpy (\fclump) vote fractions: the fraction of volunteers who voted a subject as `featured or disk' in response to the first question ``Is the galaxy simply smooth and rounded, with no sign of a disk?'' and who answered `yes' to the question ``Does the galaxy have a mostly clumpy appearance?'' Specifically, we select galaxies which satisfy \ffeat~$\ge0.5$ and \fclump~$\ge0.5$ Additionally, we require $N_{\mathrm{votes}} \ge 20$, where $N_{\mathrm{votes}}$ is the number of volunteers who answerd the clumpy question. This insures that \fclump~is statistically significant and not a product of too few votes.  This yields a sample of 629 galaxies: 273 single-epoch imaging and 356 from the co-added imaging. After visual inspection we find that this is hardly a pure sample of clumpy galaxies in the traditional sense, instead including a sizeable sample of tight groups of elliptical galaxies, as well as galaxies in various merging states, possessing multiple nuclei. [\textbf{show example image?}] After excluding these and duplicate imaging, we retain 92 coadd-depth and 105 single-depth clumpy galaxies, of which 156 are unique systems (some objects are common to both the single-epoch and coadd-depth imaging). Finally, we exclude galaxies with $z>0.06$ in order to retain a sample wherein the physical scale as observed by SDSS is similar to Hubble's at $z\sim3$ to allow for comparison with high redshift samples. Our final sample contains 105 unique galaxies. 
 
-
-We obtain SDSS Data Release 12 (DR12) \textit{ugriz} coadd imaging, as well as all optical spectra associated with each galaxy. The wavelength range of the SDSS spectra is $3800-9200$\AA~with a resolution of $R\sim 1500$ at $\sim3800$\AA. The $3$\arcsec~SDSS fibers cover 2.9 kpc at $z=0.05$. We visually inspect all spectra to verify that they are associated with an object in our sample as opposed to a nearby object or overlapping star. Through this inspection we determine that one clumpy galaxy is actually a juxtoposition of three galaxies at disparate redshifts flagged as clumpy in GZH due to the low resolution of SDSS imaging. We exclude this subject from our sample. Our final list includes 171 spectra. Approximately half of the galaxies in our sample have more than one spectrum with a handful having three or four spectra.  
-
-\begin{figure}
-\includegraphics[width=\textwidth]{Figures/mass_z_sfr.png}
-\caption[Stellar mass, redshift, and Star-formation rate for a subset of our ``clumpy'' galaxies as measured by the GSWLC.]{Stellar mass, redshift, and star-formation rate (SFR) for a subset of 89 ``clumpy'' galaxies as measured by the GSWLC \citep{Salim2016}.}
-\end{figure}
-
-We also draw on the \textit{GALEX}-SDSS-\textit{WISE} Legacy Catalog \citep[GSWLC,][]{Salim2016} which provides stellar mass, star formation rates and dust attenuations for 700,000 low-redshift galaxies. Specifically we obtain the GSWLC-X version which contains measurements using the deepest imaging available for each galaxy in the sample. We provide a brief overview of their methodology here.  Galaxy physical properties were obtained from UV and optical spectral energy distribution (SED) fitting utilizing imaging data from the \textit{Galaxy Evolution Explorer}, SDSS, and \textit{Wide-field Infrared Survey Explorer} surveys for galaxies with $z<0.3$, covering up to 90\% of the SDSS footprint. \cite{Salim2016} use a Bayesian fitting methodology that includes corrections for photometry blending and emission-line.  We match our sample against this catalog to objects within $15\arcsec$, of which we find 95. Of these, 6 are flagged as having failed the SED fitting and are thus excluded. Thus we retain 89 galaxies with estimates of global galactic paramters. This distribution of the resulting sample is shown in Figure \ref{fig: clumpy galaxy properties} where we plot the log stellar mass against redshift with color denoting the log SFR. The median log galaxy mass and SED star-formation rate (SFR) are $\sim$9 M$_{\odot}$ and XXX respectively. 
-
-
-%The physical scale at z= 0.06 is 1"=1.1kpc. SDSS pixel scale is 0.396"/pixel. --> 0.43 kpc/pixel -->  ~2.3 pixels = 1kpc.  We visually inspect these spectra and verify that the fiber was positioned over a star-forming region in the majority of cases rather than the galactic bulge or other structure. 
-
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Figures/jpeg_fits_spec_examples.png}
 \caption[Sample of ``clumpy'' galaxies determined by Galaxy Zoo: Hubble]{Sample of ``clumpy'' galaxies. The first column shows the SDSS $gri$ color composite image where the red squares denote locations of SDSS spectroscopy. The middle column shows our postage stamp for the object where the colored circles show the same spectral locations, however these circles are color coded to the third panel which shows the spectra associated with each object.}
-\label{fig: clumpy galaxy properties}
+\label{fig: clumpy examples}
 \end{figure}
 
+We obtain SDSS Data Release 12 (DR12) \textit{ugriz} coadd imaging, as well as all optical spectra associated with each galaxy. The wavelength range of the SDSS spectra is $3800-9200$\AA~with a resolution of $R\sim 1500$ at $\sim3800$\AA. The $3$\arcsec~SDSS fibers cover 2.9 kpc at $z=0.05$. We visually inspect all spectra to verify that they are associated with an object in our sample as opposed to a nearby object or overlapping star. Through this inspection we determine that one clumpy galaxy is actually a juxtoposition of three galaxies at disparate redshifts flagged as clumpy in GZH due to the low resolution of SDSS imaging. We exclude this subject from our sample. Our final list includes 171 spectra. Approximately half of the galaxies in our sample have more than one spectrum with a handful having three or four spectra. Figure \ref{fig: clumpy examples} shows some examples of our clumpy galaxies where the first column is the $gri$ color composite SDSS jpeg image with red squares denoting the location of SDSS spectra, the middle column is the $r$-band postage stamp (described below) where the colored circles again denote the location of SDSS spectra and reflect the size of the fiber. The third column shows the spectra associated with each object, color-coded to the apertures in the middle column. 
+
+
+We create postage stamps of each galaxy from the $r$-band SDSS fields.  The size of the postage stamp is taken to be 3$\times\mathtt{petrorad\_r}$, the Petrosian radius as measured in the $r$-band by the SDSS pipeline. We then run Source Extractor \citep{sextractor} on each postage stamp. During visual inspection of these cutouts and the associated SExtractor segmentation maps we discover that the SDSS coordinates are occasionally incorrectly assigned, that is, star-forming clumps are mistaken for individual galaxies likely due to the low surface brightness of some of these systems. An example is shown in the final row of Figure \ref{fig: clumpy examples}. It is clear in the first panel that the central coordinates are not well aligned with the galactic center. The middle panel depicts our postage stamp in which we have corrected the galaxy's coordinates using that determined by SExtractor. 
+
+
+We also draw on the \textit{GALEX}-SDSS-\textit{WISE} Legacy Catalog \citep[GSWLC,][]{Salim2016} which provides stellar mass, star formation rates (SFR) and dust attenuations for 700,000 low-redshift galaxies. Specifically we obtain the GSWLC-X version which contains measurements using the deepest imaging available for each galaxy in the sample. We provide a brief overview of their methodology here.  Galaxy physical properties were obtained from UV and optical spectral energy distribution (SED) fitting utilizing imaging data from the \textit{Galaxy Evolution Explorer}, SDSS, and \textit{Wide-field Infrared Survey Explorer} surveys for galaxies with $z<0.3$, covering up to 90\% of the SDSS footprint. \cite{Salim2016} use a Bayesian fitting methodology that includes corrections for photometry blending and emission-line.  We match our sample against this catalog to objects within $15\arcsec$, of which we find 95. Of these, 6 are flagged as having failed the SED fitting and are thus excluded. Thus we retain 89 galaxies with estimates of global galactic paramters. Figure \ref{fig: clumpy gswlc properties} shows the distribution of our sample wherein we plot the galaxy log stellar mass as a function of redshift with color denoting the log SFR. The median galaxy log stellar mass and SED SFR are $\sim$9 M$_{\odot}$ and XXX, respectively. 
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/mass_z_sfr.png}
+\caption[Stellar mass, redshift, and Star-formation rate for a subset of our ``clumpy'' galaxies as measured by the GSWLC.]{Stellar mass, redshift, and star-formation rate (SFR) for a subset of 89 ``clumpy'' galaxies as measured by the GSWLC \citep{Salim2016}.}
+\label{fig: clumpy gswlc properties}
+\end{figure}
+
+%The physical scale at z= 0.06 is 1"=1.1kpc. SDSS pixel scale is 0.396"/pixel. --> 0.43 kpc/pixel -->  ~2.3 pixels = 1kpc.  We visually inspect these spectra and verify that the fiber was positioned over a star-forming region in the majority of cases rather than the galactic bulge or other structure. 
+
+
+
 \section{Are these star-forming regions analogs of high-redshift clumps?}
-Many studies have been conducted (cite cite cite) comparing HII regions to high-redshift star-forming regions and the debate between whether these regions arise due to the same physical processes is still under debate. 
-
-We create postage stamps of each galaxy from the $r$-band SDSS fields.  Where possible, the size of the postage stamp is taken to be 5$\times\mathtt{petrorad\_r}$, the Petrosian radius as measured in the $r$-band by the SDSS pipeline. We then run Source Extractor \citep{sextractor} on each postage stamp. During visual inspection of these cutouts we discover that the SDSS coordinates are occasionally incorrectly assigned, that is, star-forming clumps are mistaken for individual galaxies likely due to the low surface brightness of some of these systems. An example is shown in the final row of Figure XXX where the first panel shows the SDSS $gri$ color composite in which it is clear that the central coordinates are not well aligned with the galactic center. The middle panel depicts our postage stamp in which we have corrected the galaxy's coordinates using the galactic center given by SExtractor which is based on the second order moment of light. The final panel shows the spectra associated with this object in arbitrary units. It is clear that their are strong \ha~and \oiii~emission lines. 
+Many studies have been conducted (cite cite cite) comparing local HII regions to high-redshift star-forming clumps and the debate between whether these regions arise due to the same physical processes is still under debate. In this section we use the GSWLC and spectral features as measured by SDSS to explore various properties of the clumps in our sample. 
 
 
+\subsection{Clump galactic radial distance} \label{subsec:radii}
 
-%We next process the $r$-band (maybe g-band cuz that's more blue?) postage stamp with Source Extractor (Bertin and whoever) using parameters designed to detect low surface brightness features. Important parameters are detailed in Table X that doesn't exist yet. Though these parameters adequately identify most of our sample, galaxies that fail are redone individually and SE parameters are tweaked for each particular case. These segmentation maps define the galaxy extent for all future analysis. 
+Most SDSS fibers are either centered on a bright star-forming region or on/near the galactic center. We thus compute the galactocentric distance of each fiber from the galaxy center and normalized by the galaxy's half light radius (\texttt{FLUX\_RADIUS}) as determined by SExtractor. The resulting distribution is shown in the third panel of Figure \ref{fig: clump properties}. That the distribution is obviously skewed towards the small galactocentric values is likely due to the several spectra that are not covering a clump but instead probe the central region.  
+
+ The \ha~equivalent width is a rough stand-in for specific SFR since it is the ratio of a strong star formation indicator (\ha~line flux) and a reasonable proxy for stellar mass, i.e., the stellar continuum at \ha. However, we find no relation between EW(\ha) and clump radial distance. More telling would be a trend between clump radial distance and stellar age as this diagnostic will potentially distinguish between \textit{in situ} and external clump origin theories. The high quality of the SDSS spectra will allow for detailed stellar age estimates in a future analysis.  
+
+
+\subsection{Clump \ha~velocity dispersion}
+
+In the first panel of Figure \ref{fig: clump properties} we show the distribution of the \ha~velocity dispersion as measured by the SDSS spectroscopic pipeline, where the instrument resolution is subtracted in quadrature. The median for our sample is $\sigma_{\mathrm{H}_{\alpha}}\sim40$km/s and while this is slightly smaller than giant star-forming regions observed at $z\sim$2 (Sanchez et al., 2013; Elmegreen and Elmegreen, 2010), it is also significantly larger than typical HII regions observed in local galaxies (cite cite cite).
+
+A relationship between clump luminosity and velocity dispersion has been observed and it has been suggested that star formation drives the large observed line widths. In particular, Lehnert postulate that the velocity dispersion is due to mechanical energy released by star formation and that $\sigma$ is proportional to the star formation surface density. Another possibility is that the KS relation holds for star-forming regions
+
+
+\begin{figure}
+\includegraphics[width=\textwidth]{Figures/clump_properties.png}
+\caption[Properties of ``clumps'': velocity dispersion, clump diameter, and clump galactic radial distance.]{Clump properties. }
+\label{fig: clump properties}
+\end{figure}
 
 
 
-\subsection{Measuring clump radial distance} \label{subsec:radii}
-Most SDSS fibers are either centered on a star-forming clump or on/near the galactic center. We thus compute the galactic radial distance of each fiber from the galaxy center as given by SExtractor. The distribution of radial galacto-centric distance is shown in the third panel of Figure \ref{fig: clump properties}. We find no trend between clump galacto-centric distance and \ha~equivalent width as measured by SDSS. This could be due to the interpoping ``bulge'' regions that were not excluded from the spectral analysis. 
-
-\subsection{Distribution of clump diameters}
+\subsection{Clump diameters}
 If clumps form through disk instabilities as is traditionally thought, the relation between clump velocity distribution and physical size can be theoretically derived as detailed in \citep[e.g.,][]{Wisnioski2012}. Show it???
 
 \cite{Wisnioski2012} develop empirical relations between clump size, luminosity, and velocity dispersion for a sample of local HII regions along with a sample of high redshift clumps. They demonstrate that these relations hold over three orders of magnitude in clump diameter and five orders of magnitude in \ha~luminosity for thousands of local HII regions and high-redshift clumps taken from 11 different studies. Specifically, we invert the following relation to estimate the clump diameter from the SDSS measurement of the \ha~velocity dispersion
@@ -84,29 +102,40 @@ The resulting clump diameter distribution is shown in the middle panel of Figure
 %% separate it off from the body of the text using the \acknowledgments
 %% command.
 
-\begin{figure}
-\includegraphics[width=\textwidth]{Figures/clump_sizes_and_sfr_density.png}
-\caption[Properties of ``clumps'': velocity dispersion, clump diameter, and clump galactic radial distance.]{Clump properties. }
-\label{fig: clump properties}
-\end{figure}
+
+
+In future analyses, the quality of the SDSS spectra will allow for the derivation of accurate stellar ages from fitting of the continuum, as well as gas metallicity (e.g., Henry et al., 2015). With these measurements we can begin to study statistical properties that correlate with clump galactocentric distance. 
+
+\section{Summary}
+
 
 Though preliminary, this analysis demonstrates that star-forming regions in this galaxy sample are likely more similar to high-redshift clumps than to typical local HII regions. This motivates not only a more in depth analysis of this sample but also justifies the search for similar galaxies in the local universe. These clumpy galaxies were found as a consequence of SDSS Stripe 82 galaxies being included in the GZH project. We next detail a new project that will potentially find an order of magnitude more galaxies similar to the sample presented here.
 
+
+%=========================================================================
+%	CLUMP SCOUT
+%=========================================================================
 \section{Clump Scout}
-The above analysis was performed on a subsample of galaxies determined as ``clumpy'' from the SDSS Stripe 82 sample included in the GZH project. The area covered by Stripe 82 was only a fraction of the full SDSS sky coverage. In this section we describe the \textit{Clump Scout} project, a citizen-science initiative to discover more ``clumpy'' galaxies in the remaining SDSS footprint. We thus consider the remaining non-Stripe 82 SDSS galaxies that were originally part of the GZ2 project. We first exclude any galaxies with $z>0.06$ in order to satisfy the resolution requirements discussed above. We also make a cut such that \fsmooth~$\le0.8$ in order to exclude those galaxies which are obviously elliptical and thus would likely not have travelled down the clumpy track of the GZH decision tree. These criteria yield a sample of $\sim66$K galaxies. 
+The above analysis was performed on a subsample of galaxies determined as ``clumpy'' from the SDSS Stripe 82 sample included in the GZH project. The area covered by Stripe 82 was only a fraction of the full SDSS sky coverage. In this section we describe the \textit{Clump Scout} project, a citizen-science initiative to discover more ``clumpy'' galaxies in the remaining SDSS footprint. We thus consider the remaining non-Stripe 82 SDSS galaxies that were originally part of the GZ2 project. We first exclude any galaxies with $z>0.06$ in order to satisfy the resolution requirements discussed above. We also make a cut such that \fsmooth~$\le0.8$ in order to exclude those galaxies which are obviously elliptical and thus would likely not have travelled down the clumpy track of the GZH decision tree. These criteria yield a sample of $\sim45$K galaxies. 
 
-The goal of the project would be to collect additional volunteer morphology information so as to identify which of these has clumps similar to the sample presented above. Because the galaxy sample is so large and because we only considered the first question of the clumpy branch of questioning in the GZH decision tree, we will only ask volunteers to complete two tasks for each galaxy in the non-Stripe 82 GZ2 sample. The first would be identical to the top-level clumpy branch question of GZH: "quote it. " If they volunteer answers in the afirmative, they will then be asked to use the Zooniverse point tool, a drag and drop circle that can be placed around the clump(s) they see in the galaxy image. This will provide localization information as well as a very coarse measurement of clump size. 
+The goal of the project would be to collect additional volunteer morphology information so as to identify which of these has clumps similar to the sample presented above. Because the galaxy sample is so large and because we only considered the first question of the clumpy branch of questioning in the GZH decision tree, we will only ask volunteers to complete two tasks for each galaxy in the non-Stripe 82 GZ2 sample. The first would be identical to the top-level clumpy branch question of GZH: "quote it. " If they volunteer answers in the afirmative, they will then be asked to use the Zooniverse point tool allowing volunteers to click on any clump(s) they see in the galaxy image. This will provide both a preliminary clump count as well as coarse localization information. Based on the statistics of the clumpy galaxies found in the sky area of Stripe 82, we expect to find an additional 900 such systems in the non-Stripe 82 SDSS sky coverage.
 
-[INSERT FIGURE: distribution of GZ2 non-stripe 82 galaxies as a function of redshit and \fsmooth.]
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/clump_scout_sample_in_z-fsmooth.png}
+\caption[\textit{Clump Scout} sample selection criteria from non-Stripe 82 GZ2 galaxy sample.]{\textit{Clump Scout} sample selection criteria from non-Stripe 82 GZ2 galaxy sample.}
+\label{fig: clump scout sample}
+\end{figure}
 
-[INSERT FIGURE: mass distribution of non-stripe 82 sample for those that will go in -- what mass catalog did i match them to??? I don't remember.... ]
 
 
+\subsection{Redshift evolution of \fclump}
+\cite{Guo2015} recently showed that the fraction of star-forming galaxies that have at least one off-center clump (\fclump) can be used to place constraints on theoretical models. By focusing on the redshift range between $0.5 <z<3$, they find that \fclump~changes with the stellar mass of the galaxies. Low-mass (M$<10$ 10 M) galaxies keep an almost constant fclumpy of $\sim$60\% from $z\sim3$ to $z\sim0.5$, while massive galaxies drop their \fclump~from 55\% at $z\sim3$ to 15\%, at $z\sim0.5$, as shown in Figure XXX \citep[adapted from][]{Guo2015}. \cite{Guo2015} argue that these observations support a model in which the clumpy star-formation results from multiple processes. In massive galaxies, the evolutionary trends are consistent with violent disk instability, however the apparent lack of \fclump~evolution in low mass galaxies is more consistent with a minor merger original. However, this conclusion, is based primarily on the lowest redshift bin probed by the \cite{Guo2015} data. In fact, when these data are combined with \fclump~measured from a variety of different surveys at $z<1$, the result is not so convincing anymore. The variation in the low-z measurements, however, is clearly large mostly as a consequence of non-uniform selection criteria and uncontrolled-for biases. \textit{Clump Scout} promises to provide the largest sample to date selected in a uniform fashion and with biases properly accounted for, especially in the low-mass regime where measurements of \fclump~can provide the strongest model constraints.
 
-The goal of this project is to identify additional low redshift galaxies with bright star-forming clumps. This will allow multiple avenues of study: determining the fraction of clumpy galaxies in the local universe, a task which today is quite difficult and at this low redshift has very large error bars -- cite who?? Guo?? And the other one which I forgot. Go find the NSF proposal!
+In order to secure reliable measurements for \fclump~in the local universe, we must estimate the completeness of recovering low redshift clumpy galaxies from the SDSS sample. Ideally, we  To that end we need to conjure up some simulated clumpy galaxies that span the galactic mass and clump mass range appropriate for XXX reasons. 
 
-In order to secure reliable measurements for \fclump~in the local universe, we must estimate the completeness of recovering low redshift clumpy galaxies from the SDSS sample. To that end we need to conjure up some simulated clumpy galaxies that span the galactic mass and clump mass range appropriate for XXX reasons. 
 
+We performed a preliminary project in which we obtained volunteer feedback. Go over that. 1000 galaxies were added in. What were they ? How many users? General feedback -- Where is that spreadsheet? 
 
 \section{Discussion / Conclusions}
 our clumps are the best clumps. Everybody says so. 
