@@ -193,6 +193,10 @@ Breiman, L. 2001, Machine Learning, 45, 5
 \bibitem[{{Buta}(2011)}]{Buta2011}
 {Buta}, R.~J. 2011, arXiv:1102.0550
 
+\bibitem[{{Calzetti}(2013)}]{Calzetti2013}
+{Calzetti}, D. 2013, {Star Formation Rate Indicators}, ed.
+  J.~{Falc{\'o}n-Barroso} \& J.~H. {Knapen}, 419
+
 \bibitem[{{Cameron} {et~al.}(2011){Cameron}, {Carollo}, {Oesch}, {Bouwens},
   {Illingworth}, {Trenti}, {Labb{\'e}}, \& {Magee}}]{Cameron2011}
 {Cameron}, E., {Carollo}, C.~M., {Oesch}, P.~A., {et~al.} 2011, \apj, 743, 146
@@ -382,6 +386,13 @@ Breiman, L. 2001, Machine Learning, 45, 5
 {Geach}, J.~E., {Bower}, R.~G., {Alexander}, D.~M., {et~al.} 2014, \apj, 793,
   22
 
+\bibitem[{{Genzel} {et~al.}(2011){Genzel}, {Newman}, {Jones}, {F{\"o}rster
+  Schreiber}, {Shapiro}, {Genel}, {Lilly}, {Renzini}, {Tacconi}, {Bouch{\'e}},
+  {Burkert}, {Cresci}, {Buschkamp}, {Carollo}, {Ceverino}, {Davies}, {Dekel},
+  {Eisenhauer}, {Hicks}, {Kurk}, {Lutz}, {Mancini}, {Naab}, {Peng},
+  {Sternberg}, {Vergani}, \& {Zamorani}}]{Genzel2011}
+{Genzel}, R., {Newman}, S., {Jones}, T., {et~al.} 2011, \apj, 733, 101
+
 \bibitem[{Glasser(1962)}]{Glasser1962}
 Glasser, G.~J. 1962, Journal of the American Statistical Association, 57, 648
 
@@ -414,6 +425,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Weiner}, {Wiklind}, {Wild}, {Wilson}, {Wuyts}, {Yan}, \& {Yun}}]{Grogin2011}
 {Grogin}, N.~A., {Kocevski}, D.~D., {Faber}, S.~M., {et~al.} 2011, \apjs, 197,
   35
+
+\bibitem[{{Guo} {et~al.}(2012){Guo}, {Giavalisco}, {Ferguson}, {Cassata}, \&
+  {Koekemoer}}]{Guo2012}
+{Guo}, Y., {Giavalisco}, M., {Ferguson}, H.~C., {Cassata}, P., \& {Koekemoer},
+  A.~M. 2012, \apj, 757, 120
 
 \bibitem[{{Guo} {et~al.}(2015){Guo}, {Ferguson}, {Bell}, {Koo}, {Conselice},
   {Giavalisco}, {Kassin}, {Lu}, {Lucas}, {Mandelker}, {McIntosh}, {Primack},
@@ -618,6 +634,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   Wel}}]{Man2012}
 {Man}, A.~W.~S., {Toft}, S., {Zirm}, A.~W., {Wuyts}, S., \& {van der Wel}, A.
   2012, \apj, 744, 85
+
+\bibitem[{{M{\'a}rmol-Queralt{\'o}} {et~al.}(2016){M{\'a}rmol-Queralt{\'o}},
+  {McLure}, {Cullen}, {Dunlop}, {Fontana}, \& {McLeod}}]{MarmolQueralto2016}
+{M{\'a}rmol-Queralt{\'o}}, E., {McLure}, R.~J., {Cullen}, F., {et~al.} 2016,
+  \mnras, 460, 3587
 
 \bibitem[{{Marshall} {et~al.}(2016){Marshall}, {Verma}, {More}, {Davis},
   {More}, {Kapadia}, {Parrish}, {Snyder}, {Wilcox}, {Baeten}, {Macmillan},
