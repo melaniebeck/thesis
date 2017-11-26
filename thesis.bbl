@@ -82,6 +82,11 @@
 {Adelman-McCarthy}, J.~K., {Ag{\"u}eros}, M.~A., {Allam}, S.~S., {et~al.} 2008,
   \apjs, 175, 297
 
+\bibitem[{{Amor{\'{\i}}n} {et~al.}(2010){Amor{\'{\i}}n}, {P{\'e}rez-Montero},
+  \& {V{\'{\i}}lchez}}]{Amorin2010}
+{Amor{\'{\i}}n}, R.~O., {P{\'e}rez-Montero}, E., \& {V{\'{\i}}lchez}, J.~M.
+  2010, \apjl, 715, L128
+
 \bibitem[{{Andrae} {et~al.}(2011){Andrae}, {Jahnke}, \&
   {Melchior}}]{Andrae2011}
 {Andrae}, R., {Jahnke}, K., \& {Melchior}, P. 2011, \mnras, 411, 385
@@ -113,6 +118,14 @@
 \bibitem[{{Ball} {et~al.}(2004){Ball}, {Loveday}, {Fukugita}, {Nakamura},
   {Okamura}, {Brinkmann}, \& {Brunner}}]{Ball2004}
 {Ball}, N.~M., {Loveday}, J., {Fukugita}, M., {et~al.} 2004, \mnras, 348, 1038
+
+\bibitem[{{Balogh} {et~al.}(2004){Balogh}, {Eke}, {Miller}, {Lewis}, {Bower},
+  {Couch}, {Nichol}, {Bland-Hawthorn}, {Baldry}, {Baugh}, {Bridges}, {Cannon},
+  {Cole}, {Colless}, {Collins}, {Cross}, {Dalton}, {de Propris}, {Driver},
+  {Efstathiou}, {Ellis}, {Frenk}, {Glazebrook}, {Gomez}, {Gray}, {Hawkins},
+  {Jackson}, {Lahav}, {Lumsden}, {Maddox}, {Madgwick}, {Norberg}, {Peacock},
+  {Percival}, {Peterson}, {Sutherland}, \& {Taylor}}]{Balogh2004}
+{Balogh}, M., {Eke}, V., {Miller}, C., {et~al.} 2004, \mnras, 348, 1355
 
 \bibitem[{{Bamford} {et~al.}(2009){Bamford}, {Nichol}, {Baldry}, {Land},
   {Lintott}, {Schawinski}, {Slosar}, {Szalay}, {Thomas}, {Torki}, {Andreescu},
@@ -327,8 +340,11 @@ Breiman, L. 2001, Machine Learning, 45, 5
 {Darg}, D.~W., {Kaviraj}, S., {Lintott}, C.~J., {et~al.} 2010, \mnras, 401,
   1552
 
+\bibitem[{{de Vaucouleurs}(1948)}]{deVaucouleurs1948}
+{de Vaucouleurs}, G. 1948, Annales d'Astrophysique, 11, 247
+
 \bibitem[{{de Vaucouleurs}(1959)}]{deVaucouleurs1959}
-{de Vaucouleurs}, G. 1959, Handbuch der Physik, 53, 275
+---. 1959, Handbuch der Physik, 53, 275
 
 \bibitem[{{de Vaucouleurs}(1963)}]{deVaucouleurs1963}
 ---. 1963, \apjs, 8, 31
@@ -368,6 +384,16 @@ Breiman, L. 2001, Machine Learning, 45, 5
 
 \bibitem[{{Dijkstra} \& {Loeb}(2009)}]{DijkstraLoeb2009}
 ---. 2009, \mnras, 400, 1109
+
+\bibitem[{{Dom\'inguez S\`anchez} {et~al.}(2017){Dom\'inguez S\`anchez},
+  {Huertas-Company}, {Bernardi}, {Ticcillo}, \&
+  {Fisher}}]{DominguezSanchez2017}
+{Dom\'inguez S\`anchez}, H., {Huertas-Company}, M., {Bernardi}, M., {Ticcillo},
+  D., \& {Fisher}, J.~L. 2017, ArXiv e-prints, arXiv:1711.05744
+
+\bibitem[{{Dressel}(2012)}]{Dressel2012}
+{Dressel}, L. 2012, {Wide Field Camera 3 Instrument Handbook for Cycle 21 v.
+  5.0}
 
 \bibitem[{{Dressler}(1980)}]{Dressler1980}
 {Dressler}, A. 1980, \apj, 236, 351
@@ -599,6 +625,16 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Siana}}]{HayesScarlata2011}
 {Hayes}, M., {Scarlata}, C., \& {Siana}, B. 2011, \nat, 476, 304
 
+\bibitem[{{Hearin} {et~al.}(2016){Hearin}, {Behroozi}, \& {van den
+  Bosch}}]{Hearin2016}
+{Hearin}, A.~P., {Behroozi}, P.~S., \& {van den Bosch}, F.~C. 2016, \mnras,
+  461, 2135
+
+\bibitem[{{Hearin} {et~al.}(2015){Hearin}, {Watson}, \& {van den
+  Bosch}}]{Hearin2015}
+{Hearin}, A.~P., {Watson}, D.~F., \& {van den Bosch}, F.~C. 2015, \mnras, 452,
+  1958
+
 \bibitem[{{Heckman} \& {Best}(2014)}]{HeckmanBest2014}
 {Heckman}, T.~M., \& {Best}, P.~N. 2014, \araa, 52, 589
 
@@ -607,6 +643,12 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Weiland}, {Gold}, {Jarosik}, {Kogut}, {Limon}, {Meyer}, {Tucker}, {Wollack},
   \& {Wright}}]{Hinshaw2013}
 {Hinshaw}, G., {Larson}, D., {Komatsu}, E., {et~al.} 2013, \apjs, 208, 19
+
+\bibitem[{{Hogg} {et~al.}(2004){Hogg}, {Blanton}, {Brinchmann}, {Eisenstein},
+  {Schlegel}, {Gunn}, {McKay}, {Rix}, {Bahcall}, {Brinkmann}, \&
+  {Meiksin}}]{Hogg2004}
+{Hogg}, D.~W., {Blanton}, M.~R., {Brinchmann}, J., {et~al.} 2004, \apjl, 601,
+  L29
 
 \bibitem[{{Holwerda} {et~al.}(2014){Holwerda}, {Mu{\~n}oz-Mateos},
   {Comer{\'o}n}, {Meidt}, {Sheth}, {Laine}, {Hinz}, {Regan}, {Gil de Paz},
@@ -668,6 +710,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 {Ilbert}, O., {McCracken}, H.~J., {Le F{\`e}vre}, O., {et~al.} 2013, \aap, 556,
   A55
 
+\bibitem[{{Izotov} {et~al.}(2016){Izotov}, {Orlitov{\'a}}, {Schaerer}, {Thuan},
+  {Verhamme}, {Guseva}, \& {Worseck}}]{Izotov2016}
+{Izotov}, Y.~I., {Orlitov{\'a}}, I., {Schaerer}, D., {et~al.} 2016, \nat, 529,
+  178
+
 \bibitem[{{Jimenez} \& {Haiman}(2006)}]{Jimenez2006}
 {Jimenez}, R., \& {Haiman}, Z. 2006, \nat, 440, 501
 
@@ -696,11 +743,19 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   and Space Science Library, Vol. 281, The IGM/Galaxy Connection. The
   Distribution of Baryons at z=0, ed. J.~L. {Rosenberg} \& M.~E. {Putman}, 185
 
+\bibitem[{{Kauffmann} {et~al.}(2013){Kauffmann}, {Li}, {Zhang}, \&
+  {Weinmann}}]{Kauffmann2013}
+{Kauffmann}, G., {Li}, C., {Zhang}, W., \& {Weinmann}, S. 2013, \mnras, 430,
+  1447
+
 \bibitem[{{Kauffmann} {et~al.}(2003){Kauffmann}, {Heckman}, {White}, {Charlot},
   {Tremonti}, {Peng}, {Seibert}, {Brinkmann}, {Nichol}, {SubbaRao}, \&
   {York}}]{Kauffman2003}
 {Kauffmann}, G., {Heckman}, T.~M., {White}, S.~D.~M., {et~al.} 2003, \mnras,
   341, 54
+
+\bibitem[{{Kawata} \& {Mulchaey}(2008)}]{Kawata2008}
+{Kawata}, D., \& {Mulchaey}, J.~S. 2008, \apjl, 672, L103
 
 \bibitem[{{Keller} {et~al.}(2010){Keller}, {Schmid}, {Venema}, {Hanenburg},
   {Jager}, {Kasper}, {Martinez}, {Rigal}, {Rodenhuis}, {Roelfsema}, {Snik},
@@ -896,6 +951,11 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
 \bibitem[{{Mo} {et~al.}(1998){Mo}, {Mao}, \& {White}}]{Mo1998}
 {Mo}, H.~J., {Mao}, S., \& {White}, S.~D.~M. 1998, \mnras, 295, 319
 
+\bibitem[{{Moore} {et~al.}(1996){Moore}, {Katz}, {Lake}, {Dressler}, \&
+  {Oemler}}]{Moore1996}
+{Moore}, B., {Katz}, N., {Lake}, G., {Dressler}, A., \& {Oemler}, A. 1996,
+  \nat, 379, 613
+
 \bibitem[{{More} {et~al.}(2016){More}, {Verma}, {Marshall}, {More}, {Baeten},
   {Wilcox}, {Macmillan}, {Cornen}, {Kapadia}, {Parrish}, {Snyder}, {Davis},
   {Gavazzi}, {Lintott}, {Simpson}, {Miller}, {Smith}, {Paget}, {Saha},
@@ -946,6 +1006,9 @@ GMTO Corporation. 2012, Giant Magellan Telescope Scientific Promise and
   {Kashikawa}, {Ota}, {Doi}, {Hamabe}, {Kimura}, {Komiyama}, {Miyazaki},
   {Miyazaki}, {Nakata}, {Sekiguchi}, {Yagi}, \& {Yasuda}}]{Ouchi2004}
 {Ouchi}, M., {Shimasaku}, K., {Okamura}, S., {et~al.} 2004, \apj, 611, 660
+
+\bibitem[{{Pahwa} \& {Paranjape}(2017)}]{Pahwa2017}
+{Pahwa}, I., \& {Paranjape}, A. 2017, \mnras, 470, 1298
 
 \bibitem[{{Palunas} {et~al.}(2004){Palunas}, {Teplitz}, {Francis}, {Williger},
   \& {Woodgate}}]{Palunas2004}
@@ -1261,6 +1324,10 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., {et~al.} 2011, Journal of Machine
 Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
   of the Royal Astronomical Society, 459, 44
 
+\bibitem[{{The Dark Energy Survey Collaboration}(2005)}]{DES2005}
+{The Dark Energy Survey Collaboration}. 2005, ArXiv Astrophysics e-prints,
+  astro-ph/0510346
+
 \bibitem[{{Toomre}(1964)}]{Toomre1964}
 {Toomre}, A. 1964, \apj, 139, 1217
 
@@ -1306,6 +1373,11 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
 {Weijmans}, A.-M., {Bower}, R.~G., {Geach}, J.~E., {et~al.} 2010, \mnras, 402,
   2245
 
+\bibitem[{{Weinmann} {et~al.}(2006){Weinmann}, {van den Bosch}, {Yang}, \&
+  {Mo}}]{Weinmann2006}
+{Weinmann}, S.~M., {van den Bosch}, F.~C., {Yang}, X., \& {Mo}, H.~J. 2006,
+  \mnras, 366, 2
+
 \bibitem[{{White} \& {Frenk}(1991)}]{WhiteFrenk1991}
 {White}, S.~D.~M., \& {Frenk}, C.~S. 1991, \apj, 379, 52
 
@@ -1336,6 +1408,11 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
 {Wisnioski}, E., {Glazebrook}, K., {Blake}, C., {et~al.} 2012, \mnras, 422,
   3339
 
+\bibitem[{{Woo} {et~al.}(2013){Woo}, {Dekel}, {Faber}, {Noeske}, {Koo},
+  {Gerke}, {Cooper}, {Salim}, {Dutton}, {Newman}, {Weiner}, {Bundy}, {Willmer},
+  {Davis}, \& {Yan}}]{Woo2013}
+{Woo}, J., {Dekel}, A., {Faber}, S.~M., {et~al.} 2013, \mnras, 428, 3306
+
 \bibitem[{{Wuyts} {et~al.}(2012){Wuyts}, {F{\"o}rster Schreiber}, {Genzel},
   {Guo}, {Barro}, {Bell}, {Dekel}, {Faber}, {Ferguson}, {Giavalisco}, {Grogin},
   {Hathi}, {Huang}, {Kocevski}, {Koekemoer}, {Koo}, {Lotz}, {Lutz}, {McGrath},
@@ -1353,5 +1430,30 @@ Thanjavur, K., Simard, L., Bluck, A. F.~L., \& Mendel, T. 2016, Monthly Notices
   {Weiss}, {Leipski}, {Dey}, {Chapman}, {Le Floc'h}, {Prescott}, {Neri},
   {Borys}, {Matsuda}, {Yamada}, {Hayashino}, {Tapken}, \& {Menten}}]{Yang2012}
 {Yang}, Y., {Decarli}, R., {Dannerbauer}, H., {et~al.} 2012, \apj, 744, 178
+
+\bibitem[{{York} {et~al.}(2000){York}, {Adelman}, {Anderson}, {Anderson},
+  {Annis}, {Bahcall}, {Bakken}, {Barkhouser}, {Bastian}, {Berman}, {Boroski},
+  {Bracker}, {Briegel}, {Briggs}, {Brinkmann}, {Brunner}, {Burles}, {Carey},
+  {Carr}, {Castander}, {Chen}, {Colestock}, {Connolly}, {Crocker}, {Csabai},
+  {Czarapata}, {Davis}, {Doi}, {Dombeck}, {Eisenstein}, {Ellman}, {Elms},
+  {Evans}, {Fan}, {Federwitz}, {Fiscelli}, {Friedman}, {Frieman}, {Fukugita},
+  {Gillespie}, {Gunn}, {Gurbani}, {de Haas}, {Haldeman}, {Harris}, {Hayes},
+  {Heckman}, {Hennessy}, {Hindsley}, {Holm}, {Holmgren}, {Huang}, {Hull},
+  {Husby}, {Ichikawa}, {Ichikawa}, {Ivezi{\'c}}, {Kent}, {Kim}, {Kinney},
+  {Klaene}, {Kleinman}, {Kleinman}, {Knapp}, {Korienek}, {Kron}, {Kunszt},
+  {Lamb}, {Lee}, {Leger}, {Limmongkol}, {Lindenmeyer}, {Long}, {Loomis},
+  {Loveday}, {Lucinio}, {Lupton}, {MacKinnon}, {Mannery}, {Mantsch}, {Margon},
+  {McGehee}, {McKay}, {Meiksin}, {Merelli}, {Monet}, {Munn}, {Narayanan},
+  {Nash}, {Neilsen}, {Neswold}, {Newberg}, {Nichol}, {Nicinski}, {Nonino},
+  {Okada}, {Okamura}, {Ostriker}, {Owen}, {Pauls}, {Peoples}, {Peterson},
+  {Petravick}, {Pier}, {Pope}, {Pordes}, {Prosapio}, {Rechenmacher}, {Quinn},
+  {Richards}, {Richmond}, {Rivetta}, {Rockosi}, {Ruthmansdorfer}, {Sandford},
+  {Schlegel}, {Schneider}, {Sekiguchi}, {Sergey}, {Shimasaku}, {Siegmund},
+  {Smee}, {Smith}, {Snedden}, {Stone}, {Stoughton}, {Strauss}, {Stubbs},
+  {SubbaRao}, {Szalay}, {Szapudi}, {Szokoly}, {Thakar}, {Tremonti}, {Tucker},
+  {Uomoto}, {Vanden Berk}, {Vogeley}, {Waddell}, {Wang}, {Watanabe},
+  {Weinberg}, {Yanny}, {Yasuda}, \& {SDSS Collaboration}}]{York2000}
+{York}, D.~G., {Adelman}, J., {Anderson}, Jr., J.~E., {et~al.} 2000, \aj, 120,
+  1579
 
 \end{thebibliography}
