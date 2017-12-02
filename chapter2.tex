@@ -46,7 +46,8 @@ For the single-depth sample, volunteers were shown color images generated from t
 %%%		FIGURE: 	GZ2 WEB INTERFACE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h!]
-\includegraphics[width=\textwidth]{Figures/GZ2_classification_count.png}
+\centering
+\includegraphics[width=5in]{Figures/GZ2_classification_count.png}
 \caption[Galaxy Zoo 2 classification count distributions]{Distribution of the classification counts for the various subsets of the GZ2 galaxy sample \citep[credit:][]{Willett2013}. In this thesis we use the main sample with a median of 44 votes per galaxy.}
 \label{fig: gz2 interface}
 \end{figure}
@@ -212,10 +213,17 @@ In total, we successfully measure all morphological indicators for 281,801 SDSS 
 We perform several checks to determine the quality and consistency of our morphology diagnostics. Due to the wealth of information provided by the SDSS pipeline, we can compare some of our diagnostics against SDSS values. Obviously there are some instances where our measurements will outperform the SDSS pipeline and vice versa. We first check our values of the Petrosian radius as shown in Figure \ref{fig: Rp and C comparison}. Our \rp~are on average $\sim$35\% larger than those computed by SDSS. The biggest reason for this discrepancy is due to aperture shape: SDSS compute \rp~using circular annuli while we use elliptical. [Mention the weird ones where our \rp~is tiny but SDSS's is huge? Show some examples where my code does better than SDSS? And where mine fails?]
 
 \begin{figure}
+\centering
 \includegraphics[width=\textwidth]{Figures/compare_Rp_concentrations.png}
 \caption[Comparison of Petrosian radius and concentration index from this work to SDSS values]{Comparison of our measured \rp~and $C$ to SDSS values. In both panels the black dashed line represents a 1-to-1. The left panel shows the Petrosian radius we measure against that computed in the SDSS pipeline. Most of the discrepancy is due to the apertures used: the SDSS pipeline defines \rp~in circular annuli while we use elliptical. 
 The right panel shows the relationship between concentration indexes, where the red dash-dotted line is a linear fit. We find that our $C$ is systematically $\sim$1 point larger than SDSS. This is remarkable considering $C_{\mathrm{SDSS}}$ is computed using Petrosian radii containing 50\% and 90\% of the total galaxy light while we use radii containing 20\% and 80\%, in addition to the disperate aperture shapes already mentioned.}
 \label{fig: Rp and C comparison}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=5in]{Figures/Rp_SBprofiles.pdf}
+\caption[Examples of discrepancies between SDSS's and our measurement of the Petrosian radius.]{Examples of discrepancies between SDSS's and our measurement of the Petrosian radius. blah blah blah}
 \end{figure}
 
 Of greater importance, however, are the values of the morphology diagnostics as these are used as features to train our machine learning algorithm in Chapter \ref{chap:4}. Though SDSS does not measure all of the structural indicators we tackle here, they do provide a means to compute the concentration index via \texttt{PETROR50} and \texttt{PETROR90}, the Petrosian radii containing 50\% and 90\% of the galaxy total light, respectively. Figure \ref{fig: Rp and C comparison} shows our $C$ against that computed from SDSS, $C_{\mathrm{SDSS}}$. Our values are systematically $\sim$1 point larger than SDSS values but otherwise retain a strikingly tight correlation. This is suprising considering the drasticly different ways these values are computed. Besides the obvious difference in radii (SDSS uses 50\% and 90\% vs our 20\% and 80\%), SDSS values are measured using ciruclar aperture,s whereas we use elliptical. The latter is preferable as it has been shown that aperture shape affects $C$ such that the concentration index is artificially inflated when measured within circular apertures, especially for highly elongated galaxies, i.e., edge-on disks \citep{Bershady2000, Andrae2011}.

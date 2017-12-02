@@ -3,12 +3,14 @@
 \chapter{Incorporating machine intelligence}
 \label{chap:4}
 
-
+\begin{quote}
+\emph{This chapter, albeit with slight modifications, was submitted as part of a publication to the Monthly Notices of the Royal Astronomical Society and is currently under review with authorship Melanie R. Beck, Claudia Scarlata, Lucy F. Fortson, Chris J. Lintott, Melanie A. Galloway, Kyle W. Willett, B. D. Simmons, Hugh Dickinson, Karen L. Masters, Philip J. Marshall, and Darryl Wright}\\
+\end{quote}
 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 %%   INTEGRATING MACHINE CLASSIFIERS 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Efficiency through incorporation of machine classifiers} \label{sec: machine}
+\section{Efficiency through incorporation of machine classifiers} \label{chap4: machine}
 
 We construct the full Galaxy Zoo Express by incorporating supervised 
 learning, the machine learning task of inference from labelled training data. 
@@ -19,7 +21,7 @@ function that can be mapped to new examples. A properly optimized algorithm will
 correctly determine class labels for unseen data. By processing human classifications 
 through SWAP, we obtain a set of binary labels by which we can train a machine 
 classifier. We briefly outline the technical details of our machine below,  turning
-towards the decision engine we develop in Section~\ref{sec: decision engine}. 
+towards the decision engine we develop in Section~\ref{chap4: decision engine}. 
 
 
 
@@ -76,7 +78,7 @@ that subject from others in the training sample.
 To segregate~\feat~from~\notfeat, we draw on ZEST \citep{Scarlata2007} and compute
  concentration, asymmetry, Gini coefficient, and M$_{20}$, 
 the second-order moment of light for the brightest 20\% of galaxy pixels as
-measured from SDSS DR12 $i$-band imaging (see Appendix \ref{sec: measuring morphology}). 
+measured from SDSS DR12 $i$-band imaging (see Chapter 2 \ref{chap2}). 
 Coupled with SExtractor's measurement of ellipticity \citep{sextractor}, 
 we provide the machine with a $D=5$ dimensional morphology parameter space.
 These non-parametric diagnostics have long been used to distinguish between early- and late-type galaxies 
@@ -90,7 +92,8 @@ step we perform is the removal of poorly-measured morphological indicators, i.e.
 %%%  FIGURE:   LEARNING CURVE
 %%%-------------------------------------------------------
 \begin{figure}[t!]
-\includegraphics[width=3.25in]{Figures/human_machine/f6.pdf}
+\centering
+\includegraphics[width=3.25in]{Figures/human_machine/f9.pdf}
 \caption[Random Forest learning curve]{Learning curve for a Random Forest with fixed hyperparameters. These curves show the mean accuracy computed during cross-validation and on the training sample, where the shaded regions denote the standard deviation. When the training sample size is small, the machine accurately identifies its own training sample but is unable to generalize to unseen data as evidenced by a low cross-validation score. As the training sample size increases, the cross-validation score increases. This behaviour plateaus indicating that larger training samples provide little in additional performance. \label{fig: learning curve}}
 \end{figure}
 
@@ -98,7 +101,7 @@ step we perform is the removal of poorly-measured morphological indicators, i.e.
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 %%   DECISION ENGINE 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Decision Engine}\label{sec: decision engine}
+\subsection{Decision Engine}\label{chap4: decision engine}
 A number of decisions must be addressed before attempting to train the machine. 
 In particular, which subjects should be designated as the training sample? 
 When should the machine attempt its first training session? 
@@ -108,7 +111,7 @@ for answering these questions, only guidelines and best practices.
 Here we briefly discuss our approach for the development of our decision engine.
 
 
-As discussed in detail in Section~\ref{sec: SWAP}, SWAP yields a probability that 
+As discussed in detail in Section~\ref{chap3: SWAP}, SWAP yields a probability that 
 a subject exhibits the feature of interest. While some machine algorithms can 
 accept continuous input labels, the RF requires distinct classes. We thus use only those subjects which have crossed either of the retirement thresholds. 
 Though we find that SWAP consistently retires 35-40\%~\feat~subjects on 
@@ -141,7 +144,7 @@ cross-validation score, and the best hyperparameters.
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 %%   MACHINE SHOP 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{The Machine Shop}\label{sec: machine shop}
+\subsection{The Machine Shop}\label{chap4: machine shop}
 We can now describe a full GZX simulation, which begins with human classifications 
 processed through SWAP for several days.   
 Once at least 10K subjects have been retired, their feature vectors are passed to 
@@ -182,9 +185,9 @@ training sessions.
 %%----------------------------------------------------------------------------------------------------------------------------------------------
 %%   RESULTS 
 %%----------------------------------------------------------------------------------------------------------------------------------------------
-\section{Results} \label{sec: results}
+\section{Results} \label{chap4: results}
 We perform a full GZX simulation incorporating our RF with the fiducial 
-SWAP run discussed in Section~\ref{sec: fiducial}. The machine attempts its first training on Day 8 with an initial training sample of $\sim$20K subjects. It undergoes several additional nights of training, each time with a larger training sample. By Day 12, SWAP has provided over 40K subjects for training and the machine's agent has deemed the machine optimized. The machine predicts class labels for the remaining 230K GZ2 subjects. Of those, the machine retires over 70K, dramatically increasing the subset of retired subjects. We end the simulation after 32 days, having retired $\sim$210K subjects as detailed in Table~\ref{tab: summary}. 
+SWAP run discussed in Section~\ref{chap3: fiducial}. The machine attempts its first training on Day 8 with an initial training sample of $\sim$20K subjects. It undergoes several additional nights of training, each time with a larger training sample. By Day 12, SWAP has provided over 40K subjects for training and the machine's agent has deemed the machine optimized. The machine predicts class labels for the remaining 230K GZ2 subjects. Of those, the machine retires over 70K, dramatically increasing the subset of retired subjects. We end the simulation after 32 days, having retired $\sim$210K subjects as detailed in Table~\ref{tab: summary}. 
 
 We present these results in Figure~\ref{fig: money} where subject retirement 
 with GZX (red) is compared to our fiducial SWAP-only run (light blue) and GZ2 (dashed dark blue). Using the~\raw~labels as before, we compute our usual quality metrics on the full sample of GZX-retired subjects; reported in Table~\ref{tab: summary}. Accuracy and purity remain within a few percent of the SWAP-only run at 93.1\% and 83.2\% respectively. Instead we see a 5\% decline in the completeness. 
@@ -221,7 +224,7 @@ By dynamically generating a training sample through a more sophisticated analysi
 %%%-------------------------------------------------------
 \begin{figure}
 \centering
-\includegraphics[width=3.7in]{Figures/human_machine/GZX_component_contributions.pdf}
+\includegraphics[width=3.5in]{Figures/human_machine/GZX_component_contributions.pdf}
 \caption[Individual contributions of human and machine to galaxy classification]{Contributions to subject retirement by both classifying agents of GZX: human (SWAP) and machine. The top panel shows cumulative subject retirement for GZX as a whole (solid black), along with that attributed to the RF (dash-dotted teal), and SWAP (dashed orange). The dotted grey line shows the fiducial SWAP-only run for comparison. Retirement totals for humans and machine are nearly equal over the course of the simulation but display different behaviours: SWAP's retirement rate is almost constant while the RF contributes substantially after its initial application and then plateaus.  The bottom panels show what fraction of GZ2 subjects are retired, separated by class label. Overall, GZX retires 73.7\% of the entire GZ2 sample in 32 days, retiring the same proportion of~\feat~and~\notfeat~subjects as indicated by the black lines. However, humans retire 30\% more~\feat~subjects than the machine, while both components retire a similar proportion of~\notfeat~subjects. \label{fig: gzx components}}
 \end{figure}
 
@@ -233,7 +236,7 @@ By dynamically generating a training sample through a more sophisticated analysi
 In the top panel of Figure~\ref{fig: gzx components} we explore the individual 
 contributions to GZX subject retirement from the RF (dash-dotted teal) 
 and SWAP (dashed orange). The solid black line shows the total GZX retirement (SWAP+RF), while the dotted grey line depicts the fiducial SWAP-only run from 
-Section~\ref{sec: fiducial} for reference. Two things are immediately obvious. First, each component shoulders approximately half of the retirement burden with the machine and SWAP responsible for $\sim$$98$K and $\sim$$112$K subjects respectively. Secondly, the rate of retirement exhibited by the two components is in stark contrast. SWAP retires at a relatively constant rate while the machine retires dramatically at the beginning of its application, quickly surpassing the human contribution, and plateaus thereafter. We thus clearly see three epochs of subject retirement. In the first phase, humans are the only contributors to subject retirement. Once the machine is optimized, it immediately contributes more to retirement than humans. However, the machine's performance plateaus quickly; the third phase is again dominated by human classifications.
+Section~\ref{chap3: fiducial} for reference. Two things are immediately obvious. First, each component shoulders approximately half of the retirement burden with the machine and SWAP responsible for $\sim$$98$K and $\sim$$112$K subjects respectively. Secondly, the rate of retirement exhibited by the two components is in stark contrast. SWAP retires at a relatively constant rate while the machine retires dramatically at the beginning of its application, quickly surpassing the human contribution, and plateaus thereafter. We thus clearly see three epochs of subject retirement. In the first phase, humans are the only contributors to subject retirement. Once the machine is optimized, it immediately contributes more to retirement than humans. However, the machine's performance plateaus quickly; the third phase is again dominated by human classifications.
 
 %932,017
 
@@ -242,7 +245,7 @@ Section~\ref{sec: fiducial} for reference. Two things are immediately obvious. F
 %%%-------------------------------------------------------
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/human_machine/f9.pdf}
+\includegraphics[width=\textwidth]{Figures/human_machine/f12.pdf}
 \caption[Random subsample of galaxy jpegs identified as false positives by the Random Forest]{A random subsample of subjects identified as false positives: labelled by machine as~\feat, but as~\notfeat~according to~\raw. We display \fsmooth~in the lower left corner, that is, the fraction of volunteers who classified the subject as `smooth' (\notfeat). Values are typically between 0.5 and 0.65 indicating that GZ2 volunteers did not reach a strong consensus. Fortunately, the machine is able to identify these subjects as~\feat~due to their measured morphology diagnostics. \label{fig: machine false pos}}
 \end{figure}
 
@@ -262,7 +265,7 @@ composition of subjects retired by SWAP and the RF. The left (right) panel shows
 What is the source of this discrepancy? Each night the machine trains on a sample composed consistently of 30-40\%~\feat~subjects but does not retire a similar proportion, indicating that the 30\% of non-retired~\feat~subjects do not receive high~\pmachine. In the following section we explore whether this is an artefact of our choice in machine or in the human-machine combination implemented here. 
 
 
-\subsection{Machine performance}\label{sec: machine performance}
+\subsection{Machine performance}\label{chap4: machine performance}
 
 Throughout our analysis we have defined~\feat~and~\notfeat~subjects by 
 their~\raw~labels as this was the most compatible choice for comparison with SWAP output. However, the machine does not learn in the same way, nor is it presented with the same information. Machine and human classifications each provide valuable and complementary information for identifying \feat~galaxies.
@@ -273,7 +276,7 @@ comprises 7.2\% of all subjects the machine retires. We visually examine several
 
 
 That the machine strongly identifies these galaxies as \feat~
-(\pmachine~$\ge 0.9$) where humans instead classify them as \notfeat~(\ffeat~$< 0.5$) has several contributing factors: 1) as discussed in Section~\ref{sec: swap gz2 disagree}, the threshold we chose carries with it a confidence interval such that subjects with $0.4 <$~\ffeat+\fstar~$< 0.6$ are most likely to receive disagreeing labels from other classifying agents, 2) the first task of the GZ2 decision tree asks a question that does not necessarily correlate with a split between early- and
+(\pmachine~$\ge 0.9$) where humans instead classify them as \notfeat~(\ffeat~$< 0.5$) has several contributing factors: 1) as discussed in Section~\ref{chap3: swap gz2 disagree}, the threshold we chose carries with it a confidence interval such that subjects with $0.4 <$~\ffeat+\fstar~$< 0.6$ are most likely to receive disagreeing labels from other classifying agents, 2) the first task of the GZ2 decision tree asks a question that does not necessarily correlate with a split between early- and
  late-type galaxies, and 3) the machine learns on morphology diagnostics
  that are very different from visual inspection.
 
@@ -306,7 +309,7 @@ machine properly identifies can become part of the humans' training sample.
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 %%   MAD RAVINGS OF THE FUTURE 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Looking Forward}\label{sec: visions}
+\section{Looking Forward}\label{chap4: visions}
 
 We have demonstrated the first practical framework for combining human and machine
  intelligence in galaxy morphology classification tasks. 
@@ -393,17 +396,4 @@ subjects that humans miss, providing  a complementary approach to visual classif
 The gain in classification speed allows us to tackle the massive amount of data promised
  from large surveys like \textit{LSST} and \textit{Euclid}.
  
- 
-%%----------------------------------------------------------------------------------------------------------------------------------------------------
-%%   ACKNOWLEDGEMENTS
-%%----------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Acknowledgements}
-MB thanks Steven Bamford and Boris H{\"a}u{\ss}ler for insightful discussions on citizen science and Galaxy Zoo; and John Wallin and Marc Huertas-Company for several enlightening conversations on machine learning and classification. 
-We are grateful to Elisabeth Baeten, Micaela Bagley, Karlen Shahinyan, Vihang Mehta, Steven Bamford, Kevin Schawinski, and Rebecca Smethurst for providing expert classifications in addition to those provided by the authors. PJM acknowledges Aprajita Verma and Anupreeta More for their ongoing collaboration on the Space Warps project. 
 
-MB, CS, LF, KW, and MG gratefully acknowledge support from the US National Science
-Foundation Grant AST-1413610.  MB acknowledges additional support 
-through New College and Oxford University's Balzan Fellowship as well as the University
-of Minnesota Doctoral Dissertation Fellowship. Travel funding was supplied 
-to MB, in part, by the University of Minnesota Thesis Research Travel Grant. CJL recognizes support from a grant from the Science \& Technology Facilities Council (ST/N003179/1). 
-BDS acknowledges support from Balliol College, Oxford, and the National Aeronautics and Space Administration (NASA) through Einstein Postdoctoral Fellowship Award Number PF5-160143 issued by the Chandra X-ray Observatory Center, which is operated by the Smithsonian Astrophysical Observatory for and on behalf of NASA under contract NAS8-03060. The work of PJM is supported by the U.S. Department of Energy under contract number DE-AC02-76SF00515.
