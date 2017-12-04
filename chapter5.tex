@@ -17,7 +17,7 @@ Observationally, the situation is still unclear. Large gas-to-baryonic fractions
 
 The lack of existing observational constraints below $10^{10}M_{\odot}$ is of particular concern. It is precisely in this mass range that most of the constraining power resides. In fact, state of the art simulations that directly resolve the interstellar medium of individual galaxies while capturing their cosmological environment show that low mass galaxies are mostly affected by preventive feedback \citep{Muratov2015, Christensen2011,Dave2016}. These simulations show that in galaxies with $M<10^{10}$ supernova-driven fast outflows can lower the gas inflow rate and consequently the rate at which clumps are formed in-situ, compared to more massive galaxies. If clumps are the result of minor merging, on the other hand, the dependency with stellar mass would hinge on the specifics of the dynamics of the mergers. 
 
-In this work we utilize the high quality data accumulated by SDSS for a sample of local clumpy galaxies discovered during the preparation of the Galaxy Zoo: Hubble morphology catalog which collected morphological data for galaxies in Stripe 82. Taking advantage of the increased depth of the Stripe 82 coadd imaging for over 100 galaxies, as well as high quality SDSS spectra for more than 150 ``clumps'', we explore the properties of this initial sample to assess how similar these objects are to their high redshift counterparts. Additionally, we seek to differentiate between possible clump formation mechanisms, especially for low mass galaxies of which our sample peaks around $9M_{\odot}$, precisely the range for which observations are sorely needed. In Section \ref{chap5: data} we detail the galaxy selection process and data utilized in this work, followed by a preliminary analysis of various clump properties in Section \ref{chap5: clump properties}. We next discuss the \textit{Clump Scout} project in Section \ref{chap5: Clump Scout}: an initiative to discover up to 1000 more low redshift clumpy galaxies hiding in SDSS imaging data. Finally, in Section \ref{chap5: future} we present our conclusions and future work. Throughout this chapter we assume a flat Planck cosmology with H$_0=67.8$ and $\Omega_m = 0.308$ where appropriate. 
+In this work we utilize the high quality data accumulated by SDSS for a sample of local clumpy galaxies discovered during the preparation of the Galaxy Zoo: Hubble morphology catalog which collected morphological data for galaxies in Stripe 82. Taking advantage of the increased depth of the Stripe 82 coadd imaging for over 100 galaxies, as well as high quality SDSS spectra for more than 150 ``clumps'', we explore the properties of this initial sample to assess how similar these objects are to their high redshift counterparts. Additionally, we seek to differentiate between possible clump formation mechanisms, especially for low mass galaxies of which our sample peaks around $9M_{\odot}$, precisely the range for which observations are sorely needed. In Section \ref{chap5: data} we detail the galaxy selection process and data utilized in this work, followed by a preliminary analysis of various clump properties in Section \ref{chap5: clump properties}. We next discuss the \textit{Clump Scout} project in Section \ref{chap5: Clump Scout}: an initiative to discover up to 1000 more low redshift clumpy galaxies hiding in SDSS imaging data. Finally, in Sections \ref{chap5: future} and \ref{chap5: summary} we present our conclusions and future work. Throughout this chapter we assume a flat Planck cosmology with H$_0=67.8$ and $\Omega_m = 0.308$ where appropriate. 
 
 
 \section{Sample Selection \& Data} \label{chap5: data}
@@ -87,7 +87,7 @@ Specifically, we exploit the high quality emission line measurements produced th
 \begin{figure}
 \centering
 \includegraphics[width=5in]{Figures/clump_4properties.png}
-\caption[Histogram distributions of several physical properties for $\sim$170 ``clumps.'']{We present here distributions of several physical properties of the $\sim$170 star-forming regions in our sample. These properties are all derived from emission-line measurements produced by the SDSS spectroscopic pipeline. }
+\caption[Histogram distributions of several physical properties for $\sim$170 ``clumps.'']{We present here distributions of several physical properties of the $\sim$170 star-forming regions in our sample. These properties (with the exception of galactocentric radius, see Section \ref{chap5: galactocentric radius}) are all derived from emission-line measurements produced by the SDSS spectroscopic pipeline. }
 \label{fig: clump histograms}
 \end{figure}
 
@@ -109,6 +109,12 @@ We begin by estimating the \ha~flux and velocity dispersion for each spectrum as
 
 The left panel of Figure \ref{fig: clump scatter plots} shows the relationship between the \ha~luminosity and the clump diameters derived from the \ha~velocity dispersion. The black dashed line represents the luminosity-size scaling relation of equation \ref{eqn: luminsotiy-size}. The points are color-coded according to the stellar mass of the host galaxy where the dark purple points are those spectra whose corresponding galaxy's do not have a match in the GSWLC. The clumps in our sample lie reasonably well along the empirical relation of \cite{Wisnioski2012} though much of the sample has lower \ha~luminosity. The \ha~luminosity distribution overlaps with that of high redshift clumps, though the size distribution is intermediate between local and high-redshift star-forming regions, as previously discussed. There is also a strong galaxy stellar mass dependence along the relation. This isn't altogether surprising since lower mass galaxies typically have smaller SFRs in our sample (as evidenced by the global SED SFR in Figure \ref{fig: clumpy gswlc properties}) and, by extension, lower \ha~luminosities. 
 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Figures/clump_relations.png}
+\caption[Clump properties: $L(\mathrm{H}_{\alpha})$ vs size and $\sigma_{H_{\alpha}}$ vs $\Sigma_{SFR}$]{In the left panel we show the \ha~luminosity versus clump size as estimated via the \ha~velocity dispersion utilizing equation \ref{eqn: sigma-size}. The black dashed line represents the luminosity-size relation of \cite{Wisnioski2012}, reproduced in equation \ref{eqn: luminsotiy-size}. The left panel shows the \ha~velocity dispersion versus the clump star formation rate density. In bath panels the points are colored according to host galaxy total stellar mass as measured by \cite{Salim2016} in the GSWLC. The dark purple points are those clump spectra whose host galaxy did not match to that catalog.}
+\label{fig: clump scatter plots}
+\end{figure}
 
 Several observations have detected a relationship between luminosity and velocity dispersion of galaxies both locally and at high redshift \citep{Dib2006,Green2010,Lehnert2009,Genzel2011}. It has been suggested that the velocity dispersion is driven by star formation. One possibility is through released mechanical energy as discussed in \cite{Lehnert2009}. \cite{Wisnioski2012} offer an alternative whereby the velocity dispersion is the result of the star formation density in a marginally stable galactic disk (i.e., Toomre parameter, $Q\sim1$), assuming the Kennicutt-Schmidt law, an empirical relation between SFR surface density and gas surface density \citep{Schmidt1959,Kennicutt1998a}. While \cite{Wisnioski2012} find a moderate correlation between $\sigma-\Sigma_{\mathrm{SFR}}$, \cite{Genzel2011} find a weak dependence concluding that feedback does not appear to directly drive the velocity dispersion of the ionized gas.  Utilizing the clump sizes measured previously, we estimate the $\Sigma_{\mathrm{SFR}}$ after computing the \ha~SFR using the well known calibration \citep{Kennicutt1998,Calzetti2013}
 \begin{equation}
@@ -117,17 +123,7 @@ Several observations have detected a relationship between luminosity and velocit
 The right panel of Figure \ref{fig: clump scatter plots} shows the resulting $\sigma_{\mathrm{H}_{\alpha}}-\Sigma_{\mathrm{SFR}}$ relation, where again the points are colored according to the host galaxy stellar mass as given by the GSWLC with purple points denoting those spectra for which the host galaxy is not found in that catalog. Instead, we observe a mild anti-correlation. If this finding holds, it could be an indication that feedback mechanisms in low mass galaxies are poorly understood since our sample probes much lower galaxy stellar mass and it is precisely this population that skew the relation. 
 
 
-\begin{figure}
-\includegraphics[width=\textwidth]{Figures/clump_relations.png}
-\caption[Clump properties: $L(\mathrm{H}_{\alpha})$ vs size and $\sigma_{H_{\alpha}}$ vs $\Sigma_{SFR}$]{Caption}
-\label{fig: clump scatter plots}
-\end{figure}
-
 Finally, we compare SFRs between those derived from the \ha~emission and the global SED SFR from the GSWLC. For each galaxy, we sum the SFR$_{\mathrm{H}_{\alpha}}$ from each spectrum and compare that to SFR$_{\mathrm{SED}}$, for those 89 galaxies that were matched to the GSWLC. The median ratio of these two star-formation measures is $\sim$10\%. Because a majority of galaxies have only one spectrum, we interpret this rough estimate as being not dissimilar to giant star-forming regions found at high redshift where it is typical for individual clumps to contribute 10\% or more to the total star formation of the galaxy \citep{Genzel2011, Guo2012, Wisnioski2012}
-
-
-
-
 
 
 \section{Physical properties vs galactocentric radius}
@@ -141,7 +137,7 @@ We compute the galactocentric distance of each SDSS fiber from the galaxy center
 
 \begin{figure}
 \includegraphics[width=\textwidth]{Figures/clump_galactocentric_Reff.png}
-\caption[\ha~EW, SFR, Balmer decrement as a function of clump galactocentric radius.]{\ha~EW, SFR, Balmer decrement as a function of clump galactocentric radius.}
+\caption[\ha~EW, SFR, Balmer decrement as a function of clump galactocentric radius.]{\ha~equivalent width, star formation rate, and Balmer decrement as a function of clump galactocentric radius normalized by the host galaxy's R$_{\mathrm{eff}}$. In all panels the points are colored according to host galaxy total stellar mass as measured by \cite{Salim2016} in the GSWLC. The dark purple points are those clump spectra whose host galaxy did not match to that catalog.}
 \label{fig: galactocentric radius relations}
 \end{figure}
 
@@ -198,7 +194,7 @@ Additionally, this large statistical sample will allow us to investigate the evo
 
 
 
-\section{Summary and conclusions}
+\section{Summary and conclusions}\label{chap5: summary}
 
 In this work, we have isolated a sample of galaxies with morphologies which resemble those of star-forming clumpy galaxies of the high-redshift universe. We identify these galaxies in the local universe through the Galaxy Zoo: Hubble project which included imaging from Stripe 82 of the SDSS. We isolate 104 galaxies that have a traditional clumpy morphology and acquire SDSS imaging and spectroscopic data for these galaxies, including spectra for over 150 clumps. These galaxies have a median log stellar mass of 9.4, a sample that could provide crucial constraints on star formation models of low mass galaxies. We obtain stellar mass and star-formation rates for these galaxies through the GSWLC catalog. Our preliminary analysis of the spectra reveals that star-forming regions in these galaxies are in many ways similar to high-redshift clumps: our clumps have a median physical size of $\sim1$kpc and median \ha~velocity dispersion of $\sim40$km/s, values that are only slightly lower than high redshift clumps. We also compare several spectroscopically derived properties with clump galactocentric radius but find no strong correlations. 
 
