@@ -1,10 +1,10 @@
 %!TEX root = thesis.tex
 
 \chapter{Incorporating machine intelligence}
-\label{chap:4}
+\label{chap4}
 
 \begin{quote}
-\emph{This chapter, albeit with slight modifications, was submitted as part of a publication to the Monthly Notices of the Royal Astronomical Society and is currently under review with authorship Melanie R. Beck, Claudia Scarlata, Lucy F. Fortson, Chris J. Lintott, Melanie A. Galloway, Kyle W. Willett, B. D. Simmons, Hugh Dickinson, Karen L. Masters, Philip J. Marshall, and Darryl Wright}\\
+\emph{This chapter, albeit with some modifications, was submitted as part of a publication to the Monthly Notices of the Royal Astronomical Society and is currently under review with authorship Melanie R. Beck, Claudia Scarlata, Lucy F. Fortson, Chris J. Lintott, Melanie A. Galloway, Kyle W. Willett, B. D. Simmons, Hugh Dickinson, Karen L. Masters, Philip J. Marshall, and Darryl Wright; ``Integrating human and machine intelligence in galaxy morphology classification tasks.''}\\
 \end{quote}
 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -18,10 +18,7 @@ The training data consist of a set of training examples, and must include
 an input feature vector and a desired output label.  Generally speaking,
 a supervised learning algorithm analyses the training data and produces a 
 function that can be mapped to new examples. A properly optimized algorithm will 
-correctly determine class labels for unseen data. By processing human classifications 
-through SWAP, we obtain a set of binary labels by which we can train a machine 
-classifier. We briefly outline the technical details of our machine below,  turning
-towards the decision engine we develop in Section~\ref{chap4: decision engine}. 
+correctly determine class labels for unseen data. By processing human classifications through SWAP, we obtain a set of binary labels by which we can train a machine classifier. We briefly outline the technical details of our machine below,  turning towards the decision engine we develop in Section~\ref{chap4: decision engine}. 
 
 
 
@@ -29,18 +26,7 @@ towards the decision engine we develop in Section~\ref{chap4: decision engine}.
 %%   RANDOM FORESTS
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Random Forests}
-We use a Random Forest (RF) algorithm~\citep{Breiman2001},  
-an ensemble classifier that operates by
- bootstrapping the training data and constructing a multitude of individual decision 
-tree algorithms, one for each subsample.  
-An individual decision tree works by deciding which of 
-the input features best separates the classes. It does this by performing 
-splits on the values of the input feature that minimize the classification 
-error. These feature splits proceed recursively. Decision trees alone are
- prone to over-fitting, precluding them from generalizing 
-well to new data. Random Forests mitigate this effect by combining the 
-output labels from a multitude of decision trees.  Specifically, we use the 
-\texttt{RandomForestClassifier} from the Python module \texttt{scikit-learn}
+We use a Random Forest (RF) algorithm~\citep{Breiman2001},  an ensemble classifier that operates by bootstrapping the training data and constructing a multitude of individual decision tree algorithms, one for each subsample.  An individual decision tree works by deciding which of the input features best separates the classes. It does this by performing splits on the values of the input feature that minimize the classification error. These feature splits proceed recursively. Decision trees alone are prone to over-fitting, precluding them from generalizing well to new data. Random Forests mitigate this effect by combining the output labels from a multitude of decision trees.  Specifically, we use the \texttt{RandomForestClassifier} from the Python module \texttt{scikit-learn}
 \citep{scikit-learn}. 
 
 
@@ -78,7 +64,7 @@ that subject from others in the training sample.
 To segregate~\feat~from~\notfeat, we draw on ZEST \citep{Scarlata2007} and compute
  concentration, asymmetry, Gini coefficient, and M$_{20}$, 
 the second-order moment of light for the brightest 20\% of galaxy pixels as
-measured from SDSS DR12 $i$-band imaging (see Chapter 2 \ref{chap2}). 
+measured from SDSS DR12 $i$-band imaging (see Chapter \ref{chap2}). 
 Coupled with SExtractor's measurement of ellipticity \citep{sextractor}, 
 we provide the machine with a $D=5$ dimensional morphology parameter space.
 These non-parametric diagnostics have long been used to distinguish between early- and late-type galaxies 
@@ -94,7 +80,7 @@ step we perform is the removal of poorly-measured morphological indicators, i.e.
 \begin{figure}[t!]
 \centering
 \includegraphics[width=4in]{Figures/human_machine/f9.pdf}
-\caption[Random Forest learning curve]{Learning curve for a Random Forest with fixed hyperparameters. These curves show the mean accuracy computed during cross-validation and on the training sample, where the shaded regions denote the standard deviation. When the training sample size is small, the machine accurately identifies its own training sample but is unable to generalize to unseen data as evidenced by a low cross-validation score. As the training sample size increases, the cross-validation score increases. This behaviour plateaus indicating that larger training samples provide little in additional performance. \label{fig: learning curve}}
+\caption[Random Forest learning curve]{Learning curve for a Random Forest with fixed hyperparameters. These curves show the mean accuracy computed during cross-validation and on the training sample, where the shaded regions denote the standard deviation. When the training sample size is small, the machine accurately identifies its own training sample but is unable to generalize to unseen data as evidenced by a low cross-validation score. As the training sample size increases, the cross-validation score increases. This behavior plateaus indicating that larger training samples provide little in additional performance. \label{fig: learning curve}}
 \end{figure}
 
 
@@ -102,13 +88,8 @@ step we perform is the removal of poorly-measured morphological indicators, i.e.
 %%   DECISION ENGINE 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Decision Engine}\label{chap4: decision engine}
-A number of decisions must be addressed before attempting to train the machine. 
-In particular, which subjects should be designated as the training sample? 
-When should the machine attempt its first training session? 
-When has the machine's performance been optimized such that it will successfully
-generalize to unseen subjects? The field of machine learning provides few hard rules 
-for answering these questions, only guidelines and best practices. 
-Here we briefly discuss our approach for the development of our decision engine.
+A number of decisions must be addressed before GZX attempts to train the machine.
+In particular, which subjects should be designated as the training sample? When should the machine attempt its first training session? When has the machine's performance been optimized such that it will successfully generalize to unseen subjects? The field of machine learning provides few hard rules for answering these questions, only guidelines and best practices. Here we briefly discuss our approach for the development of our decision engine which allows GZX to dynamically train a machine classifier.
 
 
 As discussed in detail in Section~\ref{chap3: SWAP}, SWAP yields a probability that 
@@ -157,20 +138,7 @@ Once the machine has been optimized, the agent introduces it to the test sample
 consisting of any subject that has not yet reached retirement through SWAP 
 and is not part of the gold standard sample.  
 
-Analogous to SWAP, we generate a retirement rule for machine-classified subjects. 
-In addition to the class prediction, the RF algorithm computes the probability for
-each subject to belong to each class.  This probability is simply the average of
- the probabilities of each individual decision tree, where the probability of a 
-single tree is determined as the fraction of subjects of class X on a leaf node.  
-Only subjects that receive a class prediction of \feat with 
-$p_{\mathrm{machine}} \ge 0.9$ ($p_{\mathrm{machine}} \le 0.1$ for \notfeat)
-are considered retired. 
-The remaining subjects have the possibility of being classified by humans 
-or the machine on a future night of the simulation. 
-This constitutes the core of our passive feedback mechanism. Subjects that are
-not retired by the machine can instead be retired by humans, thus providing 
-the machine a more fully sampled morphology parameter space on future 
-training sessions. 
+Analogous to SWAP, we generate a retirement rule for machine-classified subjects. In addition to the class prediction, the RF algorithm computes the probability for each subject to belong to each class.  This probability is simply the average of the probabilities of each individual decision tree, where the probability of a single tree is determined as the fraction of subjects of class X on a leaf node. Only subjects that receive a class prediction of \feat with $p_{\mathrm{machine}} \ge 0.9$ ($p_{\mathrm{machine}} \le 0.1$ for \notfeat)are considered retired. The remaining subjects have the possibility of being classified by humans or the machine on a future night of the simulation. This constitutes the core of our passive feedback mechanism. Subjects that are not retired by the machine can instead be retired by humans, thus providing the machine a more fully sampled morphology parameter space on future training sessions. 
 
 %%%-------------------------------------------------------
 %%%  FIGURE:    FULL GZX PERFORMANCE
@@ -192,7 +160,7 @@ SWAP run discussed in Section~\ref{chap3: fiducial}. The machine attempts its fi
 We present these results in Figure~\ref{fig: money} where subject retirement 
 with GZX (red) is compared to our fiducial SWAP-only run (light blue) and GZ2 (dashed dark blue). Using the~\raw~labels as before, we compute our usual quality metrics on the full sample of GZX-retired subjects; reported in Table~\ref{tab: summary}. Accuracy and purity remain within a few percent of the SWAP-only run at 93.1\% and 83.2\% respectively. Instead we see a 5\% decline in the completeness. 
 While the SWAP-only run identified 99\% of~\feat~subjects, incorporation
-of the machine seems to miss a significant portion thus dropping GZX completeness to 94.0\%. We discuss this behaviour below.
+of the machine seems to miss a significant portion thus dropping GZX completeness to 94.0\%. We discuss this behavior below.
 
 
 \begin{table}
@@ -225,7 +193,7 @@ By dynamically generating a training sample through a more sophisticated analysi
 \begin{figure}
 \centering
 \includegraphics[width=3.5in]{Figures/human_machine/GZX_component_contributions.pdf}
-\caption[Individual contributions of human and machine to galaxy classification]{Contributions to subject retirement by both classifying agents of GZX: human (SWAP) and machine. The top panel shows cumulative subject retirement for GZX as a whole (solid black), along with that attributed to the RF (dash-dotted teal), and SWAP (dashed orange). The dotted grey line shows the fiducial SWAP-only run for comparison. Retirement totals for humans and machine are nearly equal over the course of the simulation but display different behaviours: SWAP's retirement rate is almost constant while the RF contributes substantially after its initial application and then plateaus.  The bottom panels show what fraction of GZ2 subjects are retired, separated by class label. Overall, GZX retires 73.7\% of the entire GZ2 sample in 32 days, retiring the same proportion of~\feat~and~\notfeat~subjects as indicated by the black lines. However, humans retire 30\% more~\feat~subjects than the machine, while both components retire a similar proportion of~\notfeat~subjects. \label{fig: gzx components}}
+\caption[Individual contributions of human and machine to galaxy classification]{Contributions to subject retirement by both classifying agents of GZX: human (SWAP) and machine. The top panel shows cumulative subject retirement for GZX as a whole (solid black), along with that attributed to the RF (dash-dotted teal), and SWAP (dashed orange). The dotted grey line shows the fiducial SWAP-only run for comparison. Retirement totals for humans and machine are nearly equal over the course of the simulation but display different behaviors: SWAP's retirement rate is almost constant while the RF contributes substantially after its initial application and then plateaus.  The bottom panels show what fraction of GZ2 subjects are retired, separated by class label. Overall, GZX retires 73.7\% of the entire GZ2 sample in 32 days, retiring the same proportion of~\feat~and~\notfeat~subjects as indicated by the black lines. However, humans retire 30\% more~\feat~subjects than the machine, while both components retire a similar proportion of~\notfeat~subjects. \label{fig: gzx components}}
 \end{figure}
 
 %%----------------------------------------------------------------------------------------------------------------------------------------------
@@ -246,7 +214,7 @@ Section~\ref{chap3: fiducial} for reference. Two things are immediately obvious.
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Figures/human_machine/f12.pdf}
-\caption[Random subsample of galaxy jpegs identified as false positives by the Random Forest]{A random subsample of subjects identified as false positives: labelled by machine as~\feat, but as~\notfeat~according to~\raw. We display \fsmooth~in the lower left corner, that is, the fraction of volunteers who classified the subject as `smooth' (\notfeat). Values are typically between 0.5 and 0.65 indicating that GZ2 volunteers did not reach a strong consensus. Fortunately, the machine is able to identify these subjects as~\feat~due to their measured morphology diagnostics. \label{fig: machine false pos}}
+\caption[Random subsample of galaxy jpegs identified as false positives by the Random Forest]{A random subsample of subjects identified as false positives: labeled by machine as \feat~but as \notfeat~according to \raw. We display \ffeat~in the lower left corner and choose a random sample of subject with \ffeat$<0.35$, indicating that GZ2 volunteers strongly identified these as `smooth' (\notfeat). Fortunately, the machine is able to identify these subjects as \feat~due to their measured morphology diagnostics. \label{fig: machine false pos}}
 \end{figure}
 
 
@@ -262,7 +230,7 @@ Section~\ref{chap3: fiducial} for reference. Two things are immediately obvious.
 In the bottom panels of Figure~\ref{fig: gzx components}, we consider the class
 composition of subjects retired by SWAP and the RF. The left (right) panel shows the retired fraction of GZ2 subjects identified as~\feat~(\notfeat) according to their~\raw~labels as a function of GZ2 project time. Overall, GZX retires 73.7\% of the GZ2 subject sample and this is almost evenly distributed between~\feat~and~\notfeat~subjects as indicated by the solid black lines in both panels. However, SWAP retires 50\% of all~\feat~subjects while the machine retires only 20\%. This divergence does not exist for~\notfeat~subjects where each component contributes 33-34\%. 
 
-What is the source of this discrepancy? Each night the machine trains on a sample composed consistently of 30-40\%~\feat~subjects but does not retire a similar proportion, indicating that the 30\% of non-retired~\feat~subjects do not receive high~\pmachine. In the following section we explore whether this is an artefact of our choice in machine or in the human-machine combination implemented here. 
+What is the source of this discrepancy? Each night the machine trains on a sample composed consistently of 30-40\%~\feat~subjects but does not retire a similar proportion, indicating that the 30\% of non-retired~\feat~subjects do not receive high~\pmachine. In the following section we explore whether this is an artifact of our choice in machine or in the human-machine combination implemented here. 
 
 
 \subsection{Machine performance}\label{chap4: machine performance}
@@ -283,7 +251,7 @@ That the machine strongly identifies these galaxies as \feat~
 We find that 40\% of these false positives have $0.4 \le$~\ffeat+\fstar$<0.5$ 
 indicating that the disagreement between humans and machine is likely due to the 
 labels we assign at our given threshold. However, we also find that 45\% of false
-positives have \ffeat+\fstar~$\le0.35$, and this discrepancy is not as easily explained. In Figure~\ref{fig: machine false pos} we examine a random sample of false positives in this regime where, for clarity, we display only the \ffeat~value in the lower left corner. The majority of these subjects are disks lacking features such as spiral arms or strong bars. Whether this is the reason the majority of volunteers classify these objects as ``smooth" is beyond the scope of this paper, however, this behaviour might be modified by providing actual training images and live feedback as performed in \cite{Marshall2016}. We suggest that, at least for this particular question, if either human or machine identifies a subject as \feat, it is likely the subject is disky and worth further investigation.
+positives have \ffeat+\fstar~$\le0.35$, and this discrepancy is not as easily explained. In Figure~\ref{fig: machine false pos} we examine a random sample of false positives in this regime where, for clarity, we display only the \ffeat~value in the lower left corner. The majority of these subjects are disks lacking features such as spiral arms or strong bars. Whether this is the reason the majority of volunteers classify these objects as ``smooth" is beyond the scope of this paper, however, this behavior might be modified by providing actual training images and live feedback as performed in \cite{Marshall2016}. We suggest that, at least for this particular question, if either human or machine identifies a subject as \feat, it is likely the subject is disky and worth further investigation.
 
 %%%-------------------------------------------------------
 %%%  FIGURE:   FEATURE IMPORTANCES
@@ -294,7 +262,7 @@ positives have \ffeat+\fstar~$\le0.35$, and this discrepancy is not as easily ex
 \caption[Random Forest's feature importances]{The RF's ranked feature importance averaged over all nights of training with black bars indicating the standard deviation. A larger value corresponds to higher importance. The machine computes feature importance according to how much each feature increases the purity of the resulting split averaged over all trees in the forest. The RF places great importance in the Gini coefficient though we note that it can under-represent the importance of highly correlated features such as concentration.\label{fig: feature importance}}
 \end{figure}
 
-Accordingly, this suggests that, in some cases, the morphology indicators we measure are sufficient for the machine to recognize~\feat~galaxies regardless of the labels humans provide. Figure~\ref{fig: morph params} shows the distribution of each morphology indicator for all subjects the machine retires as~\feat~(blue) and~\notfeat~(orange) compared to the full GZ2 subject set. The difference between~\feat~and~\notfeat~is stark in all but the \M{20} distribution. This can be seen explicitly in Figure~\ref{fig:  feature importance} in which we show the RF's ranked feature importances, where large values indicate higher importance. Feature importance is computed as how much each feature decreases the impurity of a split in a tree. The impurity decrease from each feature is then averaged over all trees and ranked. We show the feature importance averaged over all nights of training with black bars indicating the standard deviation. The machine finds the Gini coefficient most important for class prediction, placing little emphasis on \M{20}. It is well known that the Gini coefficient is more sensitive to noise than other diagnostics, however, we point out that when a machine is faced with two or more correlated features any of them can be used as the predictor. Once chosen, the importance of the others is reduced. This explains why Concentration is ranked much lower than Gini even though they are strongly correlated as seen in Figure~\ref{fig: morph thresh}. That the machine relies heavily on these two morphology diagnostics is unsurprising asconcentration has long been an automated predictor between early- and late-type galaxies~\citep{Abraham1994, Abraham1996, Shen2003}.
+Accordingly, this suggests that, in some cases, the morphology indicators we measure are sufficient for the machine to recognize~\feat~galaxies regardless of the labels humans provide. Figure~\ref{fig: morph params} shows the distribution of each morphology indicator for all subjects the machine retires as~\feat~(blue) and~\notfeat~(orange) compared to the full GZ2 subject set. The difference between~\feat~and~\notfeat~is stark in all but the \M{20} distribution. This can be seen explicitly in Figure~\ref{fig:  feature importance} in which we show the RF's ranked feature importances, where large values indicate higher importance. Feature importance is computed as how much each feature decreases the impurity of a split in a tree. The impurity decrease from each feature is then averaged over all trees and ranked. We show the feature importance averaged over all nights of training with black bars indicating the standard deviation. The machine finds the Gini coefficient most important for class prediction, placing little emphasis on \M{20}. It is well known that the Gini coefficient is more sensitive to noise than other diagnostics, however, we point out that when a machine is faced with two or more correlated features any of them can be used as the predictor. Once chosen, the importance of the others is reduced. This explains why Concentration is ranked much lower than Gini even though they are strongly correlated as seen in Figure~\ref{fig: morph thresh}. That the machine relies heavily on these two morphology diagnostics is unsurprising as concentration has long been an automated predictor between early- and late-type galaxies~\citep{Abraham1994, Abraham1996, Shen2003}.
 
 
 The complementary nature of human and machine classification can 
@@ -347,21 +315,14 @@ their predictions aggregated through SWAP, creating an on-the-fly machine ensemb
 With the above upgrades implemented, we expect performance of both the
 classification rate and quality to further increase. However, even our current 
 implementation can cope with upcoming data volumes from large surveys. 
-By some estimates, \textit{Euclid} is expected to obtain measurable morphology with its 
-visual instrument (VIS) for approximately $10^6 - 10^7$ galaxies~\citep{Euclid}.
-Visual classification at the rate achieved with Galaxy Zoo today
-would require 12--120 years to classify.\footnote{We note that the classification 
-rate of GZ2 was 4 times higher than GZ's current steady rate.}
+By some estimates, \textit{Euclid} is expected to obtain measurable morphology with its visual instrument (VIS) for approximately $10^6 - 10^7$ galaxies~\citep{Euclid}. Visual classification at the rate achieved with Galaxy Zoo today
+would require 12--120 years to classify.\footnote{We note that the classification rate of GZ2 was 4 times higher than GZ's current steady rate.}
 If the \textit{Euclid} sample is on the high end, GZX as currently implemented
 could classify the brightest 20\% during the six years of its observing mission. 
 As currently implemented, we obtain accuracy around 95\% potentially leaving
 hundreds of thousands of galaxies with unreliable classifications.  
-In a companion paper that seeks to identify supernovae, Wright et al. (submitted) 
-demonstrate a dramatic increase in accuracy through an entirely different human-machine 
-combination whereby the
-scores from human and machine are averaged together with the combined score 
-yielding the most reliable classification. Again, a combination of both 
-approaches will allow us to take full advantage of legacy output from large scale surveys.
+In a companion paper that seeks to identify supernovae, \cite{Wright2017} 
+demonstrate a dramatic increase in accuracy through an entirely different human-machine combination whereby the scores from human and machine are averaged together with the combined score yielding the most reliable classification. Again, a combination of both approaches will allow us to take full advantage of legacy output from large scale surveys.
 
 
 %%----------------------------------------------------------------------------------------------------------------------------------------------------
